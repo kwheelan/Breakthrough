@@ -7,10 +7,14 @@
 {% block body %}
     <h1>Poll Finder</h1>
 
-    <form action="{{ url_for('info') }}" method="post">
+    <form action="{{ url_for('sf_info') }}" method="post">
 
         <div class="form-group">
             <input class="form-control" name="address" placeholder="Address">
+        </div>
+
+        <div class="form-group">
+            <input class="form-control" name="zip" placeholder="Zip Code">
         </div>
 
         <div class="form-group">
@@ -18,5 +22,4 @@
         </div>
 
     </form>
-  
 {% endblock %}
