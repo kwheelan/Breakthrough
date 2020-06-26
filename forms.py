@@ -1,3 +1,5 @@
+#https://www.thepythoncode.com/article/extracting-and-submitting-web-page-forms-in-python
+
 __all__ = ["get_address"]
 
 import requests
@@ -55,7 +57,7 @@ def get_address(url):
             value = input(f"Enter the value of the field '{input_tag['name']}' (type: {input_tag['type']}): ")
             data[input_tag["name"]] = value
 
-    #action = form.attrs.get("action").lower()
+    action = first_form.attrs.get("action").lower()
     url = urllib.parse.urljoin(url, form_details["action"])
 
     if form_details["method"] == "post":

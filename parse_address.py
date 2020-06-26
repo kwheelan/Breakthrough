@@ -3,6 +3,7 @@ __all__ = ["get_poll_info"]
 import requests
 from bs4 import BeautifulSoup
 import urllib.parse
+import re
 
 def parse_address(address):
     attrs = address.split(" ")
@@ -42,8 +43,11 @@ def get_poll_info(url, line1, zip):
     try:
         soup = BeautifulSoup(res.text, "html.parser")
         poll = str(soup.strong).replace('<br/>', '\n')
-        soup = BeautifulSoup(poll, "html.parser")
-        return tuple(soup.strong.text.split("\n"))
+        poll_soup = BeautifulSoup(poll, "html.parser")
+        name, address = tuple(poll_soup.strong.text.split("\n"))
+        txt = soup.find_all("center")[-1].text
+        hours = re.findall("from .* to .*", txt)[0].replace("from ", "")
+        return name, address, hours
     except:
         return "Could not find this address", ""
 

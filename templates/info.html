@@ -7,7 +7,14 @@
 {% block body %}
     <h1>Poll Location</h1>
 
-    {{ location }} <br>
+    {{ name }} <br>
+    {{ line1 }} <br> <br>
+
+    <strong>*Please note that polling places are subject to change.
+      Check back before the election. </strong>
+
+    <h1>Hours</h1>
+    {{ hours }}
 
 <!--    <h1>Address</h1>
 
@@ -15,8 +22,6 @@
     {{ city }}, {{ state }} {{ zip }} <br>
     -->
 
-    <h1>Hours</h1>
 
-    {{ hours }}
 
 {% endblock %}
