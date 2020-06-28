@@ -6,9 +6,10 @@ import requests
 from bs4 import BeautifulSoup
 import urllib.parse
 
-url = "https://www.sfelections.org/tools/pollsite/"
+#url = "https://www.sfelections.org/tools/pollsite/"
 #url = "https://wikipedia.com/"
 #url = "https://www.sos.ca.gov/elections/polling-place/"
+url = "https://verify.vote.org/"
 
 def get_all_forms(url):
     res = requests.get(url)
@@ -67,33 +68,34 @@ def get_address(url):
 
     # the below code is only for replacing relative URLs to absolute ones
     soup = BeautifulSoup(res.text, "html.parser")
-    # for link in soup.find_all("link"):
-    #     try:
-    #         link.attrs["href"] = urljoin(url, link.attrs["href"])
-    #     except:
-    #         pass
-    # for script in soup.find_all("script"):
-    #     try:
-    #         script.attrs["src"] = urljoin(url, script.attrs["src"])
-    #     except:
-    #         pass
-    # for img in soup.find_all("img"):
-    #     try:
-    #         img.attrs["src"] = urljoin(url, img.attrs["src"])
-    #     except:
-    #         pass
-    # for a in soup.find_all("a"):
-    #     try:
-    #         a.attrs["href"] = urljoin(url, a.attrs["href"])
-    #     except:
-    #         pass
+    for link in soup.find_all("link"):
+        try:
+            link.attrs["href"] = urljoin(url, link.attrs["href"])
+        except:
+            pass
+    for script in soup.find_all("script"):
+        try:
+            script.attrs["src"] = urljoin(url, script.attrs["src"])
+        except:
+            pass
+    for img in soup.find_all("img"):
+        try:
+            img.attrs["src"] = urljoin(url, img.attrs["src"])
+        except:
+            pass
+    for a in soup.find_all("a"):
+        try:
+            a.attrs["href"] = urljoin(url, a.attrs["href"])
+        except:
+            pass
 
-    # write the page content to a file
+    return soup.h2.text.strip()
+    #write the page content to a file
     #open("page.html", "w").write(str(soup))
 
-    poll = str(soup.strong).replace('<br/>', '\n')
-    soup = BeautifulSoup(poll, "html.parser")
-    return tuple(soup.strong.text.split("\n"))
+    # poll = str(soup.strong).replace('<br/>', '\n')
+    # soup = BeautifulSoup(poll, "html.parser")
+    # return tuple(soup.strong.text.split("\n"))
 
-name, address = get_address(url)
-print("{}\n{}".format(name,address))
+print(get_address(url))
+#print("{}\n{}".format(name,address))
