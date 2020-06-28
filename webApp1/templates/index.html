@@ -1,0 +1,61 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Check Voter Registration
+{% endblock %}
+
+{% block body %}
+    <h1>Check Your Registration Status</h1>
+
+    <form action="{{ url_for('registration') }}" method="post">
+
+      Name
+
+      <div class="form-group">
+          <input class="form-control" type="text" name="firstName" placeholder="First Name">
+      </div>
+
+      <div class="form-group">
+          <input class="form-control" type="text" name="lastName" placeholder="Last Name">
+      </div>
+
+      <br>
+      Address
+
+      <div class="form-group">
+          <input class="form-control" type="text" name="address" placeholder="Line 1">
+      </div>
+
+      <div class="form-group">
+          <input class="form-control" type="text" name="city" placeholder="City">
+      </div>
+
+      <div class="form-group">
+          <input class="form-control" type="text" name="state" placeholder="State">
+      </div>
+
+      <div class="form-group">
+          <input class="form-control" type="number" name="zip" placeholder="Zip Code">
+      </div>
+
+      <br>
+      Date of Birth
+      <div class="form-group">
+          <input class="form-control" type="number" name="mon" placeholder="Month">
+      </div>
+
+      <div class="form-group">
+          <input class="form-control" type="number" name="day" placeholder="Day">
+      </div>
+
+      <div class="form-group">
+          <input class="form-control" type="number" name="year" placeholder="Year">
+      </div>
+      <br>
+      <div class="form-group">
+          <button class="btn btn-primary">Check Registration</button>
+      </div>
+
+    </form>
+
+{% endblock %}
