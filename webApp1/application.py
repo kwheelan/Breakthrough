@@ -57,9 +57,18 @@ def contact():
 
 @app.route("/faqs")
 def faqs():
-    return "In progress"
+    return render_template("progress.html")
 
-@app.route("/poll_finder")
+@app.route("/reminders")
+def remind():
+    return render_template("progress.html")
+
+@app.route("/poll_finder/query")
+def poll_forms():
+    """show polling forms"""
+    return render_template("poll_form.html")
+
+@app.route("/poll_finder/info", methods = ["POST"])
 def pollFinder():
     """Get polling info."""
 
@@ -93,4 +102,4 @@ def pollFinder():
             hours = data["pollingLocations"][0]["pollingHours"]
         except:
             hours = "No available hours for this location"
-        return render_template("info.html", name=location, line1=line1, hours=hours)
+        return render_template("poll_info.html", name=location, line1=line1, hours=hours)

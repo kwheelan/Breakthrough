@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block body %}
+  <font color=gray>
+    <h2>Poll Location</h2>
+  </font>
+
+  <font color=white>
+    {{ name }} <br>
+    {{ line1 }} <br> <br>
+  </font>
+
+  <font color=gray>
+    <h2>Hours</h2>
+  </font>
+
+  <font color=white>
+    {{ hours }}
+    <br><br>
+    <strong>*Please note that polling places are subject to change.<br>
+      Please check again before the election. </strong>
+  </font>
+
+<!--    <h1>Address</h1>
+
+    {{ line1 }} <br>
+    {{ city }}, {{ state }} {{ zip }} <br>
+    -->
+
+
+
+{% endblock %}
