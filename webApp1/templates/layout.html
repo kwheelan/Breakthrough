@@ -20,7 +20,7 @@
 
   <body style = "background-color: #272c33"> <!-- #d8d8e0 -->
     <!-- Nav bar -->
-    <nav class="navbar navbar sticky-top navbar-expand-lg bg-dark navbar-dark" style ="background-color: indigo">
+    <nav class="navbar navbar sticky-top navbar-expand-md bg-dark navbar-dark" style ="background-color: indigo">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -28,13 +28,13 @@
         <ul class="nav navbar-nav">
           <li><a class="nav-item nav-link active" href="{{ url_for('index')}}">Home</a></li>
           <li><a class="nav-item nav-link" href="{{ url_for('registration_forms')}}">Am I Registered?</a></li>
-          <li><a class="nav-item nav-link" href="https://covr.sos.ca.gov/">Register to Vote</a></li>
+          <li><a class="nav-item nav-link" href="https://covr.sos.ca.gov/">Register</a></li>
           <li><a class="nav-item nav-link" href="{{ url_for('faqs') }}">FAQS</a></li>
-          <li><a class="nav-item nav-link" href= "{{ url_for('poll_forms') }}">Find My Polling Place</a></li>
-          <li><a class="nav-item nav-link" href="{{ url_for('remind') }}">Sign Up for Reminders</a></li>
+          <li><a class="nav-item nav-link" href= "{{ url_for('poll_forms') }}">Poll Finder</a></li>
+          <li><a class="nav-item nav-link" href="{{ url_for('remind') }}">Voting Reminders</a></li>
         </ul>
         <div class="navbar-nav ml-auto">
-            <a href="{{ url_for('contact') }}" class="nav-item nav-link"><font color = "white"> Contact Us </font></a>
+            <a href="{{ url_for('contact') }}" class="nav-item nav-link"><font color = "white"> Contact</font></a>
         </div>
       </div>
     </nav>
