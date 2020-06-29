@@ -1,61 +1,49 @@
 {% extends "layout.html" %}
 
-{% block title %}
-    Check Voter Registration
-{% endblock %}
 
 {% block body %}
-    <h1>Check Your Registration Status</h1>
 
-    <form action="{{ url_for('registration') }}" method="post">
+    <section id="home">
+      <div class="container" align=center>
+        <br>
+        <h1 align = center><font color=gray>California Voter Resource Guide</font></h1>
 
-      Name
-
-      <div class="form-group">
-          <input class="form-control" type="text" name="firstName" placeholder="First Name">
+        <p align = center>
+          <font color = lightgray>
+            Please find resources below... placeholder text. Something about California all mail-in
+          </font>
+        </p>
+        <div class="alert alert-secondary sect" role="alert">
+            <a class = "sectLink" href="https://voterstatus.sos.ca.gov/#VoterStatusAuthenticateForm">
+              <h1 align= center>
+                Am I Registered to Vote?
+              </h1>
+            </a>
+        </div>
+        <div class="alert alert-secondary sect" role="alert">
+            <a class = "sectLink" href="https://covr.sos.ca.gov/">
+              <h1 align= center>
+                Register Now
+              </h1>
+            </a>
+        </div>
+        <div class="alert alert-secondary sect" role="alert">
+            <a class = "sectLink" href="https://www.sos.ca.gov/elections/polling-place/">
+              <h1 align= center>
+                Find My Polling Place
+              </h1>
+            </a>
+        </div>
+        <div class="alert alert-secondary sect" role="alert">
+            <a class = "sectLink" href="FAQS.html">
+              <h1 align= center>
+                Frequently Asked Questions
+              </h1>
+            </a>
+        </div>
       </div>
 
-      <div class="form-group">
-          <input class="form-control" type="text" name="lastName" placeholder="Last Name">
-      </div>
+    </section>
 
-      <br>
-      Address
-
-      <div class="form-group">
-          <input class="form-control" type="text" name="address" placeholder="Line 1">
-      </div>
-
-      <div class="form-group">
-          <input class="form-control" type="text" name="city" placeholder="City">
-      </div>
-
-      <div class="form-group">
-          <input class="form-control" type="text" name="state" placeholder="State">
-      </div>
-
-      <div class="form-group">
-          <input class="form-control" type="number" name="zip" placeholder="Zip Code">
-      </div>
-
-      <br>
-      Date of Birth
-      <div class="form-group">
-          <input class="form-control" type="number" name="mon" placeholder="Month">
-      </div>
-
-      <div class="form-group">
-          <input class="form-control" type="number" name="day" placeholder="Day">
-      </div>
-
-      <div class="form-group">
-          <input class="form-control" type="number" name="year" placeholder="Year">
-      </div>
-      <br>
-      <div class="form-group">
-          <button class="btn btn-primary">Check Registration</button>
-      </div>
-
-    </form>
 
 {% endblock %}

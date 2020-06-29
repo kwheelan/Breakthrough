@@ -7,14 +7,21 @@ from formTools import *
 
 app = Flask(__name__)
 
-API_KEY = "AIzaSyB_TMYCnCqQz_UDRc6wsu7Tw7rMUbgQ0hQ"
+app.static_folder = 'static'
+
+#API_KEY = "AIzaSyB_TMYCnCqQz_UDRc6wsu7Tw7rMUbgQ0hQ"
 
 @app.route("/")
 def index():
+    """ home page """
     return render_template("index.html")
 
+@app.route("/registration/query")
+def registration_forms():
+    """ page to enter info for registation"""
+    return render_template("registrationForm.html")
 
-@app.route("/registration", methods=["POST"])
+@app.route("/registration/info", methods=["POST"])
 def registration():
     """Get polling info."""
 
@@ -33,9 +40,9 @@ def registration():
     data["zip_5"] = request.form.get("zip")
 
     #dob
-    data["date_of_birth_month"] = request.form.get("mon")
-    data["date_of_birth_day"] = request.form.get("day")
-    data["date_of_birth_year"] = request.form.get("year")
+    data["date_of_birth_month"] = 1#request.form.get("mon")
+    data["date_of_birth_day"] = 1#request.form.get("day")
+    data["date_of_birth_year"] = 2000#request.form.get("year")
 
 #    return data
 
