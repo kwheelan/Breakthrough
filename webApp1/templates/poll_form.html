@@ -1,26 +1,13 @@
 {% extends "layout.html" %}
 
 {% block title %}
-    Check Your Registration Status
+    Find Your Polling Place
 {% endblock %}
 
 {% block body %}
 
-    <form class = "formSect" action="{{ url_for('registration') }}" method="post">
+    <form class = "formSect" action="{{ url_for('pollFinder') }}" method="post">
 
-      <p align=left>
-        <font size = 4 color="white"> Name </font>
-      </p>
-
-      <div class="form-group">
-          <input class="form-control" type="text" name="firstName" placeholder="First Name">
-      </div>
-
-      <div class="form-group">
-          <input class="form-control" type="text" name="lastName" placeholder="Last Name">
-      </div>
-
-      <br>
       <p align=left>
         <font size = 4 color="white"> Address </font>
       </p>

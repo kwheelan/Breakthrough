@@ -26,21 +26,33 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <ul class="nav navbar-nav">
-          <li><a class="nav-item nav-link active" href="index.html">Home <span class="sr-only">(current)</span></a></li>
-          <li><a class="nav-item nav-link" href="https://voterstatus.sos.ca.gov/#VoterStatusAuthenticateForm">Am I Registered?</a></li>
+          <li><a class="nav-item nav-link active" href="{{ url_for('index')}}">Home</a></li>
+          <li><a class="nav-item nav-link" href="{{ url_for('registration_forms')}}">Am I Registered?</a></li>
           <li><a class="nav-item nav-link" href="https://covr.sos.ca.gov/">Register to Vote</a></li>
-          <li><a class="nav-item nav-link" href="faqs.html">FAQS</a></li>
-          <li><a class="nav-item nav-link" href="https://www.sos.ca.gov/elections/polling-place/">Find My Polling Place</a></li>
+          <li><a class="nav-item nav-link" href="{{ url_for('faqs') }}">FAQS</a></li>
+          <li><a class="nav-item nav-link" href= "{{ url_for('pollFinder') }}">Find My Polling Place</a></li>
           <li><a class="nav-item nav-link" href="reminders.html">Sign Up for Reminders</a></li>
         </ul>
         <div class="navbar-nav ml-auto">
-            <a href="contact.html" class="nav-item nav-link"><font color = "white"> Contact Us </font></a>
+            <a href="{{ url_for('contact') }}" class="nav-item nav-link"><font color = "white"> Contact Us </font></a>
         </div>
       </div>
     </nav>
 
-    {% block body %}
-    {% endblock %}
+    <div class="container" align=center>
+      <br>
+      <h1 align = center>
+        <font color=gray>
+          {% block title %}
+          {% endblock %}
+        </font></h1>
+
+    <div>
+      {% block body %}
+      {% endblock %}
+    </div>
+
+    </div>
 
   </body>
 </html>

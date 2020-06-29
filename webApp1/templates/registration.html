@@ -1,13 +1,42 @@
 {% extends "layout.html" %}
 
 {% block title %}
-    Check Registration
+    Registration Status
 {% endblock %}
 
 {% block body %}
-    <h1>Registration Status</h1>
 
-    {{ text }}
+  <p>
+    <font color="white" size = 5>
+      {{ text }}
+    </font>
+  </p>
+
+  {% if text == "You are registered to vote." %}
+
+  <a href = " {{ url_for('pollFinder') }}">
+    <button class="btn btn-secondary">
+      Find my polling place
+    </button>
+  </a>
+
+  {% else %}
+
+  <a href = "https://covr.sos.ca.gov/">
+    <button class="btn btn-secondary">
+      Register to vote in California
+    </button>
+  </a>
+
+  {% endif %}
+
+  <br><br>
+
+  <a href = " {{ url_for('faqs') }}">
+    <button class="btn btn-secondary">
+      More voting information
+    </button>
+  </a>
 
 
 {% endblock %}

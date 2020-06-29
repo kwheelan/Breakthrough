@@ -14,3 +14,14 @@
 .sectLink:hover {
   color: white;
 }
+
+.formSect {
+  width: 60%;
+  align: center;
+}
+
+@media (max-width: 960px) {
+  .formSect {
+    width: 90%;
+  }
+}
