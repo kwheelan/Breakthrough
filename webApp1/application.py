@@ -57,7 +57,7 @@ def contact():
 
 @app.route("/faqs")
 def faqs():
-    return render_template("progress.html")
+    return render_template("faqs.html")
 
 @app.route("/reminders")
 def remind():

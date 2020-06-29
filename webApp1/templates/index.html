@@ -9,9 +9,15 @@
 
     <section id="home">
 
-        <p align = center>
-          <font color = lightgray>
-            Please find resources below... placeholder text. Something about California all mail-in
+        <p align = left width = 80%>
+          <font color = lightgray size=4>
+            Voters must register in California at least 15 days before the upcoming election. The last day to register to vote in the November 3, 2020 general election is
+            <font color=white><strong>October 19, 2020 </strong></font>
+            (if mailed, must be postmarked by end of day). Anyone eligible can register online. <br><br>
+
+            In light of the Covid-19 pandemic, California Governor Gavin Newsom ordered that
+            <font color=white><strong>all registered California residents will receive a mail-in ballot.</strong></font>
+However, if voters prefer to vote in person, polling places will be available. You can find your polling place information 2-4 weeks before the election.
           </font>
         </p>
         <div class="alert alert-secondary sect" role="alert">
@@ -36,12 +42,19 @@
             </a>
         </div>
         <div class="alert alert-secondary sect" role="alert">
-            <a class = "sectLink" href="FAQS.html">
+            <a class = "sectLink" href="{{ url_for('faqs') }}">
               <h1 align= center>
                 Frequently Asked Questions
               </h1>
             </a>
         </div>
+      <div class="alert alert-secondary sect" role="alert">
+          <a class = "sectLink" href="{{ url_for('remind') }}">
+            <h1 align= center>
+              Sign Up for Voting Reminders
+            </h1>
+          </a>
+      </div>
 
     </section>
 

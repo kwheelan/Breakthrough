@@ -25,3 +25,15 @@
     width: 90%;
   }
 }
+
+.faq {
+  background-color: #909090;
+}
+
+.faq-body {
+  color: darkgray;
+}
+
+.card {
+  background-color: yellow;
+}
