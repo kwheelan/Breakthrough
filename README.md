@@ -3,15 +3,21 @@ Read Me
 
 Directories:
 
-\begin{list}
 
-	\item \bold{StaticSite}
+	*StaticSite*
 	
-	\item \bold{webApp0}
+	*webApp0*
 	
-	\item \bold{webApp1}
-
-\end{list}
+	*webApp1*
+		*application.py*
+		*formTools.py*
+		etc
+		*templates*
+			index.html
+			etc
+		*static*
+			*stylesheets*
+				*style.css*
 
 TO DO:
 
