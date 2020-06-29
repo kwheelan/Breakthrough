@@ -5,20 +5,20 @@
 
 #### Directories:
 
-- *StaticSite*
+* *StaticSite*
 	
-- *webApp0*
+* *webApp0*
 	
-- *webApp1*
- - *application.py*
- - *formTools.py*
- - etc
- - *templates*
-  - index.html
-  - etc
-  - *static*
-    - *stylesheets*
-     - *style.css*
+* *webApp1*
+  * *application.py*
+  * *formTools.py*
+  * etc
+  * *templates*
+    * index.html
+    * etc
+  * *static*
+     * *stylesheets*
+       * *style.css*
 
 #### TO DO:
 
