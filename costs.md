@@ -13,5 +13,12 @@
 
 ### Overall
 - We need to get a domain and also host the site
-- If we want interaction, it requires some backend, which is more expensive to host
-- 
+- If we want interaction (eg. a built-in poll-finder or registration check), it requires some backend, which is more expensive to host
+- **Cheapest option** $0/yr : IF:
+        - We have access to the hosting details of the curent site and editing access
+        - Breakthrough is willing to have the voting on the same site
+        - We want a static site
+- **High-end option** $260/yr for:
+        - A separate domain
+        - A separate hosting service 
+        - A web application with interaction
