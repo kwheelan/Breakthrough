@@ -22,7 +22,7 @@
 	
 * *webApp1/* - Combining the styled static site with the web application
   * *application.py* - Python code for a Flask application
-  * *formTools.py* - specific tools to webscrape and submit information for polling locations
+  * *formTools.py* - specific tools to webscrape and submit information for polling locations and registration information
   * *templates/* - html templates for the application
     * *layout.html* - the basic html format
     * *index.html* - the homepage
