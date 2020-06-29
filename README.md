@@ -1,44 +1,46 @@
+## Breakthrough Voting Initiative Repository
 
-Read Me
+### Katrina Wheelan
+### June 29, 2010
 
-Directories:
+#### Directories:
 
-*StaticSite*
+- *StaticSite*
 	
-*webApp0*
+- *webApp0*
 	
-*webApp1*
-	*application.py*
-	*formTools.py*
-	etc
-	*templates*
-		index.html
-		etc
-	*static*
-		*stylesheets*
-			*style.css*
+- *webApp1*
+ - *application.py*
+ - *formTools.py*
+ - etc
+ - *templates*
+  - index.html
+  - etc
+  - *static*
+    - *stylesheets*
+     - *style.css*
 
-TO DO:
+#### TO DO:
 
-clean up errors
-	badly formatted address
-	better message for poll finder if no upcoming election
+- clean up errors
+  -badly formatted address
+  -better message for poll finder if no upcoming election
 	
-get states from a drop down menu
+- get states from a drop down menu
 
-post info from registered to poll finder
+- post info from registered to poll finder
 
-do FAQs
+- do FAQs
 
-reminders? look into text updates
+- reminders? look into text updates
 
-check mobile formatting
+- check mobile formatting
 
-proof against website changes (for registration checker)
+- proof against website changes (for registration checker)
 
-add official links to check
+- add official links to check
 
-add reasons registration may not be correct (disclaimer)
+- add reasons registration may not be correct (disclaimer)
 
-sign up on heroku to host web app
+- sign up on heroku to host web app
 
