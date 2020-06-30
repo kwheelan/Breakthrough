@@ -1,9 +1,10 @@
 {% extends "layout.html" %}
-<head>
-  <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/style.css') }}">
-</head>
 
-{% block title %}
+{% block head %}
+  {{ super() }}
+{% endblock %}
+
+{% block header %}
     Frequently Asked Questions
 {% endblock %}
 
@@ -11,47 +12,177 @@
 
 <br>
 
-<div id="accordion">
+<div id="accordion" align=left style = "margin-bottom: 30px">
   <div class="card faq">
-    <div class="card-header" id="headingOne">
-      <h5 class="mb-0">
+    <div class="card-header faqHeader" id="headingOne">
+      <h4 class="mb-0">
         <button class="btn btn-link sectLink" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-            Question 1
+            How will COVID-19 affect voting in California?
         </button>
-      </h5>
+      </h4>
     </div>
 
     <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-      <div class="card-body faq-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      <div class="card-body">
+        In light of the Covid-19 pandemic, California Governor Gavin Newsom ordered that all registered California residents will receive a mail-in ballot.
+        However, if voters prefer to vote in person, polling places will be available. You can find your polling place information 2-4 weeks before the election
+        <a href="{{ url_for('poll_forms')}}" class = "faqLink">here</a>.
       </div>
     </div>
   </div>
-  <div class="card">
-    <div class="card-header" id="headingTwo">
+  <div class="card faq">
+    <div class="card-header faqHeader" id="headingFour">
       <h5 class="mb-0">
-        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-          Collapsible Group Item #2
+        <button class="btn btn-link collapsed sectLink" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+          Am I elgible to vote?
         </button>
       </h5>
     </div>
-    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
       <div class="card-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+        All of the following must be true to vote:
+        <ul>
+          <li>US citizen and resident of California. More information for military personnel and those living overseas
+            <a class = "faqLink" href="https://www.sos.ca.gov/elections/voter-registration/military-overseas-voters">here</a>.</li>
+          <li>18 years or older on Election Day (November 3, 2020).</li>
+          <li>Not currently in state or federal prison or on parole for the conviction of a felony.
+          More information <a class = "faqLink" href="https://www.sos.ca.gov/elections/voting-resources/voting-california/who-can-vote-california/voting-rights-californians/">here</a>.</li>
+          <li>Not currently found mentally incompetent to vote by a court.
+          More information <a class = "faqLink" href="https://www.sos.ca.gov/elections/voting-info/conservatorship/">here</a>.</li>
+        </ul>
       </div>
     </div>
   </div>
-  <div class="card">
-    <div class="card-header" id="headingThree">
+  <div class="card faq">
+    <div class="card-header faqHeader" id="headingTwo">
+      <h4 class="mb-0">
+        <button class="btn btn-link collapsed sectLink" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          When is the registration deadline for the November general election?
+        </button>
+      </h4>
+    </div>
+    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+      <div class="card-body">
+        Voters must register in California at least 15 days before the upcoming election.
+        The last day to register to vote in the November 3, 2020 general election is
+        <strong>October 19, 2020</strong> (if mailed, must be postmarked by end of day).
+        <strong>Anyone eligible can register online.</strong>
+
+      </div>
+    </div>
+  </div>
+  <div class="card faq">
+    <div class="card-header faqHeader" id="headingThree">
       <h5 class="mb-0">
-        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-          Collapsible Group Item #3
+        <button class="btn btn-link collapsed sectLink" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          What happens if I miss this deadline?
         </button>
       </h5>
     </div>
     <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
       <div class="card-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+        Although not ideal, if you miss the October 19, 2020 registration deadline
+        to register or update your voter registration, don’t worry!
+        Eligible voters in California (see above) can complete the registration
+        process and vote at their local county elections office, polling place,
+        or vote center within 14 days of the election. These ballots will be counted
+        once the state verifies the voter registration of these voters. Go
+        <a href="https://www.sos.ca.gov/elections/voter-registration/same-day-reg/" class = "faqLink">here</a>
+        for a list of early voting locations where you can complete the
+        Same Day Voter Registration Process. Or, register at your polling place on election day.
+      </div>
+    </div>
+  </div>
+  <div class="card faq">
+    <div class="card-header faqHeader" id="headingFive">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed sectLink" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+          What do I need to bring with me on election day?
+        </button>
+      </h5>
+    </div>
+    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+      <div class="card-body">
+        In most cases, voters in California don’t need to show a form of identification to a poll worker before voting.
+        However, if you are voting for the first time after registering to vote by mail and did
+        not provide your driver license number, California identification number or the last four digits of
+        your social security number on your registration form, you may be asked to show a form of
+        identification when you go to the polls. Be sure to bring identification with you to your
+        polling place or include a copy of it with your vote-by-mail ballot. <br><br>
+        <strong>Please bring one of the following as a form of ID:</strong>
+        <ul>
+          <li>
+            Photo identification, such as:
+            <ul>
+              <li>driver’s license or identification card from any other state</li>
+              <li>passport</li>
+              <li>employee ID card</li>
+              <li>ID card provided by a commercial establishment</li>
+              <li>credit or debit card</li>
+              <li>student ID</li>
+              <li>health club ID</li>
+              <li>insurance plan ID</li>
+              <li>public housing ID</li>
+            </ul>
+          </li>
+          <li>
+            OR copy of one of the following documents:
+            <ul>
+              <li>Utility bill</li>
+              <li>Recent bank statement</li>
+              <li>Paycheck or government document including a check that shows the voter’s name and address</li>
+              <li>The sample ballot booklet you received from your county elections office</li>
+              <li>Another document sent to you by a government agency</li>
+            </ul>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+  <div class="card faq">
+    <div class="card-header faqHeader" id="headingSix">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed sectLink" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+          Can I get time off of work to vote?
+        </button>
+      </h5>
+    </div>
+    <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordion">
+      <div class="card-body">
+        Yes, California law requires employers to provide time for employees to vote.
+        Every voter is entitled to 2 hours to vote at the beginning or end of their shift depending on which
+        gives the employee most time to vote and takes least time off work. This time is paid up to 2 hours.
+        The employee must give the employer at least 2 working days notice in advance of the election.
+        The California Elections Code also requires employers to post a notice no less than 10 days
+        before every statewide election explaining employees' right to time off to vote. The notice
+        must be posted in a conspicuous place at the work site. See more
+        <a class = "faqLink" href="https://www.sos.ca.gov/administration/news-releases-and-advisories/2018-news-releases-and-advisories/california-law-allows-time-vote-election-day1/">here</a>.
+      </div>
+    </div>
+  </div>
+  <div class="card faq">
+    <div class="card-header faqHeader" id="headingSeven">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed sectLink" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+          Where can I find translated information about voting?
+        </button>
+      </h5>
+    </div>
+    <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordion">
+      <div class="card-body">
+        Information about voting can be found on the State of California’s website in 9 languages!
+        <ul>
+          <li><a class = "faqLink" href="https://www.sos.ca.gov/elections/voting-resources/voting-california/spanish/">Spanish</a></li>
+          <li><a class = "faqLink" href="https://www.sos.ca.gov/elections/voting-resources/voting-california/chinese/">Chinese</a></li>
+          <li><a class = "faqLink" href="https://www.sos.ca.gov/elections/voting-resources/voting-california/hindi/">Hindi</a></li>
+          <li><a class = "faqLink" href="https://www.sos.ca.gov/elections/voting-resources/voting-california/japanese/">Japanese</a></li>
+          <li><a class = "faqLink" href="https://www.sos.ca.gov/elections/voting-resources/voting-california/khmer/">Khmer</a></li>
+          <li><a class = "faqLink" href="https://www.sos.ca.gov/elections/voting-resources/voting-california/korean/">Korean</a></li>
+          <li><a class = "faqLink" href="https://www.sos.ca.gov/elections/voting-resources/voting-california/tagalog/">Tagalog</a></li>
+          <li><a class = "faqLink" href="https://www.sos.ca.gov/elections/voting-resources/voting-california/thai/">Thai</a></li>
+          <li><a class = "faqLink" href="https://www.sos.ca.gov/elections/voting-resources/voting-california/vietnamese/">Vietnamese</a></li>
+        </ul>
       </div>
     </div>
   </div>

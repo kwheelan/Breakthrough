@@ -1,3 +1,16 @@
+
+.faq {
+  background-color: #c0c0c0;
+}
+
+.faqHeader {
+  background-color: #909090;
+}
+
+.card-body {
+   color: #272c33;
+}
+
 .sect {
   margin-top: 30px;
   background-color: #909090;
@@ -7,11 +20,15 @@
   width: 80%;
 }
 
-.sectLink {
+.sectLink, .sectLink:hover {
   color: white;
 }
 
-.sectLink:hover {
+.faqLink {
+  color: green;
+}
+
+.faqLink:hover {
   color: white;
 }
 
@@ -26,14 +43,6 @@
   }
 }
 
-.faq {
-  background-color: #909090;
-}
-
-.faq-body {
-  color: darkgray;
-}
-
-.card {
-  background-color: yellow;
+.page-footer {
+  padding-top: 30px;
 }
