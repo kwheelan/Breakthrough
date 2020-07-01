@@ -83,7 +83,6 @@ python-debian==0.1.32
 pytz==2019.1
 PyWavelets==1.0.3
 pyxdg==0.25
-PyYAML==3.12
 pyzmq==18.0.1
 qtconsole==4.5.0
 requests==2.24.0
@@ -108,5 +107,4 @@ wcwidth==0.1.7
 webencodings==0.5.1
 Werkzeug==1.0.1
 widgetsnbextension==3.4.2
-wxPython==4.0.1
 zope.interface==4.3.2
