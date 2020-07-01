@@ -31,7 +31,7 @@
         <ul class="nav navbar-nav">
           <li><a class="nav-item nav-link" href="{{ url_for('index')}}">Home</a></li>
           <li><a class="nav-item nav-link" href="{{ url_for('registration_forms')}}">Am I Registered?</a></li>
-          <li><a class="nav-item nav-link" href="https://covr.sos.ca.gov/">Register</a></li>
+          <li><a class="nav-item nav-link" href="{{ url_for('register') }}">Register</a></li>
           <li><a class="nav-item nav-link" href="{{ url_for('faqs') }}">FAQS</a></li>
           <li><a class="nav-item nav-link" href= "{{ url_for('poll_forms') }}">Poll Finder</a></li>
           <li><a class="nav-item nav-link" href="{{ url_for('remind') }}">Voting Reminders</a></li>
