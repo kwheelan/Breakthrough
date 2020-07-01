@@ -19,7 +19,6 @@ cryptography==2.1.4
 cycler==0.10.0
 decorator==4.4.0
 defusedxml==0.6.0
-distro-info==0.18
 entrypoints==0.3
 Flask==1.1.2
 Flask-Session==0.3.2
