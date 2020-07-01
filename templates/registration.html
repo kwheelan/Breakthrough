@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+
+{% block header %}
+    Registration Status
+{% endblock %}
+
+{% block body %}
+
+  <p>
+    <font color="white" size = 5>
+      {{ text }}
+    </font>
+      <br>
+
+    <font color=white align=left>
+      <br>
+      Please note that this information may be affected by the following things:
+      <ul>
+        <li>If you have multiple family members with the same first and last name living at the same address, the registration information may be inaccurate.</li>
+        <li>If you registered to vote recently, this tool may not yet identify this recent change.</li>
+        <li>If the name and/or address you provided does not match your registration information.</li>
+      </ul>
+
+
+    </font>
+  </p>
+
+
+  {% if text == "You are registered to vote." %}
+
+  <a href = " {{ url_for('poll_forms') }}">
+    <button class="btn btn-secondary">
+      Find my polling place
+    </button>
+  </a>
+
+  {% else %}
+
+  <a href = "{{ url_for('register') }}">
+    <button class="btn btn-secondary">
+      Register to vote in California
+    </button>
+  </a>
+
+  {% endif %}
+
+  <br><br>
+
+  <a href = " {{ url_for('faqs') }}">
+    <button class="btn btn-secondary">
+      More voting information
+    </button>
+  </a>
+
+
+{% endblock %}
