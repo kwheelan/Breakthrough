@@ -9,7 +9,6 @@ cryptography==2.1.4
 Django==1.11.16
 enum34==1.1.6
 funcsigs==1.0.2
-futures==3.2.0
 gast==0.2.2
 grpcio==1.20.1
 gunicorn==19.10.0
