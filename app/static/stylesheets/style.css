@@ -1,0 +1,48 @@
+
+.faq {
+  background-color: #c0c0c0;
+}
+
+.faqHeader {
+  background-color: #909090;
+}
+
+.card-body {
+   color: #272c33;
+}
+
+.sect {
+  margin-top: 30px;
+  background-color: #909090;
+  border-color: #909090;
+  color: black;
+  align: middle;
+  width: 80%;
+}
+
+.sectLink, .sectLink:hover {
+  color: white;
+}
+
+.faqLink {
+  color: green;
+}
+
+.faqLink:hover {
+  color: white;
+}
+
+.formSect {
+  width: 60%;
+  align: center;
+}
+
+@media (max-width: 960px) {
+  .formSect {
+    width: 90%;
+  }
+}
+
+.page-footer {
+  padding-top: 30px;
+}

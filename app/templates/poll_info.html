@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block body %}
+  <font color=gray>
+    <h2>Poll Location</h2>
+  </font>
+
+  <font color=white>
+    {{ name }} <br>
+    {{ line1 }} <br> <br>
+  </font>
+
+  <font color=gray>
+    <h2>Hours</h2>
+  </font>
+
+  <font color=white>
+    {{ hours }}
+    <br><br>
+    <strong>*Please note that polling places are subject to change.<br>
+      Please make sure you check this information 2-4 weeks before the election. </strong>
+  </font>
+
+<!--    <h1>Address</h1>
+
+    {{ line1 }} <br>
+    {{ city }}, {{ state }} {{ zip }} <br>
+    -->
+
+
+      <a href = "{{ url_for('register') }}">
+        <button class="btn btn-secondary">
+          Register to vote in California
+        </button>
+      </a>
+
+      <br><br>
+
+      <a href = " {{ url_for('faqs') }}">
+        <button class="btn btn-secondary">
+          More voting information
+        </button>
+      </a>
+
+
+
+{% endblock %}
