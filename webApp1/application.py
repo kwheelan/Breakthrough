@@ -17,6 +17,10 @@ def index():
     """ home page """
     return render_template("index.html")
 
+@app.route("/register")
+def register():
+    return render_template("register.html")
+
 @app.route("/registration/query")
 def registration_forms():
     """ page to enter info for registation"""
