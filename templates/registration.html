@@ -7,22 +7,15 @@
 {% block body %}
 
   <p>
-    <font color="white" size = 5>
+    <font color = "white">
+      Registration information for: <br>
+      {{ name }}, living at: <br>
+      {{ address }} <br>
+    </font>
+    <font {% if text == "You are registered to vote." %} color="green" {% else %} color="red" {% endif %} size = 5>
       {{ text }}
     </font>
       <br>
-
-    <font color=white align=left>
-      <br>
-      Please note that this information may be affected by the following things:
-      <ul>
-        <li>If you have multiple family members with the same first and last name living at the same address, the registration information may be inaccurate.</li>
-        <li>If you registered to vote recently, this tool may not yet identify this recent change.</li>
-        <li>If the name and/or address you provided does not match your registration information.</li>
-      </ul>
-
-
-    </font>
   </p>
 
 
@@ -36,9 +29,26 @@
 
   {% else %}
 
+  <div class = "container" style = "padding-left: 15%; padding-right: 15%"">
+  <font color=white align=left>
+    <br>
+    Please note that this information may be affected by the following things:
+    <ul>
+      <li>If the name and/or address you provided does not match your registration information</li>
+      <li>If multiple family members with the same first and last name reside at the same address</li>
+      <li>If you registered recently and are not yet in the system</li>
+    </ul>
+  </font>
+  </div>
+
+  <a href = "{{ url_for('registration_forms') }}">
+    <button class="btn btn-secondary">
+      << I made a typo; re-enter registration information
+    </button>
+  </a>
   <a href = "{{ url_for('register') }}">
     <button class="btn btn-secondary">
-      Register to vote in California
+      Register to vote in California >>
     </button>
   </a>
 

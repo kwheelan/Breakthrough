@@ -35,6 +35,7 @@ def registration():
     #Name
     data["first_name"] = request.form.get("firstName")
     data["last_name"] = request.form.get("lastName")
+    name = "{} {}".format(data["first_name"], data["last_name"])
 
     # Get address information.
     data["street_address"] = request.form.get("address")
@@ -43,6 +44,7 @@ def registration():
     data["city"] = request.form.get("city")
     data["state"] = request.form.get("state")
     data["zip_5"] = request.form.get("zip")
+    address = "{}, {}, {} {}".format(data["street_address"], data["city"], data["state"], data["zip_5"])
 
     #dob
     data["date_of_birth_month"] = 1#request.form.get("mon")
@@ -52,7 +54,7 @@ def registration():
 #    return data
 
     text = get_registration("https://verify.vote.org/", data)
-    return render_template("registration.html", text=text)
+    return render_template("registration.html", text=text, name=name, address=address)
 
 @app.route("/contact")
 def contact():
