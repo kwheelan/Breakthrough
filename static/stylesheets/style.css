@@ -1,5 +1,5 @@
-.voteImage {
-  background-image: url("https://images.unsplash.com/photo-1540908390241-82158ab62887?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80");
+.voteImg {
+  background-image: url({{ url_for('static', filename='images/vote_img.jpg') }});
 }
 
 .faq {

@@ -4,15 +4,20 @@
   {{ super() }}
 {% endblock %}
 
-{% block header %}
-  California Voter Resource Guide
+{% block background %}
+  style = "background-image: linear-gradient(rgba(255,255,255,0.8),rgba(255,240,255,0.8)), url({{ url_for('static', filename='images/vote_img.jpg') }});
+  background-repeat: no-repeat;
+  background-size: 100%;"
 {% endblock %}
 
+{% block header %}
+  <font color = black>California Voter Resource Guide</font>
+{% endblock %}
 
 {% block body %}
 
 <p>
-  <font color = white size=4>
+  <font color = black size=4>
     Voters must register in California at least 15 days before the upcoming election. The last day to register to vote in the November 3, 2020 general election is
     <font><strong>October 19, 2020 </strong></font>
     (if mailed, must be postmarked by end of day). Anyone eligible can register online. <br><br>
@@ -25,7 +30,7 @@
 </p>
 
 
-    <section id="home">
+
         <div class="alert alert-secondary sect" role="alert">
             <a class = "sectLink" href="{{ url_for('registration_forms') }}">
               <h1 align= center>
@@ -62,6 +67,5 @@
           </a>
       </div>
 
-    </section>
 
 {% endblock %}
