@@ -1,11 +1,12 @@
 import os
 
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, session
 import requests
 
 from formTools import *
 
 app = Flask(__name__)
+app.secret_key = '1k93khlj15jK'
 
 app.static_folder = 'static'
 
@@ -44,7 +45,11 @@ def registration():
     data["city"] = request.form.get("city")
     data["state"] = request.form.get("state")
     data["zip_5"] = request.form.get("zip")
+
     address = "{}, {}, {} {}".format(data["street_address"], data["city"], data["state"], data["zip_5"])
+
+    for key in ["street_address", "apartment", "city", "state", "zip_5"]:
+        session[key] = data[key]
 
     #dob
     data["date_of_birth_month"] = 1#request.form.get("mon")
@@ -74,15 +79,21 @@ def poll_forms():
     """show polling forms"""
     return render_template("poll_form.html")
 
-@app.route("/poll_finder/info", methods = ["POST"])
+@app.route("/poll_finder/info", methods = ["POST", "GET"])
 def pollFinder():
     """Get polling info."""
 
     # Get form information.
-    line1 = request.form.get("address")
-    city = request.form.get("city")
-    state = request.form.get("state")
-    zip = request.form.get("zip")
+    if request.method == 'POST':
+        line1 = request.form.get("address")
+        city = request.form.get("city")
+        state = request.form.get("state")
+        zip = request.form.get("zip")
+    if request.method == 'GET':
+        line1 = session["street_address"]
+        city = session["city"]
+        state = session["state"]
+        zip = session["zip_5"]
 
     if city.lower()=="san francisco":
         name, address, hours = get_poll_info("https://www.sfelections.org/tools/pollsite/", line1, zip)

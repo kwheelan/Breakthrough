@@ -21,11 +21,11 @@
 
   {% if text == "You are registered to vote." %}
 
-  <a href = " {{ url_for('poll_forms') }}">
-    <button class="btn btn-secondary">
-      Find my polling place
-    </button>
-  </a>
+<a href = "{{ url_for('pollFinder') }}">
+  <button class="btn btn-secondary">
+    Find my polling place >>
+  </button>
+</a>
 
   {% else %}
 
@@ -51,10 +51,10 @@
       Register to vote in California >>
     </button>
   </a>
-
+<br>
   {% endif %}
 
-  <br><br>
+  <br>
 
   <a href = " {{ url_for('faqs') }}">
     <button class="btn btn-secondary">

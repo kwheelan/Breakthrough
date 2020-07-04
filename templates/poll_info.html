@@ -7,7 +7,10 @@
 
   <font color=white>
     {{ name }} <br>
-    {{ line1 }} <br> <br>
+    {% if line1 != '' %}
+    {{ line1 }} <br>
+    {% endif %}
+    <br>
   </font>
 
   <font color=gray>
@@ -20,13 +23,26 @@
     <strong>*Please note that polling places are subject to change.<br>
       Please make sure you check this information 2-4 weeks before the election. </strong>
   </font>
-
+<br><br>
 <!--    <h1>Address</h1>
 
     {{ line1 }} <br>
     {{ city }}, {{ state }} {{ zip }} <br>
     -->
 
+    <a href = "{{ url_for('poll_forms') }}">
+      <button class="btn btn-secondary">
+        << Enter a different address to the poll finder
+      </button>
+    </a>
+
+    <a href = " {{ url_for('faqs') }}">
+      <button class="btn btn-secondary">
+        More voting information >>
+      </button>
+    </a>
+
+    <br><br>
 
       <a href = "{{ url_for('register') }}">
         <button class="btn btn-secondary">
@@ -34,13 +50,9 @@
         </button>
       </a>
 
-      <br><br>
 
-      <a href = " {{ url_for('faqs') }}">
-        <button class="btn btn-secondary">
-          More voting information
-        </button>
-      </a>
+
+
 
 
 
