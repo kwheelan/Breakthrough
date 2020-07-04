@@ -26,7 +26,6 @@
   * *templates/* - html templates for the application
     * *layout.html* - the basic html format
     * *index.html* - the homepage
-    * *info.html* - **temp**
     * *contact.html* - html page with contact information
     * *poll_form.html* - the page with an address form to fetch polling location
     * *poll_info.html* - the page to display poll information once fetched
@@ -36,28 +35,15 @@
   * *static/*
      * *stylesheets/*
        * *style.css* - CSS styling for all pages
+     * *images/*
+       * *vote_img.jpg* - background image
+     * *JS/*
+       * *blink.js* - Javascript scripts
 
 #### TO DO:
 
-- clean up errors
-  -badly formatted address
-  -better message for poll finder if no upcoming election
-	
-- get states from a drop down menu
+ - reminders? look into text updates
 
-- post info from registered to poll finder
+ - check mobile formatting
 
-- do FAQs
-
-- reminders? look into text updates
-
-- check mobile formatting
-
-- proof against website changes (for registration checker)
-
-- add official links to check
-
-- add reasons registration may not be correct (disclaimer)
-
-- sign up on heroku to host web app
 
