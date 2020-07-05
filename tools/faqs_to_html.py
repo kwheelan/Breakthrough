@@ -12,17 +12,17 @@ current = ''
 f = open(readFile, 'r')
 
 for line in f:
-    line = line.strip()
+    line = line.strip().replace('\n','')
     if line[:2] == "Q:":
         if current:
-            answers.append(current)
-        current = line[2:]
+            questions.append(current)
+        current = line[3:]
     elif line[:2] == "A:":
-        questions.append(current)
-        current = line[2:]
+        answers.append(current)
+        current = line[3:]
     else:
         if current:
-            current += (line + "\n")
+            current += (" \n" + line)
 
 f.close()
 
