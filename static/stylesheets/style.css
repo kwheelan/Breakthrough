@@ -1,6 +1,3 @@
-.voteImg {
-  background-image: url({{ url_for('static', filename='images/vote_img.jpg') }});
-}
 
 /* navbar */
 
@@ -14,40 +11,41 @@
 }
 
 .navbar a:hover {
-  color: black;
+  color: #CCE5FF;
 }
 
-.faq {
-  background-color: #c0c0c0;
+
+/* link */
+
+.lightBlueLink .lightBlueLink:hover {
+   color: yellow;
+   /* #CCE5FF; */
 }
 
-.faqHeader {
-  background-color: #909090;
+
+/* buttom formatting */
+
+.btn-custom {
+  background-color: #CCE5FF;
+  border-color: #293A73;
+  color: #293A73;
 }
 
-.card-body {
-   color: #272c33;
+.btn-custom:hover {
+  background-color: #bcd5ef;
 }
 
-.sect {
-  margin-top: 30px;
-  background-color: #909090;
-  border-color: #909090;
-  color: black;
-  align: middle;
-  width: 80%;
+/* forms */
+
+.form-label {
+  font-size: 20px;
+  color: #373C43;
 }
 
-.sectLink, .sectLink:hover {
-  color: white;
-}
-
-.faqLink {
-  color: green;
-}
-
-.faqLink:hover {
-  color: white;
+.formOutline {
+  /* border-color: #373C43; */
+  /* #293A73; */
+  background-color: #eeeeee;
 }
 
 .formSect {
@@ -60,6 +58,50 @@
     width: 90%;
   }
 }
+
+/* FAQ page */
+
+.faq {
+  background-color: #CCE5FF;
+}
+
+.sectLink:hover {
+  color: #CCE5FF;
+}
+
+.faqHeader {
+  background-color: #293A73;
+}
+
+.faqLink {
+  color: #FA7921;
+}
+
+.faqLink:hover {
+  color: #FE9920;
+}
+
+.card-body {
+   color: #293A73;
+}
+
+.sectLink {
+  color: white;
+}
+
+
+/* home page links */
+
+.sect {
+  margin-top: 30px;
+  background-color: #909090;
+  border-color: #909090;
+  color: black;
+  align: middle;
+  width: 80%;
+}
+
+/* footer */
 
 .page-footer {
   padding-top: 30px;

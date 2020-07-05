@@ -29,9 +29,14 @@
   </head>
 
 <!-- #272c33; -->
+<!-- #353A3F -->
   <body class="d-flex flex-column min-vh-100" {% block background %}
-  style = "background-color: #353A3F"
+  style = "background-color: white"
   {% endblock %}>
+
+  <!-- optional warning banner -->
+  {% block warning %}
+  {% endblock %}
 
     <!-- Nav bar -->
     {% block navbar %}
@@ -64,14 +69,11 @@
     </nav>
     {% endblock %}
 
-    <!-- optional warning banner -->
-    {% block warning %}
-    {% endblock %}
 
     <div class="container" align=center>
       <br>
       <h1 align = center>
-        <font style = "color: black;">
+        <font style = "color: #373c43;">
           {% block header %}
           {% endblock %}
         </font></h1>
@@ -88,9 +90,11 @@
       <footer class = "mt-auto page-footer font-small">
 
         <!-- Copyright -->
-        <div class="footer-copyright text-center py-3" style = "background-color: #373c43">
-          <font color = "white">© 2020 Copyright:
-            Wheelan and Dean
+        <!-- slate hex #373c43 -->
+        <div class="footer-copyright text-center py-3" style = "background-color: #293A73">
+          <font color = "white">
+            For more information, visit
+            <a href="https://www.sos.ca.gov/elections/" target = "_blank"><font color = #CCE5FF>www.sos.ca.gov/elections</font></a>.
           </font>
         </div>
         <!-- Copyright -->

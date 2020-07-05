@@ -5,12 +5,22 @@
 {% endblock %}
 
 {% block background %}
-  style = "background-image: linear-gradient(rgba(255,255,255,0.8),rgba(255,240,255,0.8)), url({{ url_for('static', filename='images/vote_img.jpg') }});
+  style = "background-image: linear-gradient(rgba(255,255,255,0.8),rgba(255,240,255,0.8)), url({{ url_for('static', filename='images/small_spool.jpg') }});
   background-repeat: repeat;
   background-size: 100%;"
 {% endblock %}
 <!-- style = "background-color: #D8DBE2;"
  -->
+
+{% block warning %}
+<div class="alert alert-primary" role="alert" style = "margin-bottom: -10px">
+  <p padding = 20px>
+    In light of the Covid-19 pandemic, California Governor Gavin Newsom ordered that
+    <font><strong>all registered California residents will receive a mail-in ballot.</strong></font> The registration deadline for the November 3, 2020 general election is
+    <font><strong>October 19, 2020</strong></font>.
+  </p>
+</div>
+{% endblock %}
 
 {% block header %}
   California Voter Resource Guide
@@ -18,7 +28,14 @@
 
 {% block body %}
 
-<p>
+<a href="{{ url_for('registration_forms')}}" class = "form-label">
+  <button class="btn btn-custom">
+    Start by checking if you're registered >>
+  </button>
+</a>
+
+
+<!-- <p>
   <font color = black size=4>
     Voters must register in California at least 15 days before the upcoming election. The last day to register to vote in the November 3, 2020 general election is
     <font><strong>October 19, 2020 </strong></font>
@@ -67,7 +84,7 @@
               Sign Up for Voting Reminders
             </h1>
           </a>
-      </div>
+      </div> -->
 
 
 {% endblock %}
