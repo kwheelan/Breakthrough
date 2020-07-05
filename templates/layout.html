@@ -35,18 +35,18 @@
 
     <!-- Nav bar -->
     {% block navbar %}
-    <nav class="navbar navbar-expand-md sticky-top" style ="background-color: #3B86C9;">
+    <nav class="navbar navbar-expand-md sticky-top" style ="background-color: #293A73;">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <ul class="nav navbar-nav">
           <li><a class="nav-item nav-link" href="{{ url_for('index')}}"><strong>Home</strong></a></li>
-          <li><a class="nav-item nav-link" href="{{ url_for('registration_forms')}}">Am I Registered?</a></li>
-          <li><a class="nav-item nav-link" href="{{ url_for('register') }}">Register</a></li>
-          <li><a class="nav-item nav-link" href="{{ url_for('faqs') }}">FAQS</a></li>
-          <li><a class="nav-item nav-link" href= "{{ url_for('poll_forms') }}">Poll Finder</a></li>
-          <li><a class="nav-item nav-link" href="{{ url_for('remind') }}">Voting Reminders</a></li>
+          <li><a class="nav-item nav-link" href="{{ url_for('registration_forms')}}"><strong>Am I Registered?</strong></a></li>
+          <li><a class="nav-item nav-link" href="{{ url_for('register') }}"><strong>Register</strong></a></li>
+          <li><a class="nav-item nav-link" href= "{{ url_for('poll_forms') }}"><strong>Poll Finder</strong></a></li>
+          <!-- <li><a class="nav-item nav-link" href="{{ url_for('remind') }}">Voting Reminders</a></li> -->
+          <li><a class="nav-item nav-link" href="{{ url_for('faqs') }}"><strong>FAQS</strong></a></li>
         </ul>
         <ul class="navbar-nav ml-auto">
           <li class="nav-item dropdown">
@@ -71,7 +71,7 @@
     <div class="container" align=center>
       <br>
       <h1 align = center>
-        <font style = "color: #E37639;">
+        <font style = "color: black;">
           {% block header %}
           {% endblock %}
         </font></h1>

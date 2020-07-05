@@ -5,14 +5,16 @@
 /* navbar */
 
 .nav a {
-  color: orange;
+  color: #9A0017;
 }
 .navbar a {
   color: white;
+  font-size: 20px;
+  padding: 10px;
 }
 
 .navbar a:hover {
-  color: #E37639;
+  color: black;
 }
 
 .faq {
