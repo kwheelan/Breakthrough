@@ -2,6 +2,19 @@
   background-image: url({{ url_for('static', filename='images/vote_img.jpg') }});
 }
 
+/* navbar */
+
+.nav a {
+  color: orange;
+}
+.navbar a {
+  color: white;
+}
+
+.navbar a:hover {
+  color: #E37639;
+}
+
 .faq {
   background-color: #c0c0c0;
 }
