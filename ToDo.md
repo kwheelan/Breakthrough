@@ -16,6 +16,7 @@
  - [ ] texting reminders Sinch
  - [ ] Implement translations
  - [ ] Figure out what it means to deploy dynos on Heroku
+ - [ ] active tabs
 
 #### Info:
  - [ ] Early voting locations/complete information
