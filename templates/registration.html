@@ -7,10 +7,10 @@
 {% block body %}
 
   <p>
-    <font color = "white">
-      Registration information for: <br>
-      {{ name }}, living at: <br>
-      {{ address }} <br>
+    <font color = "black">
+      <br>Registration information for: <br>
+      <strong>{{ name }}</strong>, living at: <br>
+      <strong>{{ address }}</strong><br><br>
     </font>
     <font {% if text == "You are registered to vote." %} color="green" {% else %} color="red" {% endif %} size = 5>
       {{ text }}
@@ -29,21 +29,22 @@
 
   {% else %}
 
-  <div class = "container" style = "padding-left: 15%; padding-right: 15%"">
-  <font color=white align=left>
+  <div class = "container" style = "padding-left: 20%; padding-right: 20%"">
+  <font color=black>
     <br>
-    Please note that this information may be affected by the following things:
-    <ul>
+    <p align = left>Please note that this information may be affected by the following things:
+    <ul align=left>
       <li>If the name and/or address you provided does not match your registration information</li>
       <li>If multiple family members with the same first and last name reside at the same address</li>
       <li>If you registered recently and are not yet in the system</li>
     </ul>
+    </p>
   </font>
   </div>
 
   <a href = "{{ url_for('registration_forms') }}">
     <button class="btn btn-custom">
-      << I made a typo; re-enter registration information
+      << Re-enter registration information
     </button>
   </a>
   <a href = "{{ url_for('register') }}">
@@ -58,7 +59,7 @@
 
   <a href = " {{ url_for('faqs') }}">
     <button class="btn btn-custom">
-      More voting information
+      Voting FAQS
     </button>
   </a>
 

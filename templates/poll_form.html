@@ -17,10 +17,15 @@
 
 {% block body %}
 
+<p>
+  Please note that polling place information may not be available until 2-4 weeks before an election.
+</p>
+<br>
+
     <form class = "formSect" action="{{ url_for('pollFinder') }}" method="post">
 
       <p align=left>
-        <font class="form-label"> Address </font>
+        <font class="form-label"> Address: </font>
       </p>
 
       <div class="form-group">

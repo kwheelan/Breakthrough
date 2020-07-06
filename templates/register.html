@@ -7,32 +7,41 @@
 {% block body %}
 
 <p>
-  <font color=white>
-    Click the link below to register to vote. Find other voting resources below.
+  <font color=black>
+    Click the link below to register to vote online. Find other voting resources below.
   </font>
 </p>
 
 
-<div class="alert alert-secondary sect" role="alert">
-    <a class = "sectLink" target = "_blank" href="https://covr.sos.ca.gov/">
+<a target = "_blank" href="https://covr.sos.ca.gov/">
+  <button class="btn btn-big">
+    <font size = 6>
+      <p>Click here to register in the state of California</p>
+    </font>
+  </button>
+</a>
+<br><br>
+
+<!-- <div class="alert alert-secondary sect" role="alert">
+    <a class = "sectLink" target = "_blank" hsref="https://covr.sos.ca.gov/">
       <h1 align= center>
         Register to vote in the state of California
       </h1>
     </a>
 </div>
-<br><br>
+<br><br> -->
 
 
-  <a href = " {{ url_for('poll_forms') }}">
+  <a href = "{{ url_for('poll_forms') }}">
     <button class="btn btn-custom">
-      Find my polling place
+      Find my polling place >>
     </button>
   </a>
   <br><br>
 
   <a href = " {{ url_for('faqs') }}">
     <button class="btn btn-custom">
-      More voting information
+      Voting FAQS
     </button>
   </a>
 

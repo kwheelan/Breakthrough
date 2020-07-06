@@ -31,6 +31,17 @@
   color: #293A73;
 }
 
+.btn-big {
+  background-color: #FA7921;
+  border-color: #FA7921;
+  color: white;
+}
+
+.btn-big:hover {
+  background-color: #FE9920;
+  color: #eA6911;
+}
+
 .btn-custom:hover {
   background-color: #bcd5ef;
 }
