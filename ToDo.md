@@ -3,6 +3,7 @@
 #### Website Desktop
  - [ ] Change font family (suprisingly difficult using BootStrap4)
  - [ ] implement background for index.html
+ - [ ] fix button alignment
 
 #### Mobile Compatibility
  - [ ] Make hamburger menu visible
@@ -28,6 +29,7 @@
  - [ ] Design sketches for anything that still looks bad
  - [ ] Find any free stock images of voting to include
  - [ ] Background for index.html
+ - [ ] Fix register to vote page
 
 #### Prep for meeting
  - [ ] Review cost proposal
