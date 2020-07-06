@@ -36,3 +36,9 @@
  - [ ] Review cost proposal
  - [ ] Check demo to make sure nothing is broken
  - [ ] maybe make organized notes doc of what to bring up
+ 
+#### Other
+ - [ ] Are we planning to do flyers, social media, education materials?
+ - [ ] Email templates to site directors
+ - [ ] Reach out to Andy Shin for a meeting
+  
