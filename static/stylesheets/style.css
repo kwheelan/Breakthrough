@@ -123,15 +123,19 @@
 }
 
 
-/* home page links */
+/* home page */
 
-.sect {
-  margin-top: 30px;
-  background-color: #909090;
-  border-color: #909090;
-  color: black;
-  align: middle;
-  width: 80%;
+.mainText {
+  font-size: 20px;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+@media (max-width: 940px) {
+  .mainText {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
 }
 
 /* homepage icons */

@@ -15,13 +15,6 @@
  background-size: 100%;" -->
 
 {% block warning %}
-<div class="alert alert-primary" role="alert" style = "margin-bottom: -10px">
-  <p padding = 20px>
-    In light of the Covid-19 pandemic, California Governor Gavin Newsom ordered that
-    <font><strong>all registered California residents will receive a mail-in ballot.</strong></font> The registration deadline for the November 3, 2020 general election is
-    <font><strong>October 19, 2020</strong></font>.
-  </p>
-</div>
 {% endblock %}
 
 {% block home %}
@@ -33,6 +26,18 @@
 {% endblock %}
 
 {% block body %}
+<br>
+<div class = "mainText">
+  <p align = left>
+    <font color = #373c43>
+    In light of the Covid-19 pandemic, California Governor Gavin Newsom ordered that
+    <strong>all registered California residents will receive a mail-in ballot for to November 3, 2020 general election.</strong>
+    <br><br>The registration deadline for the general election is
+    <strong>October 19, 2020</strong>. For more information about important dates
+    <a href="{{ url_for('faqs')}}" class = "faqLink">see FAQS</a>.
+    </font>
+  </p>
+</div>
 
 <br>
 

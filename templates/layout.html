@@ -35,13 +35,20 @@
 
   <!-- optional warning banner -->
   {% block warning %}
+  <div class="alert alert-primary" role="alert" style = "margin-bottom: -10px">
+    <p padding = 20px>
+      In light of the Covid-19 pandemic, California Governor Gavin Newsom ordered that
+      <font><strong>all registered California residents will receive a mail-in ballot for to November 3, 2020 general election.</strong></font> The registration deadline for the general election is
+      <font><strong>October 19, 2020</strong></font>. For more information about important dates see FAQS.
+    </p>
+  </div>
   {% endblock %}
 
     <!-- Nav bar -->
     <nav class="navbar navbar-expand-md sticky-top" style ="background-color: #293A73;">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon">
-          <img src="{{ url_for('static', filename='images/menu_icon.png') }}" alt="Menu" height=45px width=55px style = "margin-top: -8px">
+          <img src="{{ url_for('static', filename='images/menu_icon.png') }}" alt="Menu" height=35px width=40px style = "margin-top: -2px; margin-left: -5px">
         </span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
