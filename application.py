@@ -16,12 +16,7 @@ API_KEY = "AIzaSyB_TMYCnCqQz_UDRc6wsu7Tw7rMUbgQ0hQ"
 @app.route("/")
 def index():
     """ home page """
-    return render_template("index.html", opt=0)
-
-@app.route("/icons")
-def index2():
-    """ home page """
-    return render_template("index.html", opt=1)
+    return render_template("index.html")
 
 @app.route("/register")
 def register():
