@@ -12,12 +12,12 @@ A: Voters must register in California at least *15 days* before the upcoming ele
  *October 19, 2020* (if mailed, must be postmarked by end of day).
  Anyone eligible can register online.
 
-Q: What happens if I miss this deadline?
+Q: What happens if I miss the registration deadline?
 A: Although not ideal, if you miss the October 19, 2020 registration deadline
- to register or update your voter registration, don’t worry!
- Eligible voters in California (see above) can complete the registration
+ to register or update your voter registration, don’t worry.
+ *Eligible voters in California (see above) can complete the registration
  process and vote at their local county elections office, polling place,
- or vote center within 14 days of the election. These ballots will be counted
+ or vote center within 14 days of the election.* These ballots will be counted
  once the state verifies the voter registration of these voters. Go
  here
  for a list of early voting locations where you can complete the
@@ -33,8 +33,10 @@ Not currently in state or federal prison or on parole for the conviction of a fe
    More information here.
 Not currently found mentally incompetent to vote by a court.
    More information here.
+   
+*Formerly incarcerated individuals who are no longer on parole, or are now “off paper,” are eligible to vote in California.
 
-Q: What do I need to bring with me on election day?
+Q: What do I need to bring with me on Election Day?
 A: In most cases, voters in California don’t need to show a form of identification to a poll worker before voting.
  However, if you are voting for the first time after registering to vote by mail and did
  not provide your driver license number, California identification number or the last four digits of
@@ -68,7 +70,7 @@ The sample ballot booklet you received from your county elections office
 Another document sent to you by a government agency
 
 Q: Can I get time off of work to vote?
-A: Yes, under California law requires employers are required to provide time for employees to vote.
+A: Yes, under California law employers are required to provide time for employees to vote.
  Specifically, every voter is entitled to 2 hours to vote at the beginning or end of their shift depending on which
  gives the employee most time to vote and takes least time off work. This time is paid up to 2 hours.
  If you plan on voting during the workday, *voters must give their employer at least 2 working days notice
