@@ -134,14 +134,26 @@
 }
 
 /* homepage icons */
+
+.icon_col1 {
+  text-align: right;
+}
+
+.icon_col2 {
+  text-align: left;
+}
+
 @media (max-width: 540px) {
-  .icon_col {
-    align: center
+  .icon_col1, .icon_col2 {
+    text-align: center;
+  }
+  .icon_col1 {
+    margin-bottom: 20px;
   }
 }
 
 .icon:hover {
-  
+  opacity: 75%;
 }
 
 
