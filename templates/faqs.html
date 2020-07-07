@@ -24,32 +24,9 @@
 
     <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
       <div class="card-body">
-        In light of the Covid-19 pandemic, California Governor Gavin Newsom ordered that all registered California residents will receive a mail-in ballot.
-        However, if voters prefer to vote in person, polling places will be available. You can find your polling place information 2-4 weeks before the election
+        In light of the Covid-19 pandemic, California Governor Gavin Newsom ordered that <strong>all registered California residents will receive a mail-in ballot.</strong>
+        However, if voters prefer to vote in person, <strong>polling places will be available.</strong> You can find your polling place information 2-4 weeks before the election
         <a href="{{ url_for('poll_forms')}}" class = "faqLink">here</a>.
-      </div>
-    </div>
-  </div>
-  <div class="card faq">
-    <div class="card-header faqHeader" id="headingFour">
-      <h5 class="mb-0">
-        <button class="btn btn-link collapsed sectLink" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-          Am I eligible to vote?
-        </button>
-      </h5>
-    </div>
-    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
-      <div class="card-body">
-        All of the following must be true to vote:
-        <ul>
-          <li>US citizen and resident of California. More information for military personnel and those living overseas
-            <a class = "faqLink" href="https://www.sos.ca.gov/elections/voter-registration/military-overseas-voters">here</a>.</li>
-          <li>18 years or older on Election Day (November 3, 2020).</li>
-          <li>Not currently in state or federal prison or on parole for the conviction of a felony.
-          More information <a class = "faqLink" href="https://www.sos.ca.gov/elections/voting-resources/voting-california/who-can-vote-california/voting-rights-californians/">here</a>.</li>
-          <li>Not currently found mentally incompetent to vote by a court.
-          More information <a class = "faqLink" href="https://www.sos.ca.gov/elections/voting-info/conservatorship/">here</a>.</li>
-        </ul>
       </div>
     </div>
   </div>
@@ -63,11 +40,10 @@
     </div>
     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
       <div class="card-body">
-        Voters must register in California at least 15 days before the upcoming election.
+        Voters must register in California at least <strong>15 days</strong> before the upcoming election.
         The last day to register to vote in the November 3, 2020 general election is
         <strong>October 19, 2020</strong> (if mailed, must be postmarked by end of day).
-        <strong>Anyone eligible can register online.</strong>
-
+        Anyone eligible to vote can register online.
       </div>
     </div>
   </div>
@@ -75,17 +51,17 @@
     <div class="card-header faqHeader" id="headingThree">
       <h5 class="mb-0">
         <button class="btn btn-link collapsed sectLink" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-          What happens if I miss this deadline?
+          What happens if I miss the registration deadline?
         </button>
       </h5>
     </div>
     <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
       <div class="card-body">
         Although not ideal, if you miss the October 19, 2020 registration deadline
-        to register or update your voter registration, don’t worry!
-        Eligible voters in California (see above) can complete the registration
+        to register or update your voter registration, don’t worry.
+        <strong>Eligible voters in California (see below) can complete the registration
         process and vote at their local county elections office, polling place,
-        or vote center within 14 days of the election. These ballots will be counted
+        or vote center within 14 days of the election.</strong> These ballots will be counted
         once the state verifies the voter registration of these voters. Go
         <a href="https://www.sos.ca.gov/elections/voter-registration/same-day-reg/" class = "faqLink">here</a>
         for a list of early voting locations where you can complete the
@@ -94,10 +70,36 @@
     </div>
   </div>
   <div class="card faq">
+    <div class="card-header faqHeader" id="headingFour">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed sectLink" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+          Am I eligible to vote?
+        </button>
+      </h5>
+    </div>
+    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+      <div class="card-body">
+        ALL of the following must be true to be eligible to vote:
+        <ul>
+          <li>US citizen and resident of California. More information for military personnel and those living overseas
+            <a class = "faqLink" href="https://www.sos.ca.gov/elections/voter-registration/military-overseas-voters">here</a>.</li>
+          <li>18 years or older on Election Day (November 3, 2020).</li>
+          <li>Not currently in state or federal prison or on parole for the conviction of a felony.
+          More information <a class = "faqLink" href="https://www.sos.ca.gov/elections/voting-resources/voting-california/who-can-vote-california/voting-rights-californians/">here</a>.</li>
+          <li>Not currently found mentally incompetent to vote by a court.
+          More information <a class = "faqLink" href="https://www.sos.ca.gov/elections/voting-info/conservatorship/">here</a>.</li>
+        </ul><br>
+
+        <strong>Formerly incarcerated individuals who are no longer on parole, or are now “off paper,” are eligible to vote in California.</strong>
+      </div>
+    </div>
+  </div>
+
+  <div class="card faq">
     <div class="card-header faqHeader" id="headingFive">
       <h5 class="mb-0">
         <button class="btn btn-link collapsed sectLink" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-          What do I need to bring with me on election day?
+          What do I need to bring with me on Election Day?
         </button>
       </h5>
     </div>
@@ -107,22 +109,22 @@
         However, if you are voting for the first time after registering to vote by mail and did
         not provide your driver license number, California identification number or the last four digits of
         your social security number on your registration form, you may be asked to show a form of
-        identification when you go to the polls. Be sure to bring identification with you to your
-        polling place or include a copy of it with your vote-by-mail ballot. <br><br>
+        identification when you go to the polls. <strong>If this applies to you, be sure to bring identification with you to your
+        polling place or include a copy of it with your vote-by-mail ballot.</strong> <br><br>
         <strong>Please bring one of the following as a form of ID:</strong>
         <ul>
           <li>
             Photo identification, such as:
             <ul>
-              <li>driver’s license or identification card from any other state</li>
-              <li>passport</li>
-              <li>employee ID card</li>
+              <li>Driver’s license or identification card from any other state</li>
+              <li>Passport</li>
+              <li>Employee ID card</li>
               <li>ID card provided by a commercial establishment</li>
-              <li>credit or debit card</li>
-              <li>student ID</li>
-              <li>health club ID</li>
-              <li>insurance plan ID</li>
-              <li>public housing ID</li>
+              <li>Credit or debit card</li>
+              <li>Student ID</li>
+              <li>Health club ID</li>
+              <li>Insurance plan ID</li>
+              <li>Public housing ID</li>
             </ul>
           </li>
           <li>
@@ -150,13 +152,11 @@
     </div>
     <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordion">
       <div class="card-body">
-        Yes, California law requires employers to provide time for employees to vote.
-        Every voter is entitled to 2 hours to vote at the beginning or end of their shift depending on which
-        gives the employee most time to vote and takes least time off work. This time is paid up to 2 hours.
-        The employee must give the employer at least 2 working days notice in advance of the election.
-        The California Elections Code also requires employers to post a notice no less than 10 days
-        before every statewide election explaining employees' right to time off to vote. The notice
-        must be posted in a conspicuous place at the work site. See more
+        Yes, under California law employers are required to provide time for employees to vote.
+         Specifically, every voter is entitled to 2 hours to vote at the beginning or end of their shift depending on which
+         gives the employee most time to vote and takes least time off work. This time is paid up to 2 hours.
+         If you plan on voting during the workday, <strong>you must give your employer at least 2 working days notice
+         in advance of the election of your intention to vote during work hours.</strong>  See more
         <a class = "faqLink" href="https://www.sos.ca.gov/administration/news-releases-and-advisories/2018-news-releases-and-advisories/california-law-allows-time-vote-election-day1/">here</a>.
       </div>
     </div>
