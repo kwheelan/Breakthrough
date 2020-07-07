@@ -1,5 +1,9 @@
 {% extends "layout.html" %}
 
+{% block polling %}
+<strong><font color=#e4572e>Poll Finder</font></strong>
+{% endblock %}
+
 {% block body %}
   <font color=black>
     <h2>Poll Location</h2>
@@ -38,7 +42,7 @@
 
     <a href = " {{ url_for('faqs') }}">
       <button class="btn btn-custom">
-        More voting information >>
+        Voting FAQS >>
       </button>
     </a>
 
