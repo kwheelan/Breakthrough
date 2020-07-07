@@ -5,6 +5,8 @@ from bs4 import BeautifulSoup
 import urllib.parse
 import re
 
+abbrs = {"AVE":"AVENUE","BOUL": "BOULEVARD","CT":"COURT","DR":"DRIVE","LN":"LANE","PL":"PLACE","PK":"PARK","RD": "ROAD","ST": "STREET","SQ": "SQUARE", "TERR": "TERRACE", "TER": "TERRACE", "WY": "WAY"}
+
 def parse_address(address):
     attrs = address.split(" ")
     data = {}
@@ -15,6 +17,8 @@ def parse_address(address):
             data["comboPrefix"] = attr.upper()
         if attr.upper() in ['no suffix', 'AVENUE', 'ALLEY', 'BOULEVARD', 'COURT', 'CIRCLE', 'DRIVE', 'HIGHWAY', 'HILL', 'LANE', 'LOOP', 'PLACE', 'PLAZA', 'PARK', 'ROAD', 'ROW', 'STREET', 'SQUARE', 'TERRACE', 'WAY', 'WALK']:
             data["comboType"] = attr.upper()
+        elif attr.upper() in abbrs.keys():
+            data["comboType"] = abbrs[attr.upper()]
         else:
             data["form_s0_street"] = attr
 

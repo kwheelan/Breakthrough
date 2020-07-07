@@ -63,10 +63,10 @@ def registration():
 
 #    return data
 
-    #hidden
-    if data["first_name"].lower() == "sarah" and data['last_name'].lower() == "dean":
-        return render_template('confirm.html')
-
+    # Hide this
+    # if data["first_name"].lower() == "sarah" and data['last_name'].lower() == "dean":
+    #     return render_template('confirm.html')
+    #
     text = get_registration("https://verify.vote.org/", data)
     return render_template("registration.html", text=text, name=name, address=address)
 
@@ -106,7 +106,7 @@ def pollFinder():
 
     if city.lower()=="san francisco":
         name, address, hours = get_poll_info("https://www.sfelections.org/tools/pollsite/", line1, zip)
-        return render_template("info.html", name=name, line1=address, hours=hours)
+        return render_template("poll_info.html", name=name, line1=address, hours=hours)
 
     else:
         address = "{} {} {} {}".format(line1, city, state, zip)

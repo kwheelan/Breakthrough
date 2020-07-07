@@ -1,11 +1,11 @@
 {% extends "layout.html" %}
 
 {% block body %}
-  <font color=gray>
+  <font color=black>
     <h2>Poll Location</h2>
   </font>
 
-  <font color=white>
+  <font class="form-label">
     {{ name }} <br>
     {% if line1 != '' %}
     {{ line1 }} <br>
@@ -13,11 +13,11 @@
     <br>
   </font>
 
-  <font color=gray>
+  <font color=black>
     <h2>Hours</h2>
   </font>
 
-  <font color=white>
+  <font class="form-label">
     {{ hours }}
     <br><br>
     <strong>*Please note that polling places are subject to change.<br>
