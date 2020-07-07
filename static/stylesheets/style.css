@@ -31,20 +31,20 @@
   color: #293A73;
 }
 
-
-.btn-big {
-  background-color: #f3a712;
-  border-color: #e4572e;
-  color: #e4572e;
+.btn-custom:hover {
+  background-color: #bcd5ef;
 }
 
 .btn-big:hover {
+  background-color: white;
   background-color: #e4572e;
   color: white;
 }
 
-.btn-custom:hover {
-  background-color: #bcd5ef;
+.btn-big {
+  background-color: #FFD8D8;
+  border-color: #e4572e;
+  color: #e4572e;
 }
 
 .btn-index {
