@@ -40,11 +40,12 @@
 }
 
 .btn-custom:hover {
-  background-color: #bcd5ef;
+  background-color: #293A73;
+  color: #CCE5FF;
+  /* background-color: #bcd5ef; */
 }
 
 .btn-big:hover {
-  background-color: white;
   background-color: #e4572e;
   color: white;
 }
