@@ -21,10 +21,9 @@
 #### Info:
  - [ ] Early voting locations/complete information
  - [ ] Clarify questions from the Google Doc
- - [ ] Edit FAQS (format/tools/CA_FAQS)
-    * I wrote a pareser for this, so keeping format Q: question \nA: answer
+ - [x] Edit FAQS (format/tools/CA_FAQS)
  - [ ] Edit text elsewhere on website
- - [ ] Put all text in a doc for translation
+ - [x] Put all text in a doc for translation
 
 #### Web Design
  - [ ] Design sketches for anything that still looks bad
