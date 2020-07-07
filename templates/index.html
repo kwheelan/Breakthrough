@@ -30,12 +30,60 @@
 
 <br>
 
-<a href="{{ url_for('registration_forms')}}" class = "form-label">
-  <button class="btn btn-custom">
-    Start by checking if you're registered >>
-  </button>
-</a>
+{% if opt==1 %}
 
+  <div class = "row">
+    <div class="col-sm icon_col" align=right>
+      <a href="{{ url_for('registration_forms')}}" class = "form-label">
+        <img src="https://elections.cdn.sos.ca.gov/images/voter-status.png">
+      </a>
+    </div>
+    <div class="col-sm icon_col" align=left>
+      <a href="{{ url_for('register')}}" class = "form-label">
+        <img src="https://elections.cdn.sos.ca.gov/images/register-vote-sml.png">
+      </a>
+    </div>
+   </div><br>
+  <div class = "row">
+    <div class="col-sm icon_col" align=right>
+      <img src="https://elections.cdn.sos.ca.gov/images/helpful-resources-sml.png">
+    </div>
+    <div class="col-sm icon_col" align=left>
+      <img src="https://elections.cdn.sos.ca.gov/images/how-to-vote-sml.png">
+    </div>
+  </div>
+
+
+
+{% else %}
+
+<p align = right>
+  <a href="{{ url_for('registration_forms')}}" class = "form-label">
+    <button class="btn btn-index">
+      <font size = 5>Check your registration status >></font>
+    </button>
+  </a>
+  <br><br>
+  <a href="{{ url_for('register')}}" class = "form-label">
+    <button class="btn btn-index">
+      <font size = 5> Register to vote online >></font>
+    </button>
+  </a>
+  <br><br>
+  <a href="{{ url_for('poll_forms')}}" class = "form-label">
+    <button class="btn btn-index">
+      <font size = 5> Find your polling place >></font>
+    </button>
+  </a>
+  <br><br>
+  <a href="{{ url_for('faqs')}}" class = "form-label">
+    <button class="btn btn-index">
+      <font size = 5> See voting FAQS >></font>
+    </button>
+  </a>
+</p>
+
+{% endif %}
 
 <!-- <p>
   <font color = black size=4>

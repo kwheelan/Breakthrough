@@ -46,6 +46,17 @@
   background-color: #bcd5ef;
 }
 
+.btn-index {
+  background-color: #FA7921;
+  border-color: white;
+  color: white;
+}
+
+.btn-index:hover {
+  color: #293A73;
+  border-color: #293A73;
+}
+
 /* forms */
 
 .form-label {
@@ -111,6 +122,14 @@
   align: middle;
   width: 80%;
 }
+
+/* homepage icons */
+@media (max-width: 540px) {
+  .icon_col {
+    align: center
+  }
+}
+
 
 /* footer */
 
