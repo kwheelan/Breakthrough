@@ -5,12 +5,14 @@
 {% endblock %}
 
 {% block background %}
-  style = "background-image: linear-gradient(rgba(255,255,255,0.8),rgba(255,240,255,0.8)), url({{ url_for('static', filename='images/small_spool.jpg') }});
-  background-repeat: repeat;
-  background-size: 100%;"
+
 {% endblock %}
 <!-- style = "background-color: #D8DBE2;"
  -->
+<!--
+ style = "background-image: linear-gradient(rgba(255,255,255,0.8),rgba(255,240,255,0.8)), url({{ url_for('static', filename='images/small_spool.jpg') }});
+ background-repeat: repeat;
+ background-size: 100%;" -->
 
 {% block warning %}
 <div class="alert alert-primary" role="alert" style = "margin-bottom: -10px">
@@ -84,57 +86,6 @@
 </p>
 
 {% endif %}
-
-<!-- <p>
-  <font color = black size=4>
-    Voters must register in California at least 15 days before the upcoming election. The last day to register to vote in the November 3, 2020 general election is
-    <font><strong>October 19, 2020 </strong></font>
-    (if mailed, must be postmarked by end of day). Anyone eligible can register online. <br><br>
-
-    In light of the Covid-19 pandemic, California Governor Gavin Newsom ordered that
-    <font><strong>all registered California residents will receive a mail-in ballot.</strong></font>
-    However, if voters prefer to vote in person, polling places will be available. You can find your polling place information 2-4 weeks before the election
-    <a href="{{ url_for('poll_forms')}}" class = "sectLink">here</a>.
-  </font>
-</p>
-
-
-
-        <div class="alert alert-secondary sect" role="alert">
-            <a class = "sectLink" href="{{ url_for('registration_forms') }}">
-              <h1 align= center>
-                Am I Registered to Vote?
-              </h1>
-            </a>
-        </div>
-        <div class="alert alert-secondary sect" role="alert">
-            <a class = "sectLink" href="{{ url_for('register') }}">
-              <h1 align= center>
-                Register Now
-              </h1>
-            </a>
-        </div>
-        <div class="alert alert-secondary sect" role="alert">
-            <a class = "sectLink" href= "{{ url_for('poll_forms') }}">
-              <h1 align= center>
-                Find My Polling Place
-              </h1>
-            </a>
-        </div>
-        <div class="alert alert-secondary sect" role="alert">
-            <a class = "sectLink" href="{{ url_for('faqs') }}">
-              <h1 align= center>
-                Frequently Asked Questions
-              </h1>
-            </a>
-        </div>
-      <div class="alert alert-secondary sect" role="alert">
-          <a class = "sectLink" href="{{ url_for('remind') }}">
-            <h1 align= center>
-              Sign Up for Voting Reminders
-            </h1>
-          </a>
-      </div> -->
 
 
 {% endblock %}
