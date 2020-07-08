@@ -1,0 +1,71 @@
+{% extends "layout.html" %}
+
+{% block registration %}
+<strong><font color=#e4572e>Am I Registered?</font></strong>
+{% endblock %}
+
+{% block header %}
+    Registration Status
+{% endblock %}
+
+{% block body %}
+
+  <p>
+    <font color = "black">
+      <br>Registration information for: <br>
+      <strong>{{ name }}</strong>, living at: <br>
+      <strong>{{ address }}</strong><br><br>
+    </font>
+    <font {% if text == "You are registered to vote." %} color="green" {% else %} color="red" {% endif %} size = 5>
+      {{ text }}
+    </font>
+      <br>
+  </p>
+
+
+  {% if text == "You are registered to vote." %}
+
+<a href = "{{ url_for('pollFinder') }}">
+  <button class="btn btn-custom">
+    Find my polling place >>
+  </button>
+</a>
+
+  {% else %}
+
+  <div class = "container" style = "padding-left: 20%; padding-right: 20%"">
+  <font color=black>
+    <br>
+    <p align = left>Please note that this information may be affected by the following things:
+    <ul align=left>
+      <li>If the name and/or address you provided does not match your registration information</li>
+      <li>If multiple family members with the same first and last name reside at the same address</li>
+      <li>If you registered recently and are not yet in the system</li>
+    </ul>
+    </p>
+  </font>
+  </div>
+
+  <a href = "{{ url_for('registration_forms') }}">
+    <button class="btn btn-custom">
+      << Re-enter registration information
+    </button>
+  </a>
+  <a href = "{{ url_for('register') }}">
+    <button class="btn btn-custom">
+      Register to vote in California >>
+    </button>
+  </a>
+<br>
+  {% endif %}
+
+  <br>
+
+  <a href = " {{ url_for('faqs') }}">
+    <button class="btn btn-custom">
+      Voting FAQS
+    </button>
+  </a>
+
+
+{% endblock %}

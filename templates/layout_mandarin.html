@@ -53,23 +53,22 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <ul class="nav navbar-nav">
-          <li><a class="nav-item nav-link" href="{{ url_for('index')}}">{% block home %}Home{% endblock %}</a></li>
-          <li><a class="nav-item nav-link" href="{{ url_for('registration_forms')}}">{% block registration %}Am I Registered?{% endblock %}</a></li>
+          <li><a class="nav-item nav-link" href="{{ url_for('CA_home_mandarin')}}">{% block home %}Home{% endblock %}</a></li>
+          <li><a class="nav-item nav-link" href="{{ url_for('registration_forms_mandarin')}}">{% block registration %}已经登记投票了吗?{% endblock %}</a></li>
           <li><a class="nav-item nav-link" href="{{ url_for('register') }}">{% block register %}Register{% endblock %}</a></li>
           <li><a class="nav-item nav-link" href= "{{ url_for('poll_forms') }}">{% block polling %}Poll Finder{% endblock %}</a></li>
-          <!-- <li><a class="nav-item nav-link" href="#">Voting Reminders</a></li> -->
           <li><a class="nav-item nav-link" href="{{ url_for('faqs') }}">{% block faqs %}FAQS{%endblock%}</a></li>
         </ul>
         <ul class="navbar-nav ml-auto">
           <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Language
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            语言
           </a>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#"><font color=black>English</font></a>
+            <a class="dropdown-item" href="#"><font color=black>中文</font></a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#"><font color=black>Español (Spanish)</font></a>
-            <a class="dropdown-item" href="{{ url_for('CA_home_mandarin')}}"><font color=black>中文 (Mandarin)</font></a>
+            <a class="dropdown-item" href="{{ url_for('index')}}"><font color=black>English (英语)</font></a>
+            <a class="dropdown-item" href="#"><font color=black>Español (西班牙语)</font></a>
           </div>
           </li>
         </ul>
