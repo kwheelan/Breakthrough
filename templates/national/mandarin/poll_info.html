@@ -1,4 +1,4 @@
-{% extends "layout.html" %}
+{% extends "layout_mandarin.html" %}
 
 {% block polling %}
 <strong><font color=#e4572e>Poll Finder</font></strong>
@@ -34,30 +34,24 @@
     {{ city }}, {{ state }} {{ zip }} <br>
     -->
 
-    <a href = "{{ url_for('poll_forms') }}">
+    <a href = "{{ url_for('poll_forms_mandarin') }}">
       <button class="btn btn-custom">
         << Enter a different address to the poll finder
       </button>
     </a>
 
-    <a href = " {{ url_for('faqs') }}">
+    <a href = " {{ url_for('faqs_mandarin') }}">
       <button class="btn btn-custom">
-        Voting FAQS >>
+        投票常见问答 >>
       </button>
     </a>
 
     <br><br>
 
-      <a href = "{{ url_for('register') }}">
+      <a href = "{{ url_for('register_mandarin') }}">
         <button class="btn btn-custom">
           Register to vote in California
         </button>
       </a>
-
-
-
-
-
-
 
 {% endblock %}

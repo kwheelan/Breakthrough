@@ -1,11 +1,11 @@
-{% extends "layout.html" %}
+{% extends "layout_mandarin.html" %}
 
 {% block registration %}
-<strong><font color=#e4572e>Am I Registered?</font></strong>
+<strong><font color=#e4572e>已经登记投票了吗？</font></strong>
 {% endblock %}
 
 {% block header %}
-    Registration Status
+    选民注册状态
 {% endblock %}
 
 {% block body %}
@@ -16,18 +16,24 @@
       <strong>{{ name }}</strong>, living at: <br>
       <strong>{{ address }}</strong><br><br>
     </font>
-    <font {% if text == "You are registered to vote." %} color="green" {% else %} color="red" {% endif %} size = 5>
-      {{ text }}
+    {% if text == "You are registered to vote." %}
+    <font color="green" size = 5>
+      你以前进行过登记或预先登记投票
     </font>
+    {% else %}
+    <font color="red" size = 5>
+      We could not confirm that you are registered to vote.
+    </font>
+    {% endif %}
       <br>
   </p>
 
 
   {% if text == "You are registered to vote." %}
 
-<a href = "{{ url_for('pollFinder') }}">
+<a href = "{{ url_for('pollFinder_mandarin') }}">
   <button class="btn btn-custom">
-    Find my polling place >>
+    找我的投票站 >>
   </button>
 </a>
 
@@ -46,12 +52,12 @@
   </font>
   </div>
 
-  <a href = "{{ url_for('registration_forms') }}">
+  <a href = "{{ url_for('registration_forms_mandarin') }}">
     <button class="btn btn-custom">
       << Re-enter registration information
     </button>
   </a>
-  <a href = "{{ url_for('register') }}">
+  <a href = "{{ url_for('register_mandarin') }}">
     <button class="btn btn-custom">
       Register to vote in California >>
     </button>
@@ -61,9 +67,9 @@
 
   <br>
 
-  <a href = " {{ url_for('faqs') }}">
+  <a href = " {{ url_for('faqs_mandarin') }}">
     <button class="btn btn-custom">
-      Voting FAQS
+      投票常见问答
     </button>
   </a>
 

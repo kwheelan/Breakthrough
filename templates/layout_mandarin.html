@@ -39,7 +39,7 @@
     <p padding = 20px>
       In light of the Covid-19 pandemic, California Governor Gavin Newsom ordered that
       <font><strong>all registered California residents will receive a mail-in ballot for the November 3, 2020 general election.</strong></font> The registration deadline for the general election is
-      <font><strong>October 19, 2020</strong></font>. For more information about important dates <a href="{{ url_for('faqs')}}" class = "faqLink">see FAQS</a>.
+      <font><strong>October 19, 2020</strong></font>. For more information about important dates <a href="{{ url_for('faqs_mandarin')}}" class = "faqLink">see FAQS</a>.
     </p>
   </div>
   {% endblock %}
@@ -55,9 +55,9 @@
         <ul class="nav navbar-nav">
           <li><a class="nav-item nav-link" href="{{ url_for('CA_home_mandarin')}}">{% block home %}Home{% endblock %}</a></li>
           <li><a class="nav-item nav-link" href="{{ url_for('registration_forms_mandarin')}}">{% block registration %}已经登记投票了吗?{% endblock %}</a></li>
-          <li><a class="nav-item nav-link" href="{{ url_for('register') }}">{% block register %}Register{% endblock %}</a></li>
-          <li><a class="nav-item nav-link" href= "{{ url_for('poll_forms') }}">{% block polling %}Poll Finder{% endblock %}</a></li>
-          <li><a class="nav-item nav-link" href="{{ url_for('faqs') }}">{% block faqs %}FAQS{%endblock%}</a></li>
+          <li><a class="nav-item nav-link" href="{{ url_for('register_mandarin') }}">{% block register %}登记{% endblock %}</a></li>
+          <li><a class="nav-item nav-link" href= "{{ url_for('poll_forms_mandarin') }}">{% block polling %}Poll Finder{% endblock %}</a></li>
+          <li><a class="nav-item nav-link" href="{{ url_for('faqs_mandarin') }}">{% block faqs %}投票常见问答{%endblock%}</a></li>
         </ul>
         <ul class="navbar-nav ml-auto">
           <li class="nav-item dropdown">
@@ -100,7 +100,7 @@
         <div class="footer-copyright text-center py-3" style = "background-color: #293A73">
           <font color = "white">
             For more information, visit
-            <a href="https://www.sos.ca.gov/elections/voting-resources/" target = "_blank"><font color = #CCE5FF>www.sos.ca.gov/elections/voting-resources</font></a>.
+            <a href="https://www.sos.ca.gov/elections/voting-resources/voting-california/chinese/" target = "_blank"><font color = #CCE5FF>www.sos.ca.gov/elections/voting-resources</font></a>.
           </font>
         </div>
         <!-- Copyright -->

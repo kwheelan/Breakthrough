@@ -1,4 +1,4 @@
-{% extends "layout.html" %}
+{% extends "layout_mandarin.html" %}
 
 {% block polling %}
 <strong><font color=#e4572e>Poll Finder</font></strong>
@@ -16,23 +16,23 @@
 </p>
 <br>
 
-    <form class = "formSect" action="{{ url_for('pollFinder') }}" method="post">
+    <form class = "formSect" action="{{ url_for('pollFinder_mandarin') }}" method="post">
 
       <p align=left>
-        <font class="form-label"> Address: </font>
+        <font class="form-label"> 地址: </font>
       </p>
 
       <div class="form-group">
-          <input class="form-control formOutline" type="text" name="address" placeholder="Line 1" required="required">
+          <input class="form-control formOutline" type="text" name="address" placeholder="街道地址" required="required">
       </div>
 
       <div class="form-group">
-          <input class="form-control formOutline" type="text" name="city" placeholder="City" required = "required">
+          <input class="form-control formOutline" type="text" name="city" placeholder="市" required = "required">
       </div>
 
       <div class="form-group">
             <select class="form-control formOutline" id="exampleFormControlSelect1" name = "state" required="required">
-            <option label="State" value=""></option>
+            <option label="州" value=""></option>
             <option value="Alabama">Alabama</option>
             <option value="Alaska">Alaska</option>
             <option value="Arizona">Arizona</option>
@@ -89,7 +89,7 @@
       </div>
 
       <div class="form-group">
-          <input class="form-control formOutline" type="number" name="zip" placeholder="Zip Code" required="required">
+          <input class="form-control formOutline" type="number" name="zip" placeholder="邮递区号" required="required">
       </div>
 
     <!--  <br>
@@ -107,7 +107,7 @@
       </div> -->
 
       <div class="form-group" align=left>
-          <button class="btn btn-custom">Find my polling place</button>
+          <button class="btn btn-custom">找我的投票站</button>
       </div>
 
     </form>
