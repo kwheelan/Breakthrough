@@ -157,7 +157,7 @@ def faqs_mandarin():
 #CA spanish
 @app.route("/sp")
 def CA_home_spanish():
-    return render_template("CA/spanish/CA_home_mandarin.html")
+    return render_template("CA/spanish/CA_home.html")
 
 @app.route("/sp/ca/register")
 def register_spanish():
