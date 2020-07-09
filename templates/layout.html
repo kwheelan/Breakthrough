@@ -22,7 +22,7 @@
     {% endblock %}
     <title>
       {% block title %}
-        CA Voting Resources
+        Breakthrough Voting Initiative
       {% endblock %}
     </title>
 
@@ -55,12 +55,13 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <ul class="nav navbar-nav">
-          <li><a class="nav-item nav-link" href="{{ url_for('index')}}">{% block home %}Home{% endblock %}</a></li>
-          <li><a class="nav-item nav-link" href="{{ url_for('registration_forms')}}">{% block registration %}Am I Registered?{% endblock %}</a></li>
-          <li><a class="nav-item nav-link" href="{{ url_for('register') }}">{% block register %}Register{% endblock %}</a></li>
-          <li><a class="nav-item nav-link" href= "{{ url_for('poll_forms') }}">{% block polling %}Poll Finder{% endblock %}</a></li>
+          {% set lang="" %}
+          <li><a class="nav-item nav-link" href="{{ url_for('CA_home'+lang)}}"><font {% if page=='CA_home' %} class ="active" {% endif %}>Home</font></a></li>
+          <li><a class="nav-item nav-link" href="{{ url_for('registration_forms'+lang)}}"><font {% if page=='registration_forms' or page=='registration'%} class ="active" {% endif %}>Am I Registered?</font></a></li>
+          <li><a class="nav-item nav-link" href="{{ url_for('register'+lang) }}"><font {% if page=='register' %} class ="active" {% endif %}>Register</font></a></li>
+          <li><a class="nav-item nav-link" href= "{{ url_for('poll_forms'+lang) }}"><font {% if page=='poll_forms' or page=='pollFinder'%} class ="active" {% endif %}>Poll Finder</font></a></li>
           <!-- <li><a class="nav-item nav-link" href="#">Voting Reminders</a></li> -->
-          <li><a class="nav-item nav-link" href="{{ url_for('faqs') }}">{% block faqs %}FAQS{%endblock%}</a></li>
+          <li><a class="nav-item nav-link" href="{{ url_for('faqs'+lang) }}"><font {% if page=='faqs'%} class ="active" {% endif %}>FAQS</font></a></li>
         </ul>
         <ul class="navbar-nav ml-auto">
           <li class="nav-item dropdown">
@@ -70,8 +71,8 @@
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="#"><font color=black>English</font></a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#"><font color=black>Español | Spanish</font></a>
-            <a class="dropdown-item" href="{{ url_for('CA_home_mandarin')}}"><font color=black>中文 | Mandarin</font></a>
+            <a class="dropdown-item" href="{{ url_for(page + '_spanish')}}"><font color=black>Español | Spanish</font></a>
+            <a class="dropdown-item" href="{{ url_for(page + '_mandarin')}}"><font color=black>中文 | Mandarin</font></a>
           </div>
           </li>
         </ul>

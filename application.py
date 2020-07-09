@@ -82,6 +82,10 @@ def pollFinderHelper():
     return location, line1, hours
 
 #National english
+@app.route("/")
+def index():
+    return render_template("index.html")
+
 @app.route("/registration/query")
 def registration_forms():
     """ page to enter info for registation"""
@@ -127,11 +131,34 @@ def pollFinder_mandarin():
     location, line1, hours = pollFinderHelper()
     return render_template("national/mandarin/poll_info.html", name=location, line1=line1, hours=hours)
 
+#National spanish
+@app.route("/sp/registration/query")
+def registration_forms_spanish():
+    """ page to enter info for registation"""
+    return render_template("national/spanish/registrationForm.html")
+
+@app.route("/sp/registration/info", methods=["POST"])
+def registration_spanish():
+    """Get polling info."""
+    text, name, address = registrationHelper()
+    return render_template("national/spanish/registration.html", text=text, name=name, address=address)
+
+@app.route("/sp/poll_finder/query")
+def poll_forms_spanish():
+    """show polling forms"""
+    return render_template("national/spanish/poll_form.html")
+
+@app.route("/sp/poll_finder/info", methods = ["POST", "GET"])
+def pollFinder_spanish():
+    """Get polling info."""
+    location, line1, hours = pollFinderHelper()
+    return render_template("national/spanish/poll_info.html", name=location, line1=line1, hours=hours)
+
 #CA english
-@app.route("/")
-def index():
-    """ home page """
-    return render_template("/CA/english/CA_home.html")
+@app.route("/ca/home")
+def CA_home():
+    """ home page California """
+    return render_template("CA/english/CA_home.html")
 
 @app.route("/ca/register")
 def register():
