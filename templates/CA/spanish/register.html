@@ -1,11 +1,11 @@
-{% extends "layout_mandarin.html" %}
+{% extends "layout.html" %}
 
 {% block register %}
-<strong><font color=#e4572e>登记</font></strong>
+<strong><font color=#e4572e>Register</font></strong>
 {% endblock %}
 
 {% block header %}
-    登记投票
+    Register to Vote
 {% endblock %}
 
 {% block body %}
@@ -17,7 +17,7 @@
 </p>
 
 
-<a target = "_blank" href="https://covr.sos.ca.gov/ZH">
+<a target = "_blank" href="https://covr.sos.ca.gov/">
   <button class="btn btn-lg btn-big">
       <font size=6><strong>Register to Vote in California</strong></font>
   </button>
@@ -36,14 +36,14 @@
 
   <a href = "{{ url_for('poll_forms') }}">
     <button class="btn btn-custom">
-      找我的投票站 >>
+      Find my polling place >>
     </button>
   </a>
   <br><br>
 
   <a href = " {{ url_for('faqs') }}">
     <button class="btn btn-custom">
-      投票常见问答
+      Voting FAQS
     </button>
   </a>
 
