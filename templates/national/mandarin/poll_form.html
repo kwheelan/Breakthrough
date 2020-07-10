@@ -14,7 +14,7 @@
 </p>
 <br>
 
-    <form class = "formSect" action="{{ url_for('pollFinder_mandarin') }}" method="post">
+    <form class = "formSect" action="{{ url_for('pollFinder_{}{}'.format(state, lang)) }}" method="post">
 
       <p align=left>
         <font class="form-label"> 地址: </font>

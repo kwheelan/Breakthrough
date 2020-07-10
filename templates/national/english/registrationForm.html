@@ -10,7 +10,7 @@
 
 <br>
 
-    <form class = "formSect" action="{{ url_for('registration') }}" method="post">
+    <form class = "formSect" action="{{ url_for('registration_{}{}'.format(state, lang)) }}" method="post">
 
       <p align=left>
         <font class= "form-label"> Name: </font>

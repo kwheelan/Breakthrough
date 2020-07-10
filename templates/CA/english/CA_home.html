@@ -1,6 +1,7 @@
 {% extends "layout.html" %}
 
-{% set page = 'CA_home' %}
+{% set page = 'home' %}
+{% set state = 'CA' %}
 
 {% block head %}
   {{ super() }}
@@ -32,7 +33,7 @@
     <strong>all registered California residents will receive a mail-in ballot for the November 3, 2020 general election.</strong>
     <br><br>The registration deadline for the general election is
     <strong>October 19, 2020</strong>. For more information about important dates
-    <a href="{{ url_for('faqs')}}" class = "faqLink">see FAQS</a>.
+    <a href="{{ url_for('faqs_{}{}'.format(state, lang))}}" class = "faqLink">see FAQS</a>.
     </font>
   </p>
 </div>
@@ -41,24 +42,24 @@
 
   <div class = "row">
     <div class="col-sm icon_col1">
-      <a href="{{ url_for('registration_forms')}}" class = "form-label">
+      <a href="{{ url_for('registration_forms_{}{}'.format(state, lang))}}" class = "form-label">
         <img class = "icon" src="{{ url_for('static', filename='images/icons/english/check_registration_icon.png') }}">
       </a>
     </div>
     <div class="col-sm icon_col2">
-      <a href="{{ url_for('register')}}" class = "form-label">
+      <a href="{{ url_for('register_{}{}'.format(state, lang))}}" class = "form-label">
         <img class = "icon" src="{{ url_for('static', filename='images/icons/english/register_to_vote.png') }}">
       </a>
     </div>
    </div><br>
   <div class = "row">
     <div class="col-sm icon_col1">
-      <a href="{{ url_for('poll_forms')}}" class = "form-label">
+      <a href="{{ url_for('poll_forms_{}{}'.format(state, lang))}}" class = "form-label">
         <img class = "icon" src="{{ url_for('static', filename='images/icons/english/polling.png') }}">
       </a>
     </div>
     <div class="col-sm icon_col2">
-      <a href="{{ url_for('faqs')}}" class = "form-label">
+      <a href="{{ url_for('faqs_{}{}'.format(state, lang))}}" class = "form-label">
         <img class = "icon" src="{{ url_for('static', filename='images/icons/english/faqs.png') }}">
       </a>
     </div>

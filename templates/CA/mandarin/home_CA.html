@@ -1,0 +1,15 @@
+{% extends "homepage_layout.html" %}
+
+{% set state = 'CA' %}
+
+{% block header %}
+  California Voter Resource Guide
+{% endblock %}
+
+{% block topText %}
+    In light of the Covid-19 pandemic, California Governor Gavin Newsom ordered that
+    <strong>all registered California residents will receive a mail-in ballot for the November 3, 2020 general election.</strong>
+    <br><br>The registration deadline for the general election is
+    <strong>October 19, 2020</strong>. For more information about important dates
+    <a href="{{ url_for('faqs_{}{}'.format(state, lang))}}" class = "faqLink">see FAQS</a>.
+{% endblock %}

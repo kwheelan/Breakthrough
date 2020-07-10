@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+  {% set lang="" %}
   <head>
     {% block head %}
     <!-- Required meta tags -->
@@ -41,7 +42,7 @@
     <p padding = 20px>
       In light of the Covid-19 pandemic, California Governor Gavin Newsom ordered that
       <font><strong>all registered California residents will receive a mail-in ballot for the November 3, 2020 general election.</strong></font> The registration deadline for the general election is
-      <font><strong>October 19, 2020</strong></font>. For more information about important dates <a href="{{ url_for('faqs')}}" class = "faqLink">see FAQS</a>.
+      <font><strong>October 19, 2020</strong></font>. For more information about important dates <a href="{{ url_for('faqs_{}{}'.format(state, lang))}}" class = "faqLink">see FAQS</a>.
     </p>
   </div>
   {% endblock %}
@@ -55,13 +56,12 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <ul class="nav navbar-nav">
-          {% set lang="" %}
-          <li><a class="nav-item nav-link" href="{{ url_for('CA_home'+lang)}}"><font {% if page=='CA_home' %} class ="active" {% endif %}>Home</font></a></li>
-          <li><a class="nav-item nav-link" href="{{ url_for('registration_forms'+lang)}}"><font {% if page=='registration_forms' or page=='registration'%} class ="active" {% endif %}>Am I Registered?</font></a></li>
-          <li><a class="nav-item nav-link" href="{{ url_for('register'+lang) }}"><font {% if page=='register' %} class ="active" {% endif %}>Register</font></a></li>
-          <li><a class="nav-item nav-link" href= "{{ url_for('poll_forms'+lang) }}"><font {% if page=='poll_forms' or page=='pollFinder'%} class ="active" {% endif %}>Poll Finder</font></a></li>
+          <li><a class="nav-item nav-link" href="{{ url_for('home_{}{}'.format(state, lang))}}"><font {% if page=='home' %} class ="active" {% endif %}>Home</font></a></li>
+          <li><a class="nav-item nav-link" href="{{ url_for('registration_forms_{}{}'.format(state,lang))}}"><font {% if page=='registration_forms' or page=='registration'%} class ="active" {% endif %}>Am I Registered?</font></a></li>
+          <li><a class="nav-item nav-link" href="{{ url_for('register_{}{}'.format(state,lang)) }}"><font {% if page=='register' %} class ="active" {% endif %}>Register</font></a></li>
+          <li><a class="nav-item nav-link" href= "{{ url_for('poll_forms_{}{}'.format(state, lang)) }}"><font {% if page=='poll_forms' or page=='pollFinder'%} class ="active" {% endif %}>Poll Finder</font></a></li>
           <!-- <li><a class="nav-item nav-link" href="#">Voting Reminders</a></li> -->
-          <li><a class="nav-item nav-link" href="{{ url_for('faqs'+lang) }}"><font {% if page=='faqs'%} class ="active" {% endif %}>FAQS</font></a></li>
+          <li><a class="nav-item nav-link" href="{{ url_for('faqs_{}{}'.format(state, lang) )}}"><font {% if page=='faqs'%} class ="active" {% endif %}>FAQS</font></a></li>
         </ul>
         <ul class="navbar-nav ml-auto">
           <li class="nav-item dropdown">
@@ -71,8 +71,12 @@
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="#"><font color=black>English</font></a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="{{ url_for(page + '_spanish')}}"><font color=black>Español | Spanish</font></a>
-            <a class="dropdown-item" href="{{ url_for(page + '_mandarin')}}"><font color=black>中文 | Mandarin</font></a>
+            {% if 'sp' in langs %}
+            <a class="dropdown-item" href="{{ url_for('{}_{}_spanish'.format(page, state))}}"><font color=black>Español | Spanish</font></a>
+            {% endif %}
+            {% if 'ch' in langs %}
+            <a class="dropdown-item" href="{{ url_for('{}_{}_mandarin'.format(page, state))}}"><font color=black>中文 | Chinese</font></a>
+            {% endif %}
           </div>
           </li>
         </ul>
