@@ -1,4 +1,4 @@
-{% extends "layout_spanish.html" %}
+{% extends "layout_mandarin.html" %}
 
 {% set page = 'home' %}
 {% set state = 'CA' %}
@@ -7,15 +7,6 @@
   {{ super() }}
 {% endblock %}
 
-{% block background %}
-
-{% endblock %}
-<!-- style = "background-color: #D8DBE2;"
- -->
-<!--
- style = "background-image: linear-gradient(rgba(255,255,255,0.8),rgba(255,240,255,0.8)), url({{ url_for('static', filename='images/small_spool.jpg') }});
- background-repeat: repeat;
- background-size: 100%;" -->
 
 {% block warning %}
 {% endblock %}
@@ -29,11 +20,11 @@
 <div class = "mainText">
   <p align = left>
     <font color = #373c43>
-    In light of the Covid-19 pandemic, California Governor Gavin Newsom ordered that
+    In light of the Covid-19 pandemic, California Governor Gavin Newsom has ordered that
     <strong>all registered California residents will receive a mail-in ballot for the November 3, 2020 general election.</strong>
     <br><br>The registration deadline for the general election is
     <strong>October 19, 2020</strong>. For more information about important dates
-    <a href="{{ url_for('faqs_{}{}'.format(state, lang))}}" class = "faqLink">see FAQS</a>.
+    <a href="{{ url_for('faqs', state=state, lang=lang)}}" class = "faqLink">see FAQS</a>.
     </font>
   </p>
 </div>
@@ -42,24 +33,24 @@
 
   <div class = "row">
     <div class="col-sm icon_col1">
-      <a href="{{ url_for('registration_forms_{}{}'.format(state, lang))}}" class = "form-label">
+      <a href="{{ url_for('registration_forms', state=state, lang=lang)}}" class = "form-label">
         <img class = "icon" src="{{ url_for('static', filename='images/icons/english/check_registration_icon.png') }}">
       </a>
     </div>
     <div class="col-sm icon_col2">
-      <a href="{{ url_for('register_{}{}'.format(state, lang))}}" class = "form-label">
+      <a href="{{ url_for('register', state=state, lang=lang)}}" class = "form-label">
         <img class = "icon" src="{{ url_for('static', filename='images/icons/english/register_to_vote.png') }}">
       </a>
     </div>
    </div><br>
   <div class = "row">
     <div class="col-sm icon_col1">
-      <a href="{{ url_for('poll_forms_{}{}'.format(state, lang))}}" class = "form-label">
+      <a href="{{ url_for('poll_forms', state=state, lang=lang)}}" class = "form-label">
         <img class = "icon" src="{{ url_for('static', filename='images/icons/english/polling.png') }}">
       </a>
     </div>
     <div class="col-sm icon_col2">
-      <a href="{{ url_for('faqs_{}{}'.format(state, lang))}}" class = "form-label">
+      <a href="{{ url_for('faqs', state=state, lang=lang)}}" class = "form-label">
         <img class = "icon" src="{{ url_for('static', filename='images/icons/english/faqs.png') }}">
       </a>
     </div>

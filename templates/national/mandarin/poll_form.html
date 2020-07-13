@@ -8,13 +8,15 @@
 
 {% block body %}
 
-<p>
+<div class="mainText">
+  <p align=left>
   <font size = 4>Please note that polling place information may not be available until 2-4 weeks before an election.
   </font>
-</p>
+  </p>
+</div>
 <br>
 
-    <form class = "formSect" action="{{ url_for('pollFinder_{}{}'.format(state, lang)) }}" method="post">
+    <form class = "formSect" action="{{ url_for('pollFinder', state=state, lang=lang) }}" method="post">
 
       <p align=left>
         <font class="form-label"> 地址: </font>

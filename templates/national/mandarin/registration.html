@@ -29,7 +29,7 @@
 
   {% if text == "You are registered to vote." %}
 
-<a href = "{{ url_for('pollFinder_mandarin') }}">
+<a href = "{{ url_for('pollFinder', state=state, lang=lang) }}">
   <button class="btn btn-custom">
     找我的投票站 >>
   </button>
@@ -50,12 +50,12 @@
   </font>
   </div>
 
-  <a href = "{{ url_for('registration_forms_mandarin') }}">
+  <a href = "{{ url_for('registration_forms', state=state, lang=lang) }}">
     <button class="btn btn-custom">
       << Re-enter registration information
     </button>
   </a>
-  <a href = "{{ url_for('register_mandarin') }}">
+  <a href = "{{ url_for('register', state=state, lang=lang) }}">
     <button class="btn btn-custom">
       Register to vote in California >>
     </button>

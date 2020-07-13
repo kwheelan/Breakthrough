@@ -32,13 +32,13 @@
     {{ city }}, {{ state }} {{ zip }} <br>
     -->
 
-    <a href = "{{ url_for('poll_forms_'+state) }}">
+    <a href = "{{ url_for('poll_forms', state=state, lang=lang }}">
       <button class="btn btn-custom">
         << Enter a different address to the poll finder
       </button>
     </a>
 
-    <a href = " {{ url_for('faqs_'+state) }}">
+    <a href = " {{ url_for('faqs', state=state, lang=lang) }}">
       <button class="btn btn-custom">
         Voting FAQS >>
       </button>
@@ -46,7 +46,7 @@
 
     <br><br>
 
-      <a href = "{{ url_for('register_'+state) }}">
+      <a href = "{{ url_for('register', state=state, lang=lang) }}">
         <button class="btn btn-custom">
           Register to vote in California
         </button>

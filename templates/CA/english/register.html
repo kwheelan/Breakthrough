@@ -34,14 +34,14 @@
 <br><br> -->
 
 
-  <a href = "{{ url_for('poll_forms_{}'.format(state)) }}">
+  <a href = "{{ url_for('poll_forms',state=state, lang=lang) }}">
     <button class="btn btn-custom">
       Find my polling place >>
     </button>
   </a>
   <br><br>
 
-  <a href = " {{ url_for('faqs_{}'.format(state)) }}">
+  <a href = " {{ url_for('faqs',state=state, lang=lang) }}">
     <button class="btn btn-custom">
       Voting FAQS
     </button>
