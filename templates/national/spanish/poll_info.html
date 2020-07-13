@@ -4,7 +4,7 @@
 
 {% block body %}
   <font color=black>
-    <h2>Poll Location</h2>
+    <h2>Ubicación de casilla</h2>
   </font>
 
   <font class="form-label">
@@ -16,14 +16,16 @@
   </font>
 
   <font color=black>
-    <h2>Hours</h2>
+    <h2>Horario</h2>
   </font>
 
   <font class="form-label">
     {{ hours }}
     <br><br>
-    <strong>*Please note that polling places are subject to change.<br>
-      Please make sure you check this information 2-4 weeks before the election. </strong>
+    <strong>*
+Por favor note que la ubicación de su casilla puede cambiar.
+<br>Verifique esta información 2-4 semanas antes de la elección.
+ </strong>
   </font>
 <br><br>
 <!--    <h1>Address</h1>
@@ -34,13 +36,13 @@
 
     <a href = "{{ url_for('poll_forms', state=state, lang=lang }}">
       <button class="btn btn-custom">
-        << Enter a different address to the poll finder
+        << Inserte otra dirección en el buscador de casillas
       </button>
     </a>
 
     <a href = " {{ url_for('faqs', state=state, lang=lang) }}">
       <button class="btn btn-custom">
-        Voting FAQS >>
+        Preguntas frecuentes acerca de votar >>
       </button>
     </a>
 
@@ -48,7 +50,7 @@
 
       <a href = "{{ url_for('register', state=state, lang=lang) }}">
         <button class="btn btn-custom">
-          Register to vote in California
+          Registrarse para votar en California
         </button>
       </a>
 

@@ -3,42 +3,46 @@
 {% set page='registration' %}
 
 {% block header %}
-    Registration Status
+    Estado de registro
 {% endblock %}
 
 {% block body %}
 
   <p>
     <font color = "black">
-      <br>Registration information for: <br>
-      <strong>{{ name }}</strong>, living at: <br>
+      <br>Información de registro para: <br>
+      <strong>{{ name }}</strong>, Viviendo en: <br>
       <strong>{{ address }}</strong><br><br>
     </font>
-    <font {% if text == "You are registered to vote." %} color="green" {% else %} color="red" {% endif %} size = 5>
-      {{ text }}
-    </font>
-      <br>
-  </p>
-
+    </p>
 
   {% if text == "You are registered to vote." %}
+  <font color= "green" size=5>
+      Usted está registrado/a para votar.
+    </font>
+      <br>
 
 <a href = "{{ url_for('pollFinder', state=state, lang=lang) }}">
   <button class="btn btn-custom">
-    Find my polling place >>
+    Encuenta mi casilla  >>
   </button>
 </a><br>
 
   {% else %}
 
+  <font color= "red" size=5>
+      No pudimos confirmar si usted está registrado/a para votar.
+    </font>
+      <br>
+
   <div class = "container" style = "padding-left: 20%; padding-right: 20%"">
   <font color=black>
     <br>
-    <p align = left>Please note that this information may be affected by the following things:
+    <p align = left>Por favor tome en consideración que esto puede ser afectado por los siguientes factores:
     <ul align=left>
-      <li>If the name and/or address you provided does not match your registration information</li>
-      <li>If multiple family members with the same first and last name reside at the same address</li>
-      <li>If you registered recently and are not yet in the system</li>
+      <li>Si el nombre y/o la dirección que usted escribió no están idénticas a las de su información de registro.</li>
+      <li>Si varios miembros de la misma familia con el mismo nombre y apellido tienen la misma dirección </li>
+      <li>Si usted se registró recientemente y no está en el sistema todavía </li>
     </ul>
     </p>
   </font>
@@ -46,12 +50,12 @@
 
   <a href = "{{ url_for('registration_forms', state=state, lang=lang) }}">
     <button class="btn btn-custom">
-      << Re-enter registration information
+      << Vuelva a llenar su información de registro
     </button>
   </a>
   <a href = "{{ url_for('register', state=state, lang=lang) }}">
     <button class="btn btn-custom">
-      Register to vote in California >>
+      Registrese para votar en California >>
     </button>
   </a>
 <br>
@@ -61,7 +65,7 @@
 
   <a href = " {{ url_for('faqs', state=state, lang=lang) }}">
     <button class="btn btn-custom">
-      Voting FAQS
+      Preguntas frecuentes acerca de votar
     </button>
   </a>
 

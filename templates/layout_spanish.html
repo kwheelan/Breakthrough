@@ -56,12 +56,12 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <ul class="nav navbar-nav">
-          <li><a class="nav-item nav-link" href="{{ url_for('home', lang=lang, state=state)}}"><font {% if page=='home' %} class ="active" {% endif %}>Home</font></a></li>
-          <li><a class="nav-item nav-link" href="{{ url_for('registration_forms', lang=lang, state=state)}}"><font {% if page=='registration_forms' or page=='registration'%} class ="active" {% endif %}>Am I Registered?</font></a></li>
-          <li><a class="nav-item nav-link" href="{{ url_for('register', state=state,lang=lang) }}"><font {% if page=='register' %} class ="active" {% endif %}>Register</font></a></li>
-          <li><a class="nav-item nav-link" href= "{{ url_for('poll_forms', state=state, lang=lang) }}"><font {% if page=='poll_forms' or page=='pollFinder'%} class ="active" {% endif %}>Poll Finder</font></a></li>
+          <li><a class="nav-item nav-link" href="{{ url_for('home', lang=lang, state=state)}}"><font {% if page=='home' %} class ="active" {% endif %}>Menu</font></a></li>
+          <li><a class="nav-item nav-link" href="{{ url_for('registration_forms', lang=lang, state=state)}}"><font {% if page=='registration_forms' or page=='registration'%} class ="active" {% endif %}>¿Estoy registrado/a?</font></a></li>
+          <li><a class="nav-item nav-link" href="{{ url_for('register', state=state,lang=lang) }}"><font {% if page=='register' %} class ="active" {% endif %}>Registrarse </font></a></li>
+          <li><a class="nav-item nav-link" href= "{{ url_for('poll_forms', state=state, lang=lang) }}"><font {% if page=='poll_forms' or page=='pollFinder'%} class ="active" {% endif %}>Buscador de casillas</font></a></li>
           <!-- <li><a class="nav-item nav-link" href="#">Voting Reminders</a></li> -->
-          <li><a class="nav-item nav-link" href="{{ url_for('faqs', state=state, lang=lang) }}"><font {% if page=='faqs'%} class ="active" {% endif %}>FAQS</font></a></li>
+          <li><a class="nav-item nav-link" href="{{ url_for('faqs', state=state, lang=lang) }}"><font {% if page=='faqs'%} class ="active" {% endif %}>Preguntas frecuentes</font></a></li>
         </ul>
         <ul class="navbar-nav ml-auto">
           <li class="nav-item dropdown">
@@ -105,8 +105,8 @@
         <!-- slate hex #373c43 -->
         <div class="footer-copyright text-center py-3" style = "background-color: #293A73">
           <font color = "white">
-            For more information, visit
-            <a href="https://www.sos.ca.gov/elections/voting-resources/" target = "_blank"><font color = #CCE5FF>www.sos.ca.gov/elections/voting-resources</font></a>.
+            Para más información, visite
+            <a href="https://www.sos.ca.gov/elections/voting-resources/voting-california/spanish/" target = "_blank"><font color = #CCE5FF>www.sos.ca.gov/elections/voting-resources</font></a>.
           </font>
         </div>
         <!-- Copyright -->

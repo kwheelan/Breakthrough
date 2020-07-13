@@ -3,7 +3,7 @@
 {% set page='registration_forms' %}
 
 {% block header %}
-    Check Your Voter Registration Status
+    Verifique si está registrado para votar
 {% endblock %}
 
 {% block body %}
@@ -13,33 +13,33 @@
     <form class = "formSect" action="{{ url_for('registration', state=state, lang=lang) }}" method="post">
 
       <p align=left>
-        <font class= "form-label"> Name: </font>
+        <font class= "form-label"> Nombre: </font>
       </p>
 
       <div class="form-group">
-          <input class="form-control formOutline" type="text" name="firstName" placeholder="First Name" required="required">
+          <input class="form-control formOutline" type="text" name="firstName" placeholder="Primer nombre" required="required">
       </div>
 
       <div class="form-group">
-          <input class="form-control formOutline" type="text" name="lastName" placeholder="Last Name" required="required">
+          <input class="form-control formOutline" type="text" name="lastName" placeholder="Apellido" required="required">
       </div>
 
       <br>
       <p align=left>
-        <font class = "form-label"> Address: </font>
+        <font class = "form-label"> Dirección: </font>
       </p>
 
       <div class="form-group">
-          <input class="form-control formOutline" type="text" name="address" placeholder="Line 1" required="required">
+          <input class="form-control formOutline" type="text" name="address" placeholder="Linea 1" required="required">
       </div>
 
       <div class="form-group">
-          <input class="form-control formOutline" type="text" name="city" placeholder="City" required="required">
+          <input class="form-control formOutline" type="text" name="city" placeholder="Ciudad" required="required">
       </div>
 
       <div class="form-group">
             <select class="form-control formOutline" id="exampleFormControlSelect1" name="state">
-            <option label="State" value=""></option>
+            <option label="Estado" value=""></option>
             <option value="Alabama">Alabama</option>
             <option value="Alaska">Alaska</option>
             <option value="Arizona">Arizona</option>
@@ -97,7 +97,7 @@
 
 
       <div class="form-group">
-          <input class="form-control formOutline" type="number" name="zip" placeholder="Zip Code" required="required">
+          <input class="form-control formOutline" type="number" name="zip" placeholder="Código postal" required="required">
       </div>
 
     <!--  <br>
@@ -115,7 +115,7 @@
       </div> -->
 
       <div class="form-group" align=left>
-          <button class="btn btn-custom">Check Registration</button>
+          <button class="btn btn-custom">Verificar registro</button>
       </div>
 
     </form>
