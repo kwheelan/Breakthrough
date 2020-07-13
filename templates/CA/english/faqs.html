@@ -190,26 +190,6 @@
     </div>
   </div>
   <div class="card faq">
-    <div class="card-header faqHeader" id="headingSeven">
-      <h5 class="mb-0">
-        <button class="btn btn-link collapsed sectLink" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-          My question was not answered. Where can I find more information?
-        </button>
-      </h5>
-    </div>
-    <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordion">
-      <div class="card-body">
-        More information about voting can be found on the State of California’s website in 10 languages!
-        <ul>
-          <li><a class = "faqLink" href="https://www.sos.ca.gov/elections/voting-resources/voting-california/">English</a></li>
-          {% for lang in ['spanish', 'chinese', 'hindi', 'japanese', 'khmer', 'korean', 'tagalog', 'thai', 'vietnamese'] %}
-          <li><a class = "faqLink" href="{{'https://www.sos.ca.gov/elections/voting-resources/voting-california/{}/'.format(lang)}}">{{ lang.title() }}</a></li>
-          {% endfor %}
-        </ul>
-      </div>
-    </div>
-  </div>
-  <div class="card faq">
     <div class="card-header faqHeader" id="headingEight">
       <h5 class="mb-0">
         <button class="btn btn-link collapsed sectLink" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
@@ -232,6 +212,26 @@
       </div>
     </div>
   </div>
+  <div class="card faq">
+    <div class="card-header faqHeader" id="headingSeven">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed sectLink" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+          My question was not answered. Where can I find more information?
+        </button>
+      </h5>
+    </div>
+    <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordion">
+      <div class="card-body">
+        More information about voting can be found on the State of California’s website in 10 languages!
+        <ul>
+          <li><a class = "faqLink" href="https://www.sos.ca.gov/elections/voting-resources/voting-california/">English</a></li>
+          {% for lang in ['spanish', 'chinese', 'hindi', 'japanese', 'khmer', 'korean', 'tagalog', 'thai', 'vietnamese'] %}
+          <li><a class = "faqLink" href="{{'https://www.sos.ca.gov/elections/voting-resources/voting-california/{}/'.format(lang)}}">{{ lang.title() }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div> 
 </div>
 
 <a class="anchor" id="vbm"></a>
