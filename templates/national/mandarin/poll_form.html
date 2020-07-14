@@ -9,10 +9,12 @@
 {% block body %}
 
 <div class="mainText">
+  {% if state.lower() == 'ca' %}
   <p align=left>
   <font size = 4>请注意投票地址可能只会在选举前的2-4周才会公布。(UPDATE TEXT)
   </font>
   </p>
+  {% endif %}
 </div>
 <br>
 

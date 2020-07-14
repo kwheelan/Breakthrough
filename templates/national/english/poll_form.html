@@ -10,15 +10,19 @@
 
 <div class = "mainText">
   <font size = 4>
+    {% if state.lower() == 'ca' %}
     <p align=left>
-Due to the COVID-19 pandemic and Governor Newsom’s order to send every registered
-voter a vote-by-mail ballot for the November 3, 2020 general election, <strong>some polling
-locations may differ this year.</strong> Check here <strong>2-4 weeks</strong> before November 3, 2020 if you
-plan on dropping off your ballot or voting in person at a polling location. Contact
-your local county elections officials
-<a class = "faqLink" href="https://www.sos.ca.gov/elections/voting-resources/county-elections-offices/">here</a>
-if you have further questions.
+      Due to the COVID-19 pandemic and Governor Newsom’s order to send every registered
+      voter a
+      <a href="{{ url_for('faqs', state=state, lang=lang) + '#vbm'}}" class = "faqLink">vote-by-mail ballot</a>
+      for the November 3, 2020 general election, <strong>some polling
+      locations may differ this year.</strong> Check here <strong>2-4 weeks</strong> before November 3, 2020 if you
+      plan to drop off your ballot or vote in person at a polling location. Contact
+      your local county elections officials
+      <a class = "faqLink" href="https://www.sos.ca.gov/elections/voting-resources/county-elections-offices/">here</a>
+      if you have further questions.
     </p>
+    {% endif %}
   </font>
 </div>
 

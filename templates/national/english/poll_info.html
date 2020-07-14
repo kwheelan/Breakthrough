@@ -25,6 +25,14 @@
     <br><br>
     <strong>*Please note that polling places are subject to change.<br>
       Please make sure you check this information 2-4 weeks before the election. </strong>
+      {% if state.lower() == "ca" %}
+      <br><br>
+        Every registered voter in California will receive a vote-by-mail ballot at the address used to register to vote.
+        All voters in California are encouraged to vote by mail in the upcoming November 3, 2020 election.
+        Click
+        <a class = "faqLink" href="{{ url_for('faqs', state=state, lang=lang) + '#vbm'}}">here</a>
+        for more information.
+      {% endif %}
   </font>
 <br><br>
 <!--    <h1>Address</h1>
