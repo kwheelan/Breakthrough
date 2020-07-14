@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% set page='register' %}
+
+{% set state='FL' %}
+
+{% block header %}
+    Register to Vote
+{% endblock %}
+
+{% block body %}
+
+<p>
+  <font class="form-label">
+    Click the link below to register online to vote in California. Find other voting resources below.
+  </font>
+</p>
+
+
+<a target = "_blank" href="https://covr.sos.ca.gov/">
+  <button class="btn btn-lg btn-big">
+      <font size=6><strong>Register to Vote in California</strong></font>
+  </button>
+</a>
+<br><br>
+
+
+  <a href = "{{ url_for('poll_forms',state=state, lang=lang) }}" style = "margin-right: 20px">
+    <button class="btn btn-custom">
+      Find my polling place >>
+    </button>
+  </a>
+
+  <a href = " {{ url_for('faqs',state=state, lang=lang) }}">
+    <button class="btn btn-custom">
+      Voting FAQs
+    </button>
+  </a>
+
+
+{% endblock %}

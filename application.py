@@ -86,7 +86,7 @@ def pollFinderHelper():
             hours = "No available hours for this location"
     return location, line1, hours
 
-states = ["CA"]
+states = ["CA", "FL"]
 stateLangDict = { "CA": ['zh', 'es'], "FL" : ['es']}
 langDict = { "zh" : 'mandarin', "es": 'spanish', 'en': 'english'}
 statePages = ['home', 'register', 'faqs']
@@ -132,14 +132,24 @@ def faqs(lang,state):
 def registration_forms(lang, state):
     return get_page(lang, state, 'registrationForm', True)
 
-@app.route("/<lang>/<state>/registration/info")
+@app.route("/<lang>/<state>/registration/info", methods = ['POST', 'GET'])
 def registration(lang, state):
-    return get_page(lang, state, 'registration', True)
+    if state.upper() not in states or lang not in langDict.keys():
+       return "PAGE NOT FOUND"
+    else:
+        loc = state.upper()
+    text, name, address = registrationHelper()
+    return render_template(f"national/{langDict[lang]}/registration.html", langs=stateLangDict[state.upper()], state=state, text=text, name=name, address=address)
 
 @app.route("/<lang>/<state>/poll_finder/query")
 def poll_forms(lang, state):
     return get_page(lang, state, 'poll_form', True)
 
-@app.route("/<lang>/<state>/poll_finder/query")
+@app.route("/<lang>/<state>/poll_finder/info", methods = ['POST', 'GET'])
 def pollFinder(lang, state):
-    return get_page(lang, state, 'poll_info', True)
+    if state.upper() not in states or lang not in langDict.keys():
+       return "PAGE NOT FOUND"
+    else:
+        loc = state.upper()
+    location, line1, hours = pollFinderHelper()
+    return render_template(f"national/{langDict[lang]}/poll_info.html", langs=stateLangDict[state.upper()], state=state, name=location, line1=line1, hours=hours)

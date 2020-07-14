@@ -20,13 +20,13 @@
   <font color= "green" size=5>
       Usted está registrado/a para votar.
     </font>
-      <br>
+      <br><br>
 
-<a href = "{{ url_for('pollFinder', state=state, lang=lang) }}">
+<a href = "{{ url_for('pollFinder', state=state, lang=lang) }}" style="padding: 15px">
   <button class="btn btn-custom">
     Encuenta mi casilla  >>
   </button>
-</a><br>
+</a>
 
   {% else %}
 
@@ -35,7 +35,7 @@
     </font>
       <br>
 
-  <div class = "container" style = "padding-left: 20%; padding-right: 20%"">
+  <div class = "container" style = "padding-left: 20%; padding-right: 20%">
   <font color=black>
     <br>
     <p align = left>Por favor tome en consideración que esto puede ser afectado por los siguientes factores:
@@ -48,22 +48,20 @@
   </font>
   </div>
 
-  <a href = "{{ url_for('registration_forms', state=state, lang=lang) }}">
+  <a href = "{{ url_for('registration_forms', state=state, lang=lang) }}" style="padding: 15px">
     <button class="btn btn-custom">
       << Vuelva a llenar su información de registro
     </button>
   </a>
-  <a href = "{{ url_for('register', state=state, lang=lang) }}">
+  <a href = "{{ url_for('register', state=state, lang=lang) }}" style="padding: 15px">
     <button class="btn btn-custom">
       Registrese para votar en California >>
     </button>
   </a>
-<br>
   {% endif %}
 
-  <br>
 
-  <a href = " {{ url_for('faqs', state=state, lang=lang) }}">
+  <a href = " {{ url_for('faqs', state=state, lang=lang) }}" style="padding: 15px">
     <button class="btn btn-custom">
       Preguntas frecuentes acerca de votar
     </button>

@@ -1,9 +1,10 @@
-{% extends "layout.html" %}
+{% extends "layout_spanish.html" %}
 
 {% set page='faqs' %}
 
+
 {% block header %}
-    Frequently Asked Questions
+    Preguntas frecuentes
 {% endblock %}
 
 {% block body %}
@@ -26,16 +27,16 @@
     <div class="card-header faqHeader" id="headingOne">
       <h4 class="mb-0">
         <button class="btn btn-link collapsed sectLink" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-            How will COVID-19 affect voting in California?
+            ¿Cómo va a afectar votar el COVID-19 en California?
         </button>
       </h4>
     </div>
 
     <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
       <div class="card-body">
-        Due to the Covid-19 pandemic, <strong>all registered California residents will receive a mail-in ballot.</strong>
-        However, if voters prefer to vote in person, <strong>polling places will be available.</strong> You can find your polling place information 2-4 weeks before the election
-        <a href="{{ url_for('poll_forms', state=state, lang=lang)}}" class = "faqLink">here</a>.
+        A raíz de la pandemia de COVID-19, el gobernador de California, Gavin Newsom, ordenó que <strong> todos los residentes de California registrados para votar van a recibir una boleta en el correo.</strong>
+        Sin embargo, si usted prefiere votar en persona, <strong>habrá casillas disponibles.</strong> Encuentre la información acerca de su casilla 2-4 semanas antes de la elección
+        <a href="{{ url_for('poll_forms', state=state, lang=lang)}}" class = "faqLink">aquí</a>.
       </div>
     </div>
   </div>
@@ -43,16 +44,16 @@
     <div class="card-header faqHeader" id="headingTwo">
       <h4 class="mb-0">
         <button class="btn btn-link collapsed sectLink" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-          When is the registration deadline for the November general election?
+          ¿Cuándo es la fecha límite para registrarse para votar en la elección general de Noviembre?
         </button>
       </h4>
     </div>
     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
       <div class="card-body">
-        Voters must register in California at least <strong>15 days</strong> before the upcoming election.
-        The last day to register to vote in the November 3, 2020 general election is
-        <strong>October 19, 2020</strong> (if mailed, must be postmarked by end of day).
-        Anyone eligible to vote can register online.
+        Para votar, es necesario registrarse mínimo <strong>15 días</strong> antes de una elección.
+        El último día para registrarse para votar en la elección general del 3 de Noviembre del 2020
+        es <strong>el 19 de Octubre del 2020.</strong> Si usted envía su registro por correo, lo debe haber mandado más tardar ese mismo día.
+        Cualquier persona elegible se puede registrar en línea.
       </div>
     </div>
   </div>
@@ -60,17 +61,16 @@
     <div class="card-header faqHeader" id="headingThree">
       <h5 class="mb-0">
         <button class="btn btn-link collapsed sectLink" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-          What happens if I miss the October 19, 2020 voter registration deadline?
+          ¿Qué pasa si no me he registrado y ya pasó la fecha límite?
         </button>
       </h5>
     </div>
     <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
       <div class="card-body">
-        If you're an eligible voter (see below) and you miss the October 19, 2020 registration deadline
-        to register or update your voter registration, you can still vote.
-        <strong>Eligible voters in California can complete the registration
-        process and vote at their local county elections office, polling place,
-        or vote center within 14 days of the election.</strong> These ballots will be counted
+        Aunque no es ideal, si está tratando de registrarse después del 19 de Octubre del 2020, todavía puede votar.
+        <strong>Las personas elegibles para votar en California (vea arriba) pueden completar su registro y votar en la
+          oficina de elecciones de su municipio, casilla o centro de votación dentro de 14 días de la elección. </strong>
+          These ballots will be counted
         once the state verifies the voter registration of these voters. Go
         <a href="https://www.sos.ca.gov/elections/voter-registration/same-day-reg/" class = "faqLink">here</a>
         for a list of early voting locations where you can complete the

@@ -1,0 +1,41 @@
+{% extends "layout_mandarin.html" %}
+
+{% set page='register' %}
+
+{% block header %}
+    登记投票
+{% endblock %}
+
+{% block body %}
+
+<p>
+  <br>
+  <font class="form-label">
+    点击以下链接进行网上投票。其他投票方式如下。
+
+  </font>
+</p>
+<br>
+
+<a target = "_blank" href="https://covr.sos.ca.gov/ZH">
+  <button class="btn btn-lg btn-big">
+      <font size=6><strong>在加州登记投票</strong></font>
+  </button>
+</a>
+<br><br><br>
+
+
+  <a href = "{{ url_for('poll_forms',state=state, lang=lang) }}" style = "padding: 15px">
+    <button class="btn btn-custom">
+      找我的投票站 >>
+    </button>
+  </a>
+
+  <a href = " {{ url_for('faqs',state=state, lang=lang) }}" style = "padding: 15px">
+    <button class="btn btn-custom">
+      投票常见问答
+    </button>
+  </a>
+
+
+{% endblock %}
