@@ -2,7 +2,9 @@ import os
 
 from flask import Flask, render_template, request, session
 import requests
+
 from formTools import *
+from datetime import date
 
 app = Flask(__name__)
 app.secret_key = '1k93khlj15jK'
@@ -107,7 +109,9 @@ def index():
 
 @app.route('/landing-page')
 def land():
-    return render_template("index.html")
+    election = date(2020, 11, 3)
+    days_to_election = max(0, (election - date.today()).days)
+    return render_template("index.html", langs = ['ch', 'sp'], days_to_election = days_to_election)
 
 #Home
 @app.route("/<lang>/<state>/home")

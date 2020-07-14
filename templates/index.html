@@ -1,4 +1,7 @@
 <!doctype html>
+
+{% set page = 'index' %}
+
 <html lang="en">
   <head>
     {% block head %}
@@ -29,27 +32,75 @@
   </head>
 
   <body>
+
+    <!-- Nav bar -->
+    <nav class="navbar navbar-expand-md sticky-top" style ="background-color: #293A73;">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon">
+          <img src="{{ url_for('static', filename='images/menu_icon.png') }}" alt="Menu" height=35px width=40px style = "margin-top: -2px; margin-left: -5px">
+        </span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <font color=white size=5 style = "margin-left: 20px"> Breakthrough Voting Initiative </font>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Language
+          </a>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#"><font color=black>English</font></a>
+            <div class="dropdown-divider"></div>
+            {% if 'sp' in langs %}
+            <a class="dropdown-item" href="{{ url_for(page, state=state, lang='sp' )}}"><font color=black>Español | Spanish</font></a>
+            {% endif %}
+            {% if 'ch' in langs %}
+            <a class="dropdown-item" href="{{ url_for(page, state=state, lang='en')}}"><font color=black>中文 | Chinese</font></a>
+            {% endif %}
+          </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+
+
     <div class = "container">
       <h1 style= "margin-top: 30px;">
-        Breakthrough Voting Initiative
+        Days until the November 3, 2020 general election:
+        <button class = "btn-index" disabled>
+          <font size = 10>
+          {{ days_to_election }}
+        </font>
+        </button>
       </h1>
+
       <br>
       <h3>
-        Please click on your state for relevant voting information
+        State Specific Voting Information
       </h3>
-      <ul>
-        <li>
-          <a href="{{ url_for('home', state="ca", lang="en")}}">
-            <font size = 5>California</font>
+      <br>
+      <p align = left >
+          <a href="{{ url_for('home', state="ca", lang="en")}}" style = "padding: 20px" >
+            <button class="btn btn-big">
+              <font size = 8 >California</font>
+            </button>
           </a>
-        </li>
-      </ul>
+          <a href="{{ url_for('home', state="ca", lang="en")}}" style = "padding: 20px">
+            <button class="btn btn-big">
+              <font size = 8 >Texas</font>
+            </button>
+          </a>
+      </p>
       <br> <br>
-      <a href="https://www.breakthroughcollaborative.org/">
+      <p align=center>
+      <a href="https://www.breakthroughcollaborative.org/" align=center>
         <button class="btn btn-custom">
-          Go to Breakthrough's homepage
+          <font size= 4>
+            Go to Breakthrough's national homepage
+          </font>
         </button>
       </a>
+      </p>
     </div>
   </body>
 

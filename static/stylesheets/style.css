@@ -63,15 +63,11 @@
   color: #e4572e;
 }
 
-.btn-index {
-  background-color: #FA7921;
-  border-color: white;
-  color: white;
-}
-
-.btn-index:hover {
-  color: #293A73;
+.btn-index, .btn-index:disabled {
+  background-color: #ffab91;
   border-color: #293A73;
+  color: #293A73;
+  padding: 15px;
 }
 
 /* forms */

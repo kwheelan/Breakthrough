@@ -29,8 +29,6 @@
 
   </head>
 
-<!-- #272c33; -->
-<!-- #353A3F -->
   <body class="d-flex flex-column min-vh-100"
   {% block background %}
   style = "background-color: white"
@@ -38,13 +36,15 @@
 
   <!-- optional warning banner -->
   {% block warning %}
+  {% if state.lower()=='ca' %}
   <div class="alert alert-primary" role="alert" style = "margin-bottom: -10px">
     <p padding = 20px>
       Due to the Covid-19 pandemic,
       <font><strong>all registered California residents will receive a mail-in ballot for the November 3, 2020 general election.</strong></font> The registration deadline for the general election is
-      <font><strong>October 19, 2020</strong></font>. For more information about important dates <a href="{{ url_for('faqs', state=state, lang=lang)}}" class = "faqLink">see FAQS</a>.
+      <font><strong>October 19, 2020</strong></font>. For more information about important dates <a href="{{ url_for('faqs', state=state, lang=lang)}}" class = "faqLink">see FAQs</a>.
     </p>
   </div>
+  {% endif %}
   {% endblock %}
 
     <!-- Nav bar -->
@@ -61,7 +61,7 @@
           <li><a class="nav-item nav-link" href="{{ url_for('register', state=state,lang=lang) }}"><font {% if page=='register' %} class ="active" {% endif %}>Register</font></a></li>
           <li><a class="nav-item nav-link" href= "{{ url_for('poll_forms', state=state, lang=lang) }}"><font {% if page=='poll_forms' or page=='pollFinder'%} class ="active" {% endif %}>Poll Finder</font></a></li>
           <!-- <li><a class="nav-item nav-link" href="#">Voting Reminders</a></li> -->
-          <li><a class="nav-item nav-link" href="{{ url_for('faqs', state=state, lang=lang) }}"><font {% if page=='faqs'%} class ="active" {% endif %}>FAQS</font></a></li>
+          <li><a class="nav-item nav-link" href="{{ url_for('faqs', state=state, lang=lang) }}"><font {% if page=='faqs'%} class ="active" {% endif %}>FAQs</font></a></li>
         </ul>
         <ul class="navbar-nav ml-auto">
           <li class="nav-item dropdown">
