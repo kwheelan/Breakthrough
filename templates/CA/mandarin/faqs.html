@@ -2,32 +2,39 @@
 
 {% set page='faqs' %}
 
-{% block warning %}
-{%endblock%}
 
 {% block header %}
-    投票常见问答
+    选民常见问答
 {% endblock %}
 
 {% block body %}
 
 <br>
+<p align = center>
+  <a href="#general">
+    <button class = "btn btn-big" style = "margin-right: 20px">General Voting Questions</button>
+  </a>
+  <a href="#vbm">
+    <button class = "btn btn-big">Vote-by-Mail Questions</button>
+  </a>
+</p>
+<br>
 
+<a class="anchor" id="general"></a>
+<h3 align=left margin-bottom=10px>General Questions About Voting</h3><br>
 <div id="accordion" align=left style = "margin-bottom: 30px">
   <div class="card faq">
     <div class="card-header faqHeader" id="headingOne">
       <h4 class="mb-0">
-        <button class="btn btn-link sectLink" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-            How will COVID-19 affect voting in California?
+        <button class="btn btn-link collapsed sectLink" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+            COVID-19会影响加利福利亚州的投票选举吗？
         </button>
       </h4>
     </div>
 
-    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
       <div class="card-body">
-        In light of the Covid-19 pandemic, California Governor Gavin Newsom ordered that <strong>all registered California residents will receive a mail-in ballot.</strong>
-        However, if voters prefer to vote in person, <strong>polling places will be available.</strong> You can find your polling place information 2-4 weeks before the election
-        <a href="{{ url_for('poll_forms', state=state, lang=lang)}}" class = "faqLink">here</a>.
+        鉴于当前疫情，加州州长Gavin Newsom已宣布所有登记在册的加州居民都将收到一封邮寄的选票。如果您更愿意现场投票，我们的投票点也对外开放。您将会在选举前2-4周收到投票点的具体地址。
       </div>
     </div>
   </div>
@@ -35,16 +42,13 @@
     <div class="card-header faqHeader" id="headingTwo">
       <h4 class="mb-0">
         <button class="btn btn-link collapsed sectLink" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-          When is the registration deadline for the November general election?
+          十一月大选的注册截止日期是多久？
         </button>
       </h4>
     </div>
     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
       <div class="card-body">
-        Voters must register in California at least <strong>15 days</strong> before the upcoming election.
-        The last day to register to vote in the November 3, 2020 general election is
-        <strong>October 19, 2020</strong> (if mailed, must be postmarked by end of day).
-        Anyone eligible to vote can register online.
+        投票者最晚需在选举日期15天前注册。2020年11月3日大选的注册截止日期是2020年10月19日（如通过邮寄投票，则邮件应在10月19日（含19日）之前寄出）。所有拥有投票权的公民都可以在网上注册。
       </div>
     </div>
   </div>
@@ -52,21 +56,19 @@
     <div class="card-header faqHeader" id="headingThree">
       <h5 class="mb-0">
         <button class="btn btn-link collapsed sectLink" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-          What happens if I miss the registration deadline?
+          如果我错过了截止日期怎么办？
         </button>
       </h5>
     </div>
     <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
       <div class="card-body">
-        Although not ideal, if you miss the October 19, 2020 registration deadline
-        to register or update your voter registration, don’t worry.
-        <strong>Eligible voters in California (see below) can complete the registration
-        process and vote at their local county elections office, polling place,
-        or vote center within 14 days of the election.</strong> These ballots will be counted
-        once the state verifies the voter registration of these voters. Go
-        <a href="https://www.sos.ca.gov/elections/voter-registration/same-day-reg/" class = "faqLink">here</a>
-        for a list of early voting locations where you can complete the
-        Same Day Voter Registration Process. Or, register at your polling place on election day.
+        如若您在截止日期之前没能顺利完成注册或更新注册信息，不用太担心。尽管这种做法不提倡。<br><br>
+        <strong>有投票权的选民（条件如上）可在选举日14天前于当地选举办公室、投票点或投票中心完成注册。</strong>
+        一旦政府核实并通过这些选民的登记信息，其投票将被记录。<br><br>
+        点击
+        <a href="https://www.sos.ca.gov/elections/voter-registration/same-day-reg/" class = "faqLink">这里</a>
+        查找可以当日完成注册的投票点。或注册在大选当日于您选中的投票点投票。
+
       </div>
     </div>
   </div>
@@ -74,24 +76,25 @@
     <div class="card-header faqHeader" id="headingFour">
       <h5 class="mb-0">
         <button class="btn btn-link collapsed sectLink" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-          Am I eligible to vote?
+          我可以投票吗？
         </button>
       </h5>
     </div>
     <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
       <div class="card-body">
-        ALL of the following must be true to be eligible to vote:
+        如果符合以下条件，则您可以登记投票：
         <ul>
-          <li>US citizen and resident of California. More information for military personnel and those living overseas
-            <a class = "faqLink" href="https://www.sos.ca.gov/elections/voter-registration/military-overseas-voters">here</a>.</li>
-          <li>18 years or older on Election Day (November 3, 2020).</li>
-          <li>Not currently in state or federal prison or on parole for the conviction of a felony.
-          More information <a class = "faqLink" href="https://www.sos.ca.gov/elections/voting-resources/voting-california/who-can-vote-california/voting-rights-californians/">here</a>.</li>
-          <li>Not currently found mentally incompetent to vote by a court.
-          More information <a class = "faqLink" href="https://www.sos.ca.gov/elections/voting-info/conservatorship/">here</a>.</li>
+          <li>美國公民和加州剧民。更多信息请点击
+            <a class = "faqLink" href="https://www.sos.ca.gov/elections/voter-registration/military-overseas-voters">此处
+</a>。</li>
+          <li>于选举日（11月3号）当天或之前至少年满18岁以上</li>
+          <li>目前未因重罪被判入狱或假释。更多信息请点击
+          <a class = "faqLink" href="https://www.sos.ca.gov/elections/voting-resources/voting-california/who-can-vote-california/voting-rights-californians/">此处</a>。</li>
+          <li>目前没有被法庭认定为精神上无行为能力投票。更多信息请点击
+          <a class = "faqLink" href="https://www.sos.ca.gov/elections/voting-info/conservatorship/">此处</a>.</li>
         </ul><br>
 
-        <strong>Formerly incarcerated individuals who are no longer on parole, or are now “off paper,” are eligible to vote in California.</strong>
+        <strong>以前被监禁的人如果不再假释，或是刑满释放，就有资格在加州投票</strong>
       </div>
     </div>
   </div>
@@ -100,42 +103,39 @@
     <div class="card-header faqHeader" id="headingFive">
       <h5 class="mb-0">
         <button class="btn btn-link collapsed sectLink" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-          What do I need to bring with me on Election Day?
+          我在选举当日应当携带什么材料？
         </button>
       </h5>
     </div>
     <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
       <div class="card-body">
-        In most cases, voters in California don’t need to show a form of identification to a poll worker before voting.
-        However, if you are voting for the first time after registering to vote by mail and did
-        not provide your driver license number, California identification number or the last four digits of
-        your social security number on your registration form, you may be asked to show a form of
-        identification when you go to the polls. <strong>If this applies to you, bring identification with you to your
-        polling place or include a copy of it with your vote-by-mail ballot.</strong> <br><br>
-        <strong>Please bring one of the following as a form of ID:</strong>
+        一般情况下，选民不需要向投票站工作人员出示身份证明即可投票。
+        但是，如果您是在通过邮件登记投票后首次投票，并且没有在登记表上提供您的驾驶执照号码、加利福尼亚州身份证号码或您的社会保险号码的最后四位数字，您在投票时可能会被要求出示身份证明表。
+        <strong>请确保带上您的身份证明到你的投票地点，或者在你的邮寄投票中附上它的副本。</strong> <br><br>
+        <strong>请携带下列证件之一作为身份证明：</strong>
         <ul>
           <li>
-            Photo identification, such as:
+            通过以下证件照片识别，例如
             <ul>
-              <li>Driver’s license or identification card from any other state</li>
-              <li>Passport</li>
-              <li>Employee ID card</li>
-              <li>ID card provided by a commercial establishment</li>
-              <li>Credit or debit card</li>
-              <li>Student ID</li>
-              <li>Health club ID</li>
-              <li>Insurance plan ID</li>
-              <li>Public housing ID</li>
+              <li>其他州的驾照或身份证</li>
+              <li>护照</li>
+              <li>工作证</li>
+              <li>商业机构提供的身份证</li>
+              <li>信用卡或借记卡</li>
+              <li>学生卡</li>
+              <li>医疗卡</li>
+              <li>保险卡</li>
+              <li>公积金卡</li>
             </ul>
           </li>
           <li>
-            OR copy of one of the following documents:
+            或以下任一材料的复印件
             <ul>
-              <li>Utility bill</li>
-              <li>Recent bank statement</li>
-              <li>Paycheck or government document including a check that shows the voter’s name and address</li>
-              <li>The sample ballot booklet you received from your county elections office</li>
-              <li>Another document sent to you by a government agency</li>
+              <li>水电费账单</li>
+              <li>近期银行流水</li>
+              <li>工资单或含有选民姓名和地址的发票</li>
+              <li>你从当地选举办公室收到的选票样本</li>
+              <li>其他由政府部门发放的文件</li>
             </ul>
           </li>
         </ul>
@@ -147,18 +147,57 @@
     <div class="card-header faqHeader" id="headingSix">
       <h5 class="mb-0">
         <button class="btn btn-link collapsed sectLink" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-          Can I get time off of work to vote?
+          我可以请假投票吗？
         </button>
       </h5>
     </div>
     <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordion">
       <div class="card-body">
-        Yes, under California law employers are required to provide time for employees to vote.
-         Specifically, every voter is entitled to 2 hours to vote at the beginning or end of their shift depending on which
-         gives the employee most time to vote and takes least time off work. This time is paid up to 2 hours.
-         If you plan on voting during the workday, <strong>you must give your employer at least 2 working days notice
-         in advance of the election of your intention to vote during work hours.</strong>  See more
-        <a class = "faqLink" href="https://www.sos.ca.gov/administration/news-releases-and-advisories/2018-news-releases-and-advisories/california-law-allows-time-vote-election-day1/">here</a>.
+        是的，加利福利亚州法律要求雇主在工作日为员工合理安排投票时间。
+        具体而言，每位投票人在轮班开始或结束时都有权有2小时的投票时间，这取决于给员工最多的投票时间和最少的休假时间。这段时间最多可支付2小时。
+         如果你打算在工作日投票，投票人必须在选举前至少 <strong>2个工作日通知雇主他们打算在工作时间投票。</strong> 点击
+        <a class = "faqLink" href="https://www.sos.ca.gov/administration/news-releases-and-advisories/2018-news-releases-and-advisories/california-law-allows-time-vote-election-day1/">这里</a>
+        投票，投票人必须在选举前至少2个工作日通知雇主他们打算在工作时间投票。点击这里查看更多信息。
+      </div>
+    </div>
+  </div>
+  <div class="card faq">
+    <div class="card-header faqHeader" id="heading0">
+      <h4 class="mb-0">
+        <button class="btn btn-link collapsed sectLink" data-toggle="collapse" data-target="#collapse0" aria-expanded="false" aria-controls="collapse0">
+          Can I vote early in California?
+        </button>
+      </h4>
+    </div>
+    <div id="collapse0" class="collapse" aria-labelledby="heading0" data-parent="#accordion">
+      <div class="card-body">
+        In previous elections, eligible voters in some counties could vote early at select polling locations in the days leading up to Election Day.
+        However, given that every registered California voter will receive a mail-in ballot for the November 3, 2020
+        general election, <strong>voters are encouraged to vote at home and return their ballot either by mail or at a polling place.</strong>
+        See county-specific COVID-19 early voting policies
+        <a class ="faqLink" href="https://www.sos.ca.gov/elections/voting-resources/county-elections-offices/">here</a>.
+      </div>
+    </div>
+  </div>
+  <div class="card faq">
+    <div class="card-header faqHeader" id="headingEight">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed sectLink" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+           If I will not be 18 years old by Election Day, can I pre-register to vote?
+        </button>
+      </h5>
+    </div>
+    <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordion">
+      <div class="card-body">
+        Yes! If you are currently 16 or 17 years old and the following are true, you are eligible to pre-register to vote. <br>
+        <ul>
+          <li>US citizen and resident of California.</li>
+          <li>Not currently in state or federal prison or on parole for the conviction of a felony.
+          More information <a class = "faqLink" href="https://www.sos.ca.gov/elections/voting-resources/voting-california/who-can-vote-california/voting-rights-californians/">here</a>.</li>
+          <li>Not currently found mentally incompetent to vote by a court.
+          More information <a class = "faqLink" href="https://www.sos.ca.gov/elections/voting-info/conservatorship/">here</a>.</li>
+        </ul><br>
+        <a href="https://registertovote.ca.gov/" class="faqLink">Pre-register to vote online in California</a>.
       </div>
     </div>
   </div>
@@ -166,28 +205,227 @@
     <div class="card-header faqHeader" id="headingSeven">
       <h5 class="mb-0">
         <button class="btn btn-link collapsed sectLink" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-          My question was not answered. Where can I find more information?
+          我的问题没有被解答。我在哪里可以找到更多信息？
         </button>
       </h5>
     </div>
     <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordion">
       <div class="card-body">
-        More information about voting can be found on the State of California’s website in 10 languages!
-        <ul>
-          <li><a class = "faqLink" href="https://www.sos.ca.gov/elections/voting-resources/voting-california/chinese/">中文</a></li>
-          <li><a class = "faqLink" href="https://www.sos.ca.gov/elections/voting-resources/voting-california/">英语</a></li>
-          <li><a class = "faqLink" href="https://www.sos.ca.gov/elections/voting-resources/voting-california/spanish/">西班牙语</a></li>
-          <li><a class = "faqLink" href="https://www.sos.ca.gov/elections/voting-resources/voting-california/hindi/">印地语</a></li>
-          <li><a class = "faqLink" href="https://www.sos.ca.gov/elections/voting-resources/voting-california/japanese/">日语</a></li>
-          <li><a class = "faqLink" href="https://www.sos.ca.gov/elections/voting-resources/voting-california/khmer/">高棉</a></li>
-          <li><a class = "faqLink" href="https://www.sos.ca.gov/elections/voting-resources/voting-california/korean/">韩语</a></li>
-          <li><a class = "faqLink" href="https://www.sos.ca.gov/elections/voting-resources/voting-california/tagalog/">菲律宾语</a></li>
-          <li><a class = "faqLink" href="https://www.sos.ca.gov/elections/voting-resources/voting-california/thai/">泰语</a></li>
-          <li><a class = "faqLink" href="https://www.sos.ca.gov/elections/voting-resources/voting-california/vietnamese/">越南语</a></li>
+        有关投票的信息可以在加利福尼亚州的网站上找到，有10种语言可选择。
+        <ul> FIX LINKS
+          {% for lang in ['中文', '英语', '西班牙语', '印地语', '日语', '高棉语', '韩语', '菲律宾语', '泰语', '越南语'] %}
+          <li><a class = "faqLink" href="{{'https://www.sos.ca.gov/elections/voting-resources/voting-california/{}/'.format(lang)}}">{{ lang.title() }}</a></li>
+          {% endfor %}
         </ul>
       </div>
     </div>
   </div>
 </div>
+
+<a class="anchor" id="vbm"></a>
+<h3 align=left id='vbm'>Questions About Vote-by-Mail</h3><br>
+<div align=left id='accordion2' style = "margin-bottom: 30px">
+  <div class="card faq">
+    <div class="card-header faqHeader" id="headinga">
+      <h4 class="mb-0">
+        <button class="btn btn-link collapsed sectLink" data-toggle="collapse" data-target="#collapsea" aria-expanded="false" aria-controls="collapsea">
+            How will COVID-19 affect vote-by-mail in California?
+        </button>
+      </h4>
+    </div>
+
+    <div id="collapsea" class="collapse" aria-labelledby="headinga" data-parent="#accordion2">
+      <div class="card-body">
+        This election cycle, vote-by-mail in California is easy and encouraged.
+        Due to the Covid-19 pandemic, <strong>all registered California residents will receive a mail-in ballot.</strong>
+        However, if voters prefer to vote in person, <strong>some polling places will be available.</strong>
+      </div>
+    </div>
+  </div>
+	<div class="card faq">
+		<div class="card-header faqHeader" id="heading1">
+			<h4 class="mb-0">
+				<button class="btn btn-link collapsed sectLink" data-toggle="collapse" data-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+					Do I need to apply to vote by mail?
+				</button>
+			</h4>
+		</div>
+		<div id="collapse1" class="collapse" aria-labelledby="heading1" data-parent="#accordion2">
+			<div class="card-body">
+				In the upcoming November 3, 2020 general election, <strong>voters DO NOT need to apply to vote-by mail.
+          All registered voters will receive a vote-by-mail ballot in light of the COVID-19 pandemic.</strong>
+			</div>
+		</div>
+	</div>
+  <div class="card faq">
+    <div class="card-header faqHeader" id="heading0">
+      <h4 class="mb-0">
+        <button class="btn btn-link collapsed sectLink" data-toggle="collapse" data-target="#collapse01" aria-expanded="false" aria-controls="collapse01">
+          How do I vote by mail?
+        </button>
+      </h4>
+    </div>
+    <div id="collapse01" class="collapse" aria-labelledby="heading01" data-parent="#accordion2">
+      <div class="card-body">
+        Voting by mail is simple:
+        <ol>
+          <li>Fill out your ballot.
+          <ul>
+            <li>Use a black ballpoint pen. Do not use felt-tip pens.</li>
+            <li>Fully blacken desired ovals.</li>
+            <li>Do not sign or initial on the ballot.</li>
+          </ul></li>
+          <li>Sign the return envelope (in the indicated box).
+          <ul>
+            <li>Place completed ballot in the return envelope provided.</li>
+            <li>Write the return address on the return envelope.</li>
+            <li>Make sure to complete all information on the outside of the return envelope.</li>
+          </ul></li>
+          <li>Return your ballot in time! You have a few options for returning your ballot. <strong>If you are not sure that your vote-by-mail ballot will arrive in time if mailed, bring your ballot to any polling location
+            in the state between 7:00 am and 8:00 pm on Election Day (November 3, 2020).</strong>
+          <ol>
+            <li>Mail
+            <ul>
+            <li>The return envelope with your ballot must be postmarked on or before
+              Election Day (November 3, 2020) and received by your county elections office no later than 17 days after Election Day (November 20, 2020).
+              </li>
+            <li>You do not need to buy a stamp; postage is prepaid.</li>
+            </ul></li>
+            <li> Return via drop-off
+              <ul>
+                <li>Vote-by-mail ballots can be dropped off at any polling location in the state or at a
+                  ballot drop-off location in your county anytime from 7:00 am to 8:00 pm on Election Day
+                  (November 3, 2020). Find information for county-specific ballot drop-off locations
+                  <a class = "faqLink" href="https://www.sos.ca.gov/elections/voting-resources/county-elections-offices/">here</a>.
+                </li>
+              </ul>
+              <li> Authorize someone to return your ballot on your behalf
+                <ul><li>Anyone may return your ballot for you as long as they do not get paid to do so. In order for your ballot to be counted, make sure to fill
+                  out the authorization section found on the outside of your ballot envelope.</li></ul>
+              </li>
+          </ol></li>
+        </ol>
+        More information about voting by mail in California can be found
+        <a class = "faqLink" href="https://www.sos.ca.gov/elections/voter-registration/vote-mail/vbm-nov2020-general-election/">here</a>.
+      </div>
+    </div>
+  </div>
+	<div class="card faq">
+		<div class="card-header faqHeader" id="heading2">
+			<h4 class="mb-0">
+				<button class="btn btn-link collapsed sectLink" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+					How do I check the status of my vote-by-mail ballot?
+				</button>
+			</h4>
+		</div>
+		<div id="collapse2" class="collapse" aria-labelledby="heading2" data-parent="#accordion2">
+			<div class="card-body">
+				You can check the status of your vote-by-mail ballot
+        <a class = "faqLink" href="https://voterstatus.sos.ca.gov/">here</a>. <br><br>
+The following counties are now also offering a service called “Where’s My Ballot?”: <br>
+Amador, El Dorado, Fresno, Glenn, Kern, Los Angeles, Marin, Mariposa, Merced, Monterey, Orange, Placer,
+Riverside, Sacramento, San Benito, San Joaquin, San Luis Obispo, Santa Clara, Shasta, Sutter, Tehama, Tuolumne, Ventura, Yolo, Yuba.
+<br><br>
+If you live in one of these counties, you can sign up
+<a class = "faqLink" href="https://california.ballottrax.net/voter/">here</a>
+to receive automatic email, SMS, or voice call notifications and updates about your ballot.
+			</div>
+		</div>
+	</div>
+	<div class="card faq">
+		<div class="card-header faqHeader" id="heading3">
+			<h4 class="mb-0">
+				<button class="btn btn-link collapsed sectLink" data-toggle="collapse" data-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+					What happens if I do not receive, make a mistake, or lose my vote-by-mail ballot?
+				</button>
+			</h4>
+		</div>
+		<div id="collapse3" class="collapse" aria-labelledby="heading3" data-parent="#accordion2">
+			<div class="card-body">
+				Voters in California can apply for a second ballot if needed.
+        If you never received your vote-by-mail ballot or if you lost, damaged, or made a mistake on your original ballot,
+        contact your
+        <a class = "faqLink" href="https://www.sos.ca.gov/elections/voting-resources/county-elections-offices/">county elections offical</a>
+        to be sent a second vote-by-mail ballot.
+        <br><br>
+        If you experience other complications with voting by mail not covered here,
+        contact your county election official or visit
+        <a href="https://www.sos.ca.gov/elections/voter-registration/vote-mail/vbm-nov2020-general-election/#lost" class = "faqLink">here</a>
+        for more statewide vote-by-mail information.
+			</div>
+		</div>
+	</div>
+	<div class="card faq">
+		<div class="card-header faqHeader" id="heading4">
+			<h4 class="mb-0">
+				<button class="btn btn-link collapsed sectLink" data-toggle="collapse" data-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+					What if I want to vote by mail, but my mailing address has changed since I registered to vote?
+				</button>
+			</h4>
+		</div>
+		<div id="collapse4" class="collapse" aria-labelledby="heading4" data-parent="#accordion2">
+			<div class="card-body">
+				If your mailing address has changed for this election only and differs from the address you registered with, you can complete
+        <a href="https://elections.cdn.sos.ca.gov/vote-by-mail/pdf/vote-by-mail-application.pdf" class = "faqLink">this application</a>
+        to receive your ballot at the desired address.
+        <br><br>
+        Applications can also be found in 9 other languages:
+        <ul>
+          {% for lang in ['西班牙语', '中文', '印地语', '日语', '高棉语', '韩语', '菲律宾语', '泰语', '越南语'] %}
+          <li><a class = "faqLink" href="{{'https://elections.cdn.sos.ca.gov/vote-by-mail/pdf/vbm-app-{}.pdf'.format(lang)}}">{{ lang.title() }}</a></li>
+          {% endfor %}
+        </ul>
+        Mail this application to your
+        <a class = "faqLink" href="https://www.sos.ca.gov/elections/voting-resources/county-elections-offices/">county elections office</a>
+        so that it's received by <strong>October 27, 2020</strong>.
+        <br><br>
+        You can also contact your
+        <a class = "faqLink" href="https://www.sos.ca.gov/elections/voting-resources/county-elections-offices/">county elections official</a>
+        to check if your county allows you to apply by telephone.
+  	    <br><br>
+        If you need to change your mailing address for your vote-by-mail ballot within 7 days of Election Day (on or before October 27, 2020),
+        you will need to apply in person at your
+        <a class = "faqLink" href="https://www.sos.ca.gov/elections/voting-resources/county-elections-offices/">county elections office</a>
+        to request a vote-by-mail ballot for the upcoming general election.
+			</div>
+		</div>
+	</div>
+  <div class="card faq">
+		<div class="card-header faqHeader" id="heading5">
+			<h4 class="mb-0">
+				<button class="btn btn-link collapsed sectLink" data-toggle="collapse" data-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+					I am a registered voter. Can I still vote in person even though I will automatically be sent a vote-by-mail ballot?
+				</button>
+			</h4>
+		</div>
+		<div id="collapse5" class="collapse" aria-labelledby="heading5" data-parent="#accordion2">
+			<div class="card-body">
+        Although California voters are encouraged to vote by mail in the upcoming November 3, 2020 general election,
+        <strong>registered voters also have the option to vote in person at a polling location from 7:00 am to 8:00 pm on Election Day.
+          If you are in line at 8:00 pm on Election Day you are eligible to vote. </strong>
+          <br><br>
+          Contact
+        <a href="https://www.sos.ca.gov/elections/voting-resources/county-elections-offices/" class="faqLink">your county elections officials</a>
+        with more questions.
+			</div>
+		</div>
+	</div>
+  <div class="card faq">
+    <div class="card-header faqHeader" id="heading6">
+      <h4 class="mb-0">
+        <button class="btn btn-link collapsed sectLink" data-toggle="collapse" data-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
+          My question about vote-by-mail in California wasn't answered. Where can I find more information?
+        </button>
+      </h4>
+    </div>
+    <div id="collapse6" class="collapse" aria-labelledby="heading6" data-parent="#accordion2">
+      <div class="card-body">
+        More information about voting by mail in California can be found
+        <a class = "faqLink" href="https://www.sos.ca.gov/elections/voter-registration/vote-mail/vbm-nov2020-general-election/">here</a>.
+      </div>
+    </div>
+  </div>
+</div>
+
 
 {% endblock %}

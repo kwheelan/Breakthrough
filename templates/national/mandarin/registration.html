@@ -10,8 +10,8 @@
 
   <p>
     <font color = "black">
-      <br>Registration information for: <br>
-      <strong>{{ name }}</strong>, living at: <br>
+      <br>注册信息 <br>
+      <strong>{{ name }}</strong> 居住地 <br>
       <strong>{{ address }}</strong><br><br>
     </font>
     {% if text == "You are registered to vote." %}
@@ -20,7 +20,7 @@
     </font>
     {% else %}
     <font color="red" size = 5>
-      We could not confirm that you are registered to vote.
+      我们没有您的投票登记记录
     </font>
     {% endif %}
       <br>
@@ -40,11 +40,11 @@
   <div class = "container" style = "padding-left: 20%; padding-right: 20%"">
   <font color=black>
     <br>
-    <p align = left>Please note that this information may be affected by the following things:
+    <p align = left>这一结果可能是以下原因导致的:
     <ul align=left>
-      <li>If the name and/or address you provided does not match your registration information</li>
-      <li>If multiple family members with the same first and last name reside at the same address</li>
-      <li>If you registered recently and are not yet in the system</li>
+      <li>所填写的名字及地址与注册信息不符</li>
+      <li>同一居住地址下有同姓名的家庭成员登记</li>
+      <li>如果您是近期注册的，但是没有被录入到我们的数据库</li>
     </ul>
     </p>
   </font>
@@ -52,12 +52,12 @@
 
   <a href = "{{ url_for('registration_forms', state=state, lang=lang) }}">
     <button class="btn btn-custom">
-      << Re-enter registration information
+      << 重新登记注册信息
     </button>
   </a>
   <a href = "{{ url_for('register', state=state, lang=lang) }}">
     <button class="btn btn-custom">
-      Register to vote in California >>
+      在加利福利亚州登记投票 >>
     </button>
   </a>
 <br>

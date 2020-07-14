@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-{% set lang = "sp" %}
+{% set lang = "es" %}
   <head>
     {% block head %}
     <!-- Required meta tags -->
@@ -77,8 +77,8 @@
             <a class="dropdown-item" href="#"><font color=black>Español</font></a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="{{ url_for(page, state=state, lang='en')}}"><font color=black>English | Inglés</font></a>
-            {% if 'sp' in langs %}
-            <a class="dropdown-item" href="{{ url_for(page, state=state, lang='man')}}"><font color=black>中文 | Chino</font></a>
+            {% if 'zh' in langs %}
+            <a class="dropdown-item" href="{{ url_for(page, state=state, lang='zh')}}"><font color=black>中文 | Chino</font></a>
             {% endif %}
           </div>
           </li>

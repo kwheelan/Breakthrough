@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     {% block head %}
-    {% set lang="man" %}
+    {% set lang="zh" %}
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -41,9 +41,7 @@
   {% block warning %}
   <div class="alert alert-primary" role="alert" style = "margin-bottom: -10px">
     <p padding = 20px>
-      In light of the Covid-19 pandemic, California Governor Gavin Newsom ordered that
-      <font><strong>all registered California residents will receive a mail-in ballot for the November 3, 2020 general election.</strong></font> The registration deadline for the general election is
-      <font><strong>October 19, 2020</strong></font>. For more information about important dates <a href="{{ url_for('faqs', state=state, lang=lang)}}" class = "faqLink">see FAQS</a>.
+      鉴于当前疫情，加州州长Gavin Newsom已宣布所有登记在册的加州居民都将收到一封邮寄的选票。2020年11月3日大选的登记截止日期是2020年10月19日。
     </p>
   </div>
   {% endblock %}
@@ -57,11 +55,11 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <ul class="nav navbar-nav">
-          {% set lang='man' %}
-          <li><a class="nav-item nav-link" href="{{ url_for('home', lang=lang, state=state)}}"><font {% if page=='home' %} class ="active" {% endif %}>Home</font></a></li>
+          {% set lang='zh' %}
+          <li><a class="nav-item nav-link" href="{{ url_for('home', lang=lang, state=state)}}"><font {% if page=='home' %} class ="active" {% endif %}>主页</font></a></li>
           <li><a class="nav-item nav-link" href="{{ url_for('registration_forms', lang=lang, state=state)}}"><font {% if page=='registration_forms' or page=='registration'%} class ="active" {% endif %}>已经登记投票了吗?</font></a></li>
           <li><a class="nav-item nav-link" href="{{ url_for('register', state=state,lang=lang) }}"><font {% if page=='register' %} class ="active" {% endif %}>登记</font></a></li>
-          <li><a class="nav-item nav-link" href= "{{ url_for('poll_forms', state=state, lang=lang) }}"><font {% if page=='poll_forms' or page=='pollFinder'%} class ="active" {% endif %}>Poll Finder</font></a></li>
+          <li><a class="nav-item nav-link" href= "{{ url_for('poll_forms', state=state, lang=lang) }}"><font {% if page=='poll_forms' or page=='pollFinder'%} class ="active" {% endif %}>查找投票点</font></a></li>
           <li><a class="nav-item nav-link" href="{{ url_for('faqs', state=state, lang=lang) }}"><font {% if page=='faqs'%} class ="active" {% endif %}>投票常见问答</font></a></li>
         </ul>
         <ul class="navbar-nav ml-auto">
@@ -73,8 +71,8 @@
             <a class="dropdown-item" href="#"><font color=black>中文</font></a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="{{ url_for(page, state=state, lang='en')}}"><font color=black>English | 英语</font></a>
-            {% if 'sp' in langs %}
-            <a class="dropdown-item" href="{{ url_for(page, state=state, lang='sp')}}"><font color=black>Español | 西班牙语</font></a>
+            {% if 'es' in langs %}
+            <a class="dropdown-item" href="{{ url_for(page, state=state, lang='es')}}"><font color=black>Español | 西班牙语</font></a>
             {% endif %}
           </div>
           </li>
@@ -106,7 +104,7 @@
         <!-- slate hex #373c43 -->
         <div class="footer-copyright text-center py-3" style = "background-color: #293A73">
           <font color = "white">
-            For more information, visit
+            更多信息请访问:
             <a href="https://www.sos.ca.gov/elections/voting-resources/voting-california/chinese/" target = "_blank"><font color = #CCE5FF>www.sos.ca.gov/elections/voting-resources</font></a>.
           </font>
         </div>

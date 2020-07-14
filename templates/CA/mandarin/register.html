@@ -9,37 +9,29 @@
 {% block body %}
 
 <p>
+  <br>
   <font class="form-label">
-    Click the link below to register online to vote in California. Find other voting resources below.
+    点击以下链接进行网上投票。其他投票方式如下。
+
   </font>
 </p>
-
+<br>
 
 <a target = "_blank" href="https://covr.sos.ca.gov/ZH">
   <button class="btn btn-lg btn-big">
-      <font size=6><strong>Register to Vote in California</strong></font>
+      <font size=6><strong>在加州登记投票</strong></font>
   </button>
 </a>
-<br><br>
-
-<!-- <div class="alert alert-secondary sect" role="alert">
-    <a class = "sectLink" target = "_blank" hsref="https://covr.sos.ca.gov/">
-      <h1 align= center>
-        Register to vote in the state of California
-      </h1>
-    </a>
-</div>
-<br><br> -->
+<br><br><br>
 
 
-  <a href = "{{ url_for('poll_forms',state=state, lang=lang) }}">
+  <a href = "{{ url_for('poll_forms',state=state, lang=lang) }}" style = "padding: 15px">
     <button class="btn btn-custom">
       找我的投票站 >>
     </button>
   </a>
-  <br><br>
 
-  <a href = " {{ url_for('faqs',state=state, lang=lang) }}">
+  <a href = " {{ url_for('faqs',state=state, lang=lang) }}" style = "padding: 15px">
     <button class="btn btn-custom">
       投票常见问答
     </button>

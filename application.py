@@ -87,8 +87,8 @@ def pollFinderHelper():
     return location, line1, hours
 
 states = ["CA"]
-stateLangDict = { "CA": ['ch', 'sp'], "FL" : ['sp']}
-langDict = { "man" : 'mandarin', "sp": 'spanish', 'en': 'english'}
+stateLangDict = { "CA": ['zh', 'es'], "FL" : ['es']}
+langDict = { "zh" : 'mandarin', "es": 'spanish', 'en': 'english'}
 statePages = ['home', 'register', 'faqs']
 
 def get_page(lang, state, page, national=False):
@@ -111,7 +111,7 @@ def index():
 def land():
     election = date(2020, 11, 3)
     days_to_election = max(0, (election - date.today()).days)
-    return render_template("index.html", langs = ['ch', 'sp'], days_to_election = days_to_election)
+    return render_template("index.html", langs = ['zh', 'es'], days_to_election = days_to_election)
 
 #Home
 @app.route("/<lang>/<state>/home")
@@ -143,121 +143,3 @@ def poll_forms(lang, state):
 @app.route("/<lang>/<state>/poll_finder/query")
 def pollFinder(lang, state):
     return get_page(lang, state, 'poll_info', True)
-
-
-
-
-
-
-
-
-
-
-
-# #CA english
-# @app.route("/ca/home")
-# def home_CA():
-#     """ home page California """
-#     return render_template("CA/english/CA_home.html", langs=['ch', 'sp'])
-#
-# @app.route("/ca/register")
-# def register_CA():
-#     return render_template("CA/english/register.html", langs=['ch', 'sp'])
-#
-# @app.route("/ca/faqs")
-# def faqs_CA():
-#     return render_template("CA/english/faqs.html", langs=['ch', 'sp'], state="CA")
-#
-# @app.route("/ca/registration/query")
-# def registration_forms_CA():
-#     """ page to enter info for registation"""
-#     return render_template("national/english/registrationForm.html", langs=['ch', 'sp'], state='CA')
-#
-# @app.route("/ca/registration/info", methods=["POST", "GET"])
-# def registration_CA():
-#     """Get polling info."""
-#     text, name, address = registrationHelper()
-#     return render_template("national/english/registration.html", text=text, name=name, address=address, langs=['ch', 'sp'], state="CA")
-#
-# @app.route("/ca/poll_finder/query")
-# def poll_forms_CA():
-#     """show polling forms"""
-#     return render_template("national/english/poll_form.html", langs=['ch', 'sp'], state="CA")
-#
-# @app.route("/ca/poll_finder/info", methods = ["POST", "GET"])
-# def pollFinder_CA():
-#     """Get polling info."""
-#     location, line1, hours = pollFinderHelper()
-#     return render_template("national/english/poll_info.html", name=location, line1=line1, hours=hours, langs=['ch', 'sp'], state = "CA")
-#
-#
-# #CA chinese
-# @app.route("/man/ca")
-# def home_CA_mandarin():
-#     return render_template("CA/mandarin/home_CA.html", langs=['ch', 'sp'], state='CA')
-#
-# @app.route("/man/ca/register")
-# def register_CA_mandarin():
-#     return render_template("CA/mandarin/register.html", langs=['ch', 'sp'], state='CA')
-#
-# @app.route("/man/ca/faqs")
-# def faqs_CA_mandarin():
-#     return render_template("CA/mandarin/faqs.html", langs=['ch', 'sp'], state = 'CA')
-#
-# @app.route("/man/ca/registration/query")
-# def registration_forms_CA_mandarin():
-#     """ page to enter info for registation"""
-#     return render_template("national/mandarin/registrationForm.html", langs=['ch', 'sp'], state = 'CA')
-#
-# @app.route("/man/ca/registration/info", methods=["POST", "GET"])
-# def registration_CA_mandarin():
-#     """Get polling info."""
-#     text, name, address = registrationHelper()
-#     return render_template("national/mandarin/registration.html", text=text, name=name, address=address, langs=["ch", "sp"], state = 'CA')
-#
-# @app.route("/man/ca/poll_finder/query")
-# def poll_forms_CA_mandarin():
-#     """show polling forms"""
-#     return render_template("national/mandarin/poll_form.html", langs=['ch', 'sp'], state = 'CA')
-#
-# @app.route("/man/ca/poll_finder/info", methods = ["POST", "GET"])
-# def pollFinder_CA_mandarin():
-#     """Get polling info."""
-#     location, line1, hours = pollFinderHelper()
-#     return render_template("national/mandarin/poll_info.html", name=location, line1=line1, hours=hours, langs=['ch', 'sp'], state = 'CA')
-#
-#
-# #CA spanish
-# @app.route("/sp/ca")
-# def home_CA_spanish():
-#     return render_template("CA/spanish/CA_home.html", langs=['ch', 'sp'], state = 'CA')
-#
-# @app.route("/sp/ca/register")
-# def register_CA_spanish():
-#     return render_template("CA/spanish/register.html", langs=['ch', 'sp'], state = 'CA')
-#
-# @app.route("/sp/ca/faqs")
-# def faqs_CA_spanish():
-#     return render_template("CA/spanish/faqs.html", langs=['ch', 'sp'], state = 'CA')
-#
-# @app.route("/sp/ca/registration/query")
-# def registration_forms_CA_spanish():
-#     """ page to enter info for registation"""
-#     return render_template("national/spanish/registrationForm.html", langs=['ch', 'sp'], state = 'CA')
-#
-# @app.route("/sp/ca/registration/info", methods=["POST", "GET"])
-# def registration_CA_spanish():
-#     """Get polling info."""
-#     text, name, address = registrationHelper()
-#     return render_template("national/spanish/registration.html", text=text, name=name, address=address, langs=['ch', 'sp'], state = 'CA')
-#
-# @app.route("/sp/ca/poll_finder/query")
-# def poll_forms_CA_spanish():
-#     """show polling forms"""
-#     return render_template("national/spanish/poll_form.html", state = 'CA')
-#
-# @app.route("/sp/ca/poll_finder/info", methods = ["POST", "GET"])
-# def pollFinder_CA_spanish():
-#     """Get polling info."""
-#     location, line1, hours = pollFinderHelper()
-#     return render_template("national/spanish/poll_info.html", name=location, line1=line1, hours=hours, langs=['ch', 'sp'], state = 'CA')
