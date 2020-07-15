@@ -42,7 +42,7 @@
       Due to the Covid-19 pandemic,
       <font><strong>all registered California residents will receive a mail-in ballot for the November 3, 2020 general election.</strong></font> The registration deadline for the general election is
       <font><strong>October 19, 2020</strong></font>. For more information about important dates <a href="{{ url_for('faqs', state=state, lang=lang)}}" class = "faqLink">see FAQs</a>.
-      More information about vote-by-mail can be found 
+      More information about vote-by-mail can be found
       <a href="{{ url_for('faqs', state=state, lang=lang) + '#vbm'}}" class = "faqLink">here</a>.
     </p>
   </div>
@@ -109,7 +109,11 @@
         <div class="footer-copyright text-center py-3" style = "background-color: #293A73">
           <font color = "white">
             For more information, visit
+            {% if state.lower() == 'ca' %}
             <a href="https://www.sos.ca.gov/elections/voting-resources/" target = "_blank"><font color = #CCE5FF>www.sos.ca.gov/elections/voting-resources</font></a>.
+            {% elif state.lower() == 'fl' %}
+            <a href="https://dos.myflorida.com/elections/for-voters/" target = "_blank"><font color = #CCE5FF>dos.myflorida.com/elections/for-voters</font></a>.
+            {% endif %}
           </font>
         </div>
         <!-- Copyright -->

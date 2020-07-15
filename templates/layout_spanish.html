@@ -111,7 +111,11 @@
         <div class="footer-copyright text-center py-3" style = "background-color: #293A73">
           <font color = "white">
             Para más información, visite
+            {% if state.lower() == 'ca' %}
             <a href="https://www.sos.ca.gov/elections/voting-resources/voting-california/spanish/" target = "_blank"><font color = #CCE5FF>www.sos.ca.gov/elections/voting-resources</font></a>.
+            {% elif state.lower() == 'fl' %}
+            <a href="https://dos.myflorida.com/elections/for-voters/" target = "_blank"><font color = #CCE5FF>dos.myflorida.com/elections/for-voters</font></a>.
+            {% endif %}
           </font>
         </div>
         <!-- Copyright -->

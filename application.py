@@ -7,15 +7,20 @@ from formTools import *
 from datetime import date
 
 app = Flask(__name__)
-app.secret_key = '1k93khlj15jK'
+app.secret_key = '1k93khlj15jK' #to enable sessions
 app.static_folder = 'static'
 
-#api key for google civic api
+#api key for google civic api (polling location/hours)
 API_KEY = "AIzaSyB_TMYCnCqQz_UDRc6wsu7Tw7rMUbgQ0hQ"
+#api key for Google Maps
+MAPS_API_KEY = "AIzaSyCjVH1q11RrdM74l9r70bjDfwvRpRnsbVo"
 
-#Helper functions
+
+
+
+#Helper functions:
 def registrationHelper():
-    """Get registration information"""
+    """helper method to fetch registration information"""
     data = {}
 
     if request.method == "POST":
@@ -49,6 +54,10 @@ def registrationHelper():
 def pollFinderHelper():
     """Helper method to get poll information"""
 
+    # TODO: (1) add address Information
+    #       (2) parse multiple polling places
+    #       (3) confirm accuracy/comprhensiveness with current election
+
     # Get form information.
     if request.method == 'POST':
         line1 = request.form.get("address")
@@ -61,35 +70,42 @@ def pollFinderHelper():
         state = session["state"]
         zip = session["zip_5"]
 
+    #Disabled san francisco because the site seems outdated; CA polling places will
+    # change in response to Covid/VBM access
+
     # if city.lower()=="san francisco":
     #     location, line1, hours = get_poll_info("https://www.sfelections.org/tools/pollsite/", line1, zip)
     # else:
-    if True:
-        address = "{} {} {} {}".format(line1, city, state, zip)
 
-        #HTTP request to API
-        res = requests.get("https://www.googleapis.com/civicinfo/v2/voterinfo",
-                           params={"address": address, "returnAllAvailableData": True,
-                           "key": API_KEY})
-        if res.status_code != 200:
-            return "ERROR: Badly formatted address."
-        data = res.json()
-        try:
-            location = data["pollingLocations"][0]["address"]["locationName"]
-            line1 = data["pollingLocations"][0]["address"]["line1"]
-        except:
-            location = "No polling data for this address or no upcoming elections."
-            line1 = ""
-        try:
-            hours = data["pollingLocations"][0]["pollingHours"]
-        except:
-            hours = "No available hours for this location"
-    return location, line1, hours
+    address = "{} {} {} {}".format(line1, city, state, zip)
 
+    #HTTP request to Google Civic API
+    res = requests.get("https://www.googleapis.com/civicinfo/v2/voterinfo",
+                       params={"address": address, "returnAllAvailableData": True,
+                       "key": API_KEY})
+    if res.status_code != 200: #shouldn't ever happen
+        return "ERROR: Badly formatted address."
+    data = res.json()
+
+    try:
+        addressList = [poll["address"] for poll in data["pollingLocations"]]
+    except:
+        addressList = []
+
+    for i in range(len(addressList)):
+        if data["pollingLocations"][i].get("pollingHours"):
+            addressList[i]["hours"] = data["pollingLocations"][i].get("pollingHours")
+        else:
+            addressList[i]["hours"] = "No available hours for this location."
+
+    return addressList
+
+#states with enabled pages
 states = ["CA", "FL"]
+#translations avaible for each state
 stateLangDict = { "CA": ['zh', 'es'], "FL" : ['es']}
+#language url extension
 langDict = { "zh" : 'mandarin', "es": 'spanish', 'en': 'english'}
-statePages = ['home', 'register', 'faqs']
 
 def get_page(lang, state, page, national=False):
     """help method to fetch html file by state and language"""
@@ -101,39 +117,41 @@ def get_page(lang, state, page, national=False):
         loc = state.upper()
     return render_template(f"{loc}/{langDict[lang]}/{page}.html", langs=stateLangDict[state.upper()], state=state)
 
-#National landing page
+
+
+
+#URL routess
+
 @app.route("/")
 def index():
-    return home('en', 'CA')
-    # return render_template("index.html")
-
-@app.route('/landing-page')
-def land():
+    """National landing page"""
     election = date(2020, 11, 3)
     days_to_election = max(0, (election - date.today()).days)
     return render_template("index.html", langs = ['zh', 'es'], days_to_election = days_to_election)
 
-#Home
 @app.route("/<lang>/<state>/home")
 def home(lang, state):
+    """State-specific homepage"""
     return get_page(lang, state, 'home')
 
-#Register to vote page
 @app.route("/<lang>/<state>/register")
 def register(lang,state):
+    """Register to vote page; renders state and language speicific html files"""
     return get_page(lang, state, 'register')
 
-#STATE FAQS
 @app.route("/<lang>/<state>/faqs")
 def faqs(lang,state):
+    """State specific FAQs"""
     return get_page(lang, state, 'faqs')
 
 @app.route("/<lang>/<state>/registration/query")
 def registration_forms(lang, state):
+    """Get registration info form page; available in the languages for each state"""
     return get_page(lang, state, 'registrationForm', True)
 
 @app.route("/<lang>/<state>/registration/info", methods = ['POST', 'GET'])
 def registration(lang, state):
+    """"Returns and displays registration info. If 'GET' request, uses stored data (ie for translating the page)"""
     if state.upper() not in states or lang not in langDict.keys():
        return "PAGE NOT FOUND"
     else:
@@ -143,13 +161,15 @@ def registration(lang, state):
 
 @app.route("/<lang>/<state>/poll_finder/query")
 def poll_forms(lang, state):
+    """Get registration info form page; available in the languages for each state"""
     return get_page(lang, state, 'poll_form', True)
 
 @app.route("/<lang>/<state>/poll_finder/info", methods = ['POST', 'GET'])
 def pollFinder(lang, state):
+    """"Returns and displays poll info. If 'GET' request, uses stored data
+    (ie for translating the page or going directly from registration info page)"""
     if state.upper() not in states or lang not in langDict.keys():
        return "PAGE NOT FOUND"
     else:
         loc = state.upper()
-    location, line1, hours = pollFinderHelper()
-    return render_template(f"national/{langDict[lang]}/poll_info.html", langs=stateLangDict[state.upper()], state=state, name=location, line1=line1, hours=hours)
+    return render_template(f"national/{langDict[lang]}/poll_info.html", langs=stateLangDict[state.upper()], state=state, addressList=pollFinderHelper())
