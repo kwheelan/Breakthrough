@@ -1,12 +1,11 @@
 ## Breakthrough Voting Initiative Repository
 
-### Katrina Wheelan
-### July 16, 2020
+### Katrina Wheelan, July 16, 2020
 
 The Breakthrough Collaborative's Voting Initiative is a central site for accessible voting resources in all states that Breakthrough serves. Content is translated into Spanish and Chinese (depending on the state).
 
 This repository contains a Python Flask application. The demo branch is deployed at: https://breakthrough-voting-initiative.herokuapp.com/ 
-The default branch is the working branch for this application, deployed at: https://bt-voting.herokuapp.com/. We use the Google Civic API for polling data and scrape registration data from Vote.org. All FAQ information comes from individual states' Secretary of State sites.
+The default branch is the working branch for this application, deployed at: https://bt-voting.herokuapp.com/. We use the Google Civic Data API for polling data and scrape registration data from Vote.org. All FAQ information comes from individual states' Secretary of State sites.
 
 
 #### Directories:	
