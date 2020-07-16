@@ -1,25 +1,34 @@
 ## Breakthrough Voting Initiative Repository
 
 ### Katrina Wheelan
-### July 8, 2020
+### July 16, 2020
 
 #### Directories:	
  * *application.py* - Python code for a Flask application
- * *formTools.py* - specific tools to webscrape and submit information for polling locations and registration information
+ * *util.py* - specific tools to webscrape and submit information for polling locations and registration information
  * *templates/* - html templates for the application
    * *layout.html* - the basic html format
    * *layout_mandarin.html* - basic html format for Mandarin
    * *CA/*
      * *english/*
-       * *CA_home.html*
+       * *home.html*
        * *faqs.html*
        * *register.html*
      * *mandarin/*
-        * *CA_home.html*
+       * *home.html*
        * *faqs.html*
        * *register.html*
      * *spanish/*
-       * *CA_home_mandarin.html*
+       * *home.html*
+       * *faqs.html*
+       * *register.html*
+   * *FL/*
+     * *english/*
+       * *home.html*
+       * *faqs.html*
+       * *register.html*
+     * *spanish/*
+       * *home.html*
        * *faqs.html*
        * *register.html*
    * *national/*
@@ -46,21 +55,12 @@
      * *stockImgs/* - images not currently in use
      * *icons/*
        * *english/* - contains homepage icons in English
-       * *chinese/*
-       * *spanish/*
+       * *chinese/* - contains homepage icons in Chinese
+       * *spanish/* - contains homepage icons in Spanish
      * *favicon/* - icon for browser
        * *favicon.ico*
        * *favicon-16x16.png*
        * *favicon-32x32.png*
    * *JS/*
      * Javascript scripts
-
-#### TO DO:
-
- * Finish translations
-   * spanish
-   * chinese
-   * translate icons
- * expand to other in CA (different poll databases?)
-
 
