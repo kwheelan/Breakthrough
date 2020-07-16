@@ -1,25 +1,40 @@
 ## Breakthrough Voting Initiative Repository
 
 ### Katrina Wheelan
-### July 8, 2020
+### July 16, 2020
+
+The Breakthrough Collaborative's Voting Initiative is a central site for accessible voting resources in all states that Breakthrough serves. Content is translated into Spanish and Chinese (depending on the state).
+
+This repository contains a Python Flask application. The demo branch is deployed at: https://breakthrough-voting-initiative.herokuapp.com/ 
+The default branch is the working branch for this application, deployed at: https://bt-voting.herokuapp.com/. We use the Google Civic API for polling data and scrape registration data from Vote.org. All FAQ information comes from individual states' Secretary of State sites.
+
 
 #### Directories:	
- * *application.py* - Python code for a Flask application
- * *formTools.py* - specific tools to webscrape and submit information for polling locations and registration information
+ * *application.py* - Python code for running the Flask application
+ * *util.py* - specific tools to webscrape and submit information for polling locations and registration information
  * *templates/* - html templates for the application
    * *layout.html* - the basic html format
    * *layout_mandarin.html* - basic html format for Mandarin
    * *CA/*
      * *english/*
-       * *CA_home.html*
+       * *home.html*
        * *faqs.html*
        * *register.html*
      * *mandarin/*
-        * *CA_home.html*
+       * *home.html*
        * *faqs.html*
        * *register.html*
      * *spanish/*
-       * *CA_home_mandarin.html*
+       * *home.html*
+       * *faqs.html*
+       * *register.html*
+   * *FL/*
+     * *english/*
+       * *home.html*
+       * *faqs.html*
+       * *register.html*
+     * *spanish/*
+       * *home.html*
        * *faqs.html*
        * *register.html*
    * *national/*
@@ -46,21 +61,12 @@
      * *stockImgs/* - images not currently in use
      * *icons/*
        * *english/* - contains homepage icons in English
-       * *chinese/*
-       * *spanish/*
+       * *chinese/* - contains homepage icons in Chinese
+       * *spanish/* - contains homepage icons in Spanish
      * *favicon/* - icon for browser
        * *favicon.ico*
        * *favicon-16x16.png*
        * *favicon-32x32.png*
    * *JS/*
      * Javascript scripts
-
-#### TO DO:
-
- * Finish translations
-   * spanish
-   * chinese
-   * translate icons
- * expand to other in CA (different poll databases?)
-
 
