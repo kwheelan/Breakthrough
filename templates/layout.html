@@ -73,16 +73,17 @@
             <a class="dropdown-item" href="#"><font color=black>English</font></a>
             <div class="dropdown-divider"></div>
             {% if 'es' in langs %}
-            <a class="dropdown-item" href="{{ url_for(page, state=state, lang='es' )}}"><font color=black>Español | Spanish</font></a>
+            <a class="dropdown-item" href="{{ url_for(page, state=state, lang='en' )}}"><font color=black>Español | Spanish</font></a>
             {% endif %}
             {% if 'zh' in langs %}
-            <a class="dropdown-item" href="{{ url_for(page, state=state, lang='zh')}}"><font color=black>中文 | Chinese</font></a>
+            <a class="dropdown-item" href="{{ url_for(page, state=state, lang='en')}}"><font color=black>中文 | Chinese</font></a>
             {% endif %}
           </div>
           </li>
         </ul>
       </div>
     </nav>
+
 
 
     <div class="container" align=center>
