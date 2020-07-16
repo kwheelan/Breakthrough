@@ -26,8 +26,8 @@
 
     <font class="form-label">
       <br>
-      <strong>*Please note that polling places are subject to change.<br>
-        Make sure you check this information 2-4 weeks before the election. </strong>
+      <strong>Please note that polling places are subject to change.<br>
+        Make sure you check this information 2-4 weeks before the election.
         {% if state.lower() == "ca" %}
         <br><br>
           Every registered voter in California will receive a vote-by-mail ballot at the address used to register to vote.
@@ -36,6 +36,7 @@
           <a class = "faqLink" href="{{ url_for('faqs', state=state, lang=lang) + '#vbm'}}">here</a>
           for more information.
         {% endif %}
+      </strong>
     </font>
     <br><br>
 
