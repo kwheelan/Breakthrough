@@ -31,7 +31,7 @@ def registrationHelper():
         # Get address information.
         data["street_address"] = request.form.get("address")
         ## TODO: enable apartments
-        data["apartment"] = ""
+        data["apartment"] = request.form.get("line2")
         data["city"] = request.form.get("city")
         data["state"] = request.form.get("state")
         data["zip_5"] = request.form.get("zip")
@@ -39,7 +39,7 @@ def registrationHelper():
             session[key] = data[key]
 
         name = "{} {}".format(data["first_name"], data["last_name"])
-        address = "{}, {}, {} {}".format(data["street_address"], data["city"], data["state"], data["zip_5"])
+        address = "{} {}, {}, {} {}".format(data["street_address"], data["apartment"], data["city"], data["state"], data["zip_5"])
 
         #dob
         data["date_of_birth_month"] = 1#request.form.get("mon")
