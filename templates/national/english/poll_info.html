@@ -26,8 +26,8 @@
 
     <font class="form-label">
       <br>
-      <strong>*Please note that polling places are subject to change.<br>
-        Make sure you check this information 2-4 weeks before the election. </strong>
+      *Please note that polling places are subject to change.
+        Make sure you check this information 2-4 weeks before the election.
         {% if state.lower() == "ca" %}
         <br><br>
           Every registered voter in California will receive a vote-by-mail ballot at the address used to register to vote.
@@ -43,11 +43,11 @@
        <font size = 5>No polling data for this address or no upcoming elections.</font>
     {% else %}
       {% for address in addressList %}
-        <strong>{{ address["locationName"] }} </strong><br>
+        <font size=5><strong><font color=#e4572e>{{ address["locationName"] }}</font></strong><br>
         {{ address["line1"] }} <br>
-        {{ address["city"] }}, {{address["zip"]}} <br>
+        {{ address["city"] }}, {{address["state"]}} {{address["zip"]}} <br>
         <strong>Hours: </strong>{{ address["hours"] }}
-        <br><br>
+        <br><br></font>
       {% endfor %}
     {% endif %}
     <br>

@@ -4,52 +4,52 @@
 
 
 {% block body %}
-  <font color=black>
-    <h2>Poll Location</h2>
-  </font>
 
-  <font class="form-label">
-    {{ name }} <br>
-    {% if line1 != '' %}
-    {{ line1 }} <br>
-    {% endif %}
-    <br>
-  </font>
+<a href = "{{ url_for('poll_forms', state=state, lang=lang) }}" style = "padding: 20px">
+  <button class="btn btn-custom" >
+    << Enter a different address to the poll finder
+  </button>
+</a>
 
-  <font color=black>
-    <h2>Hours</h2>
-  </font>
+  <a href = " {{ url_for('faqs', state=state, lang=lang) }}">
+    <button class="btn btn-custom">
+      投票常见问答 >>
+    </button>
+  </a>
 
-  <font class="form-label">
-    {{ hours }}
-    <br><br>
-    <strong>*请注意投票地址可能只会在选举前的2-4周才会公布。 </strong>
-  </font>
 <br><br>
-<!--    <h1>Address</h1>
 
-    {{ line1 }} <br>
-    {{ city }}, {{ state }} {{ zip }} <br>
-    -->
+<h2 align=left>
+Poll Location(s) for your Address
+</h2>
+<p align=left>
 
-    <a href = "{{ url_for('poll_forms', state=state, lang=lang) }}">
-      <button class="btn btn-custom">
-        << Enter a different address to the poll finder
-      </button>
-    </a>
-
-    <a href = " {{ url_for('faqs', state=state, lang=lang) }}">
-      <button class="btn btn-custom">
-        投票常见问答 >>
-      </button>
-    </a>
-
+<font class="form-label">
+  <br>
+*请注意投票地址可能只会在选举前的2-4周才会公布。
+    {% if state.lower() == "ca" %}
     <br><br>
+      Every registered voter in California will receive a vote-by-mail ballot at the address used to register to vote.
+      All voters in California are encouraged to vote by mail in the upcoming November 3, 2020 election.
+      Click
+      <a class = "faqLink" href="{{ url_for('faqs', state=state, lang=lang) + '#vbm'}}">here</a>
+      for more information.
+    {% endif %}
+</font>
+<br><br>
 
-      <a href = "{{ url_for('register', state=state, lang=lang) }}">
-        <button class="btn btn-custom">
-          在加利福利亚州登记投票
-        </button>
-      </a>
+{% if addressList == [] %}
+   <font size = 5>No polling data for this address or no upcoming elections.</font>
+{% else %}
+  {% for address in addressList %}
+    <font size=5><strong><font color=#e4572e>{{ address["locationName"] }}</font></strong><br>
+    {{ address["line1"] }} <br>
+    {{ address["city"] }}, {{address["state"]}} {{address["zip"]}} <br>
+    <strong>Hours: </strong>{{ address["hours"] }}
+    <br><br>
+  {% endfor %}
+{% endif %}
+<br>
+</p>
 
 {% endblock %}

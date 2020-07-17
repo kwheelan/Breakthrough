@@ -3,7 +3,7 @@ import os
 from flask import Flask, render_template, request, session
 import requests
 
-from formTools import *
+from util import *
 from datetime import date
 
 app = Flask(__name__)
@@ -48,6 +48,7 @@ def registrationHelper():
 
         text = get_registration("https://verify.vote.org/", data)
         session['registration_info'] = (text, name.title(), address.title())
+        session['addressList'] = 'reset'
 
     return session['registration_info']
 
@@ -65,6 +66,11 @@ def pollFinderHelper():
         state = request.form.get("state")
         zip = request.form.get("zip")
     elif request.method == 'GET':
+        try:
+            if session["addressList"] != 'reset':
+                return session["addressList"]
+        except:
+            pass
         line1 = session["street_address"]
         city = session["city"]
         state = session["state"]
@@ -97,6 +103,8 @@ def pollFinderHelper():
             addressList[i]["hours"] = data["pollingLocations"][i].get("pollingHours")
         else:
             addressList[i]["hours"] = "No available hours for this location."
+
+    session['addressList'] = addressList
 
     return addressList
 
