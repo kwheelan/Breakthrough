@@ -1,4 +1,12 @@
 
+/* alert */
+
+.alert-custom {
+  background-color: #F8971A;
+  /* #b0dfff; */
+  color:  #0079C1;
+}
+
 /* navbar */
 
 .nav a {
@@ -15,7 +23,7 @@
 }
 
 .active {
-  color: #e4572e;
+  color: #F8971A;
   font-weight: bold;
 }
 
@@ -97,7 +105,8 @@
 /* FAQ page */
 
 .faq {
-  background-color: #CCE5FF;
+  background-color: white;
+  /* #b0dfff; */
 }
 
 .sectLink:hover {
@@ -105,20 +114,23 @@
 }
 
 .faqHeader {
-  background-color: #293A73;
-}
-
-.faqLink, .a {
-  color: #e4572e;
-}
-
-.faqLink:hover {
-  color: #FE9920;
+  background-color: #004991;
+  /* #0079C1; */
 }
 
 .card-body {
-   color: #293A73;
+   color: #004991;
 }
+
+.faqLink, .a {
+  color: #F8971A;
+}
+
+.faqLink:hover {
+  color: #E75724;
+}
+
+
 
 .sectLink {
   color: white;

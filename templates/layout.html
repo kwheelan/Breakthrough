@@ -37,7 +37,7 @@
   <!-- optional warning banner -->
   {% block warning %}
   {% if state.lower()=='ca' %}
-  <div class="alert alert-primary" role="alert" style = "margin-bottom: -10px">
+  <div class="alert alert-custom" role="alert" style = "margin-bottom: -10px">
     <p padding = 20px>
       Due to the Covid-19 pandemic,
       <font><strong>all registered California residents will receive a mail-in ballot for the November 3, 2020 general election.</strong></font> The registration deadline for the general election is
@@ -50,7 +50,7 @@
   {% endblock %}
 
     <!-- Nav bar -->
-    <nav class="navbar navbar-expand-md sticky-top" style ="background-color: #293A73;">
+    <nav class="navbar navbar-expand-md sticky-top" style ="background-color: #0079C1;">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon">
           <img src="{{ url_for('static', filename='images/menu_icon.png') }}" alt="Menu" height=35px width=40px style = "margin-top: -2px; margin-left: -5px">
@@ -89,7 +89,7 @@
     <div class="container" align=center>
       <br>
       <h1 align = center>
-        <font style = "color: #373c43;">
+        <font style = "color: #F8971A;">
           {% block header %}
           {% endblock %}
         </font></h1>
@@ -107,13 +107,13 @@
 
         <!-- Copyright -->
         <!-- slate hex #373c43 -->
-        <div class="footer-copyright text-center py-3" style = "background-color: #293A73">
+        <div class="footer-copyright text-center py-3" style = "background-color: #0079C1">
           <font color = "white">
             For more information, visit
             {% if state.lower() == 'ca' %}
-            <a href="https://www.sos.ca.gov/elections/voting-resources/" target = "_blank"><font color = #CCE5FF>www.sos.ca.gov/elections/voting-resources</font></a>.
+            <a class = "faqLink" href="https://www.sos.ca.gov/elections/voting-resources/" target = "_blank"><font>www.sos.ca.gov/elections/voting-resources</font></a>.
             {% elif state.lower() == 'fl' %}
-            <a href="https://dos.myflorida.com/elections/for-voters/" target = "_blank"><font color = #CCE5FF>dos.myflorida.com/elections/for-voters</font></a>.
+            <a class = "faqLink" href="https://dos.myflorida.com/elections/for-voters/" target = "_blank"><font>dos.myflorida.com/elections/for-voters</font></a>.
             {% endif %}
           </font>
         </div>
