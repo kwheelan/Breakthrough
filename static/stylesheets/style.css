@@ -1,17 +1,18 @@
 body {
-  color: white;
-  background-color: #000951;
+  color: black;
+  background-color: white;
+  /* #000951; */
 }
 
-h3 {
-  color: #F8971A;
+h3, h1 {
+  color: #000951;
+  /* #F8971A; */
 }
 
 /* alert */
 
 .alert-custom {
-  background-color: #F8971A;
-   /* #000951; */
+  background-color:  #000951;
   /* #b0dfff; */
   color:  #0079C1;
 }
@@ -63,8 +64,7 @@ h3 {
 }
 
 .btn-custom:hover {
-  background-color: white;
-  /* #000951; */
+  background-color:  #000951;
   color: #b0dfff;
   /* background-color: #bcd5ef; */
 }
@@ -96,8 +96,7 @@ h3 {
 
 .form-label {
   font-size: 20px;
-  color: white;
-  /* #373C43; */
+  color:  #373C43;
 }
 
 .formOutline {
@@ -140,8 +139,7 @@ h3 {
 }
 
 .faqLink, .a {
-  color: white;
-  /* #F8971A; */
+  color: #F8971A;
 }
 
 .faqLink:hover {
