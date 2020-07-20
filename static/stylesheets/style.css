@@ -1,8 +1,17 @@
+body {
+  color: white;
+  background-color: #000951;
+}
+
+h3 {
+  color: #F8971A;
+}
 
 /* alert */
 
 .alert-custom {
   background-color: #F8971A;
+   /* #000951; */
   /* #b0dfff; */
   color:  #0079C1;
 }
@@ -48,27 +57,32 @@
 /* buttom formatting */
 
 .btn-custom {
-  background-color: #CCE5FF;
-  border-color: #293A73;
-  color: #293A73;
+  background-color: #0079C1;
+  border-color: #000951;
+  color: #000951;
 }
 
 .btn-custom:hover {
-  background-color: #293A73;
-  color: #CCE5FF;
+  background-color: white;
+  /* #000951; */
+  color: #b0dfff;
   /* background-color: #bcd5ef; */
 }
 
-.btn-big:hover {
-  background-color: #e4572e;
+.btn-big {
+  background-color: #F8971A;
+  /* #e4572e; */
   color: white;
 }
 
-.btn-big {
-  background-color: #ffab91;
+.btn-big:hover {
+  background-color: white;
+  /* #ffab91; */
   /* FFD8D8;  */
-  border-color: #e4572e;
-  color: #e4572e;
+  border-color: #F8971A;
+  /* #e4572e; */
+  color: #F8971A;
+  /* #e4572e; */
 }
 
 .btn-index, .btn-index:disabled {
@@ -82,7 +96,8 @@
 
 .form-label {
   font-size: 20px;
-  color: #373C43;
+  color: white;
+  /* #373C43; */
 }
 
 .formOutline {
@@ -109,31 +124,37 @@
   /* #b0dfff; */
 }
 
-.sectLink:hover {
-  color: #CCE5FF;
-}
+/* background-color: #ffab91;
+/* FFD8D8;  */
+/* border-color: #e4572e; */
 
 .faqHeader {
-  background-color: #004991;
-  /* #0079C1; */
+  background-color:#0079C1;
+  /* #000951; */
+  /*  */
 }
 
 .card-body {
-   color: #004991;
+   color: #000951;
+   /* #004991; */
 }
 
 .faqLink, .a {
-  color: #F8971A;
+  color: white;
+  /* #F8971A; */
 }
 
 .faqLink:hover {
   color: #E75724;
 }
 
-
-
 .sectLink {
   color: white;
+  /* #0079C1; */
+}
+
+.sectLink:hover {
+  color: #F8971A;
 }
 
 a.anchor {
