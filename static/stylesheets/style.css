@@ -29,7 +29,8 @@ h3, h1 {
 }
 
 .navbar a:hover {
-  color: #CCE5FF;
+  /* color: #CCE5FF; */
+  color: #F6CC09;
 }
 
 .active {
@@ -44,6 +45,12 @@ h3, h1 {
 
 .custom-toggler.navbar-toggler {
   border-color: rgb(255,102,203);
+}
+
+.logo {
+   height: 60px;
+   margin-top: -12px;
+   margin-bottom:-10px;
 }
 
 /* link */
@@ -144,7 +151,8 @@ h3, h1 {
 }
 
 .faqLink:hover {
-  color: #E75724;
+  /* color: #E75724; */
+  color: #F6CC09;
 }
 
 .sectLink {
