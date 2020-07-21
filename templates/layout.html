@@ -20,6 +20,12 @@
     <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename = 'images/favicon/favicon-32x32.png')}}">
     <link rel="icon" type="image/png" sizes="16x16"href="{{ url_for('static', filename = 'images/favicon/favicon-16x16.png')}}">
 
+    {% if page =='faqs' %}
+    <style>
+      h1, h3 { color: #000951; }
+    </style>
+    {% endif %}
+
     {% endblock %}
     <title>
       {% block title %}
