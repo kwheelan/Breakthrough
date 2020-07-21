@@ -59,13 +59,15 @@ h3, h1 {
 
 .btn-custom {
   background-color: #0079C1;
-  border-color: #000951;
-  color: #000951;
+  /* border-color: #000951; */
+  color: white;
+  /* #000951; */
 }
 
 .btn-custom:hover {
   background-color:  #000951;
-  color: #b0dfff;
+  color: white;
+  /* #b0dfff; */
   /* background-color: #bcd5ef; */
 }
 
@@ -76,9 +78,8 @@ h3, h1 {
 }
 
 .btn-big:hover {
-  background-color: white;
-  /* #ffab91; */
-  /* FFD8D8;  */
+  /* background-color: white; */
+  background-color: #F6CC09;
   border-color: #F8971A;
   /* #e4572e; */
   color: #F8971A;
@@ -129,7 +130,7 @@ h3, h1 {
 
 .faqHeader {
   background-color:#0079C1;
-  /* #000951; */
+  /* background-color: #000951; */
   /*  */
 }
 
