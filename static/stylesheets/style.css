@@ -51,6 +51,7 @@ h3, h1 {
    height: 60px;
    margin-top: -12px;
    margin-bottom:-10px;
+   margin-right: -15px;
 }
 
 /* link */
@@ -68,7 +69,7 @@ h3, h1 {
   background-color: #0079C1;
   /* border-color: #000951; */
   color: white;
-  /* #000951; */
+  margin-right: 20px;
 }
 
 .btn-custom:hover {
@@ -80,7 +81,7 @@ h3, h1 {
 
 .btn-big {
   background-color: #F8971A;
-  /* #e4572e; */
+  margin-right: 20px;
   color: white;
 }
 
@@ -104,7 +105,8 @@ h3, h1 {
 
 .form-label {
   font-size: 20px;
-  color:  #373C43;
+  color: #000951;
+  /* color:  #373C43; */
 }
 
 .formOutline {
@@ -167,7 +169,7 @@ h3, h1 {
 a.anchor {
     display: block;
     position: relative;
-    top: -80px;
+    top: -90px;
     visibility: hidden;
 }
 
@@ -225,6 +227,7 @@ a.anchor {
 }
 .icon:hover .on_hover {
     display: inline;
+    /* opacity: 70%; */
 }
 
 
