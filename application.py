@@ -130,17 +130,15 @@ def get_page(lang, state, page, national=False):
 
 #URL routess
 
-@app.route("/")
-def index():
-    """National landing page"""
-    election = date(2020, 11, 3)
-    days_to_election = max(0, (election - date.today()).days)
-    return render_template("index.html", langs = ['zh', 'es'], days_to_election = days_to_election)
-
 @app.route("/<lang>/<state>/home")
 def home(lang, state):
     """State-specific homepage"""
     return get_page(lang, state, 'home')
+
+@app.route("/")
+def index():
+    """National landing page"""
+    return home('en', 'CA')
 
 @app.route("/<lang>/<state>/register")
 def register(lang,state):

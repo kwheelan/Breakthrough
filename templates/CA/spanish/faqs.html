@@ -377,13 +377,13 @@ to receive automatic email, SMS, or voice call notifications and updates about y
 		<div id="collapse4" class="collapse" aria-labelledby="heading4" data-parent="#accordion2">
 			<div class="card-body">
 				If your mailing address has changed for this election only and differs from the address you registered with, you can complete
-        <a href="https://elections.cdn.sos.ca.gov/vote-by-mail/pdf/vote-by-mail-application.pdf" class = "faqLink">this application</a>
+        <a href="https://elections.cdn.sos.ca.gov/vote-by-mail/pdf/vote-by-mail-application.pdf" class = "faqLink" target ="_blank">this application</a>
         to receive your ballot at the desired address.
         <br><br>
         Applications can also be found in 9 other languages:
         <ul>
           {% for lang in ['spanish', 'chinese', 'hindi', 'japanese', 'khmer', 'korean', 'tagalog', 'thai', 'vietnamese'] %}
-          <li><a class = "faqLink" href="{{'https://elections.cdn.sos.ca.gov/vote-by-mail/pdf/vbm-app-{}.pdf'.format(lang)}}">{{ lang.title() }}</a></li>
+          <li><a class = "faqLink" href="{{'https://elections.cdn.sos.ca.gov/vote-by-mail/pdf/vbm-app-{}.pdf'.format(lang)}}" target = "_blank">{{ lang.title() }}</a></li>
           {% endfor %}
         </ul>
         Mail this application to your

@@ -19,16 +19,31 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/style_v2.css') }}">
 
     <!-- plugins -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172950926-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-172950926-1');
+    </script>
+
     <!-- favicon -->
     <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename = 'images/favicon/favicon-32x32.png')}}">
     <link rel="icon" type="image/png" sizes="16x16"href="{{ url_for('static', filename = 'images/favicon/favicon-16x16.png')}}">
+
+    {% if page =='faqs' %}
+    <style>
+      h1, h3 { color: #000951; }
+    </style>
+    {% endif %}
 
     {% endblock %}
     <title>
@@ -40,14 +55,11 @@
   </head>
 
   <body class="d-flex flex-column min-vh-100"
-  {% block background %}
-  style = "background-color: white"
-  {% endblock %}>
 
   <!-- optional warning banner -->
   {% block warning %}
   {% if state.lower()=='ca' %}
-  <div class="alert alert-primary" role="alert" style = "margin-bottom: -10px">
+  <div class="alert alert-custom" role="alert" style = "margin-bottom: -10px">
     <p padding = 20px>
       Due to the Covid-19 pandemic,
       <font><strong>all registered California residents will receive a mail-in ballot for the November 3, 2020 general election.</strong></font> The registration deadline for the general election is
@@ -60,10 +72,13 @@
   {% endblock %}
 
     <!-- Nav bar -->
-    <nav class="navbar navbar-expand-md sticky-top" style ="background-color: #293A73;">
+    <nav class="navbar navbar-expand-md sticky-top" style ="background-color: #0079C1;">
+      <a class="navbar-brand" href=#>
+          <img class = "logo" src="{{ url_for('static', filename ='images/logo.png')}}" alt="">
+      </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon">
-          <img src="{{ url_for('static', filename='images/menu_icon.png') }}" alt="Menu" height=35px width=40px style = "margin-top: -2px; margin-left: -5px">
+          <img src="{{ url_for('static', filename='images/toggle.png') }}" alt="Menu" height=35px width=40px style = "margin-top: -2px; margin-left: -5px">
         </span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
@@ -83,10 +98,10 @@
             <a class="dropdown-item" href="#"><font color=black>English</font></a>
             <div class="dropdown-divider"></div>
             {% if 'es' in langs %}
-            <a class="dropdown-item" href="{{ url_for(page, state=state, lang='es' )}}"><font color=black>Español | Spanish</font></a>
+            <a class="dropdown-item" href="{{ url_for(page, state=state, lang='en' )}}"><font color=black>Español | Spanish</font></a>
             {% endif %}
             {% if 'zh' in langs %}
-            <a class="dropdown-item" href="{{ url_for(page, state=state, lang='zh')}}"><font color=black>中文 | Chinese</font></a>
+            <a class="dropdown-item" href="{{ url_for(page, state=state, lang='en')}}"><font color=black>中文 | Chinese</font></a>
             {% endif %}
           </div>
           </li>
@@ -95,13 +110,13 @@
     </nav>
 
 
+
     <div class="container" align=center>
       <br>
       <h1 align = center>
-        <font style = "color: #373c43;">
           {% block header %}
           {% endblock %}
-        </font></h1>
+      </h1>
 
     <div>
       {% block body %}
@@ -116,13 +131,13 @@
 
         <!-- Copyright -->
         <!-- slate hex #373c43 -->
-        <div class="footer-copyright text-center py-3" style = "background-color: #293A73">
+        <div class="footer-copyright text-center py-3" style = "background-color: #0079C1">
           <font color = "white">
             For more information, visit
             {% if state.lower() == 'ca' %}
-            <a href="https://www.sos.ca.gov/elections/voting-resources/" target = "_blank"><font color = #CCE5FF>www.sos.ca.gov/elections/voting-resources</font></a>.
+            <a class = "faqLink" href="https://www.sos.ca.gov/elections/voting-resources/" target = "_blank"><font>www.sos.ca.gov/elections/voting-resources</font></a>.
             {% elif state.lower() == 'fl' %}
-            <a href="https://dos.myflorida.com/elections/for-voters/" target = "_blank"><font color = #CCE5FF>dos.myflorida.com/elections/for-voters</font></a>.
+            <a class = "faqLink" href="https://dos.myflorida.com/elections/for-voters/" target = "_blank"><font>dos.myflorida.com/elections/for-voters</font></a>.
             {% endif %}
           </font>
         </div>

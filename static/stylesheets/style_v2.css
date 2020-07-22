@@ -1,3 +1,21 @@
+body {
+  color: #000951;
+  background-color: white;
+  /* #000951; */
+}
+
+h3, h1 {
+  /* color: #000951; */
+  color: #F8971A;
+}
+
+/* alert */
+
+.alert-custom {
+  background-color:  #000951;
+  /* #b0dfff; */
+  color:  #0079C1;
+}
 
 /* navbar */
 
@@ -11,11 +29,12 @@
 }
 
 .navbar a:hover {
-  color: #CCE5FF;
+  /* color: #CCE5FF; */
+  color: #F6CC09;
 }
 
 .active {
-  color: #e4572e;
+  color: #F8971A;
   font-weight: bold;
 }
 
@@ -26,6 +45,13 @@
 
 .custom-toggler.navbar-toggler {
   border-color: rgb(255,102,203);
+}
+
+.logo {
+   height: 60px;
+   margin-top: -12px;
+   margin-bottom:-10px;
+   margin-right: -15px;
 }
 
 /* link */
@@ -40,27 +66,32 @@
 /* buttom formatting */
 
 .btn-custom {
-  background-color: #CCE5FF;
-  border-color: #293A73;
-  color: #293A73;
+  background-color: #0079C1;
+  /* border-color: #000951; */
+  color: white;
+  margin-right: 20px;
 }
 
 .btn-custom:hover {
-  background-color: #293A73;
-  color: #CCE5FF;
+  background-color:  #000951;
+  color: white;
+  /* #b0dfff; */
   /* background-color: #bcd5ef; */
 }
 
-.btn-big:hover {
-  background-color: #e4572e;
+.btn-big {
+  background-color: #F8971A;
+  margin-right: 20px;
   color: white;
 }
 
-.btn-big {
-  background-color: #ffab91;
-  /* FFD8D8;  */
-  border-color: #e4572e;
-  color: #e4572e;
+.btn-big:hover {
+  /* background-color: white; */
+  background-color: #F6CC09;
+  border-color: #F8971A;
+  /* #e4572e; */
+  color: #F8971A;
+  /* #e4572e; */
 }
 
 .btn-index, .btn-index:disabled {
@@ -74,7 +105,8 @@
 
 .form-label {
   font-size: 20px;
-  color: #373C43;
+  color: #000951;
+  /* color:  #373C43; */
 }
 
 .formOutline {
@@ -97,37 +129,47 @@
 /* FAQ page */
 
 .faq {
-  background-color: #CCE5FF;
+  background-color: white;
+  /* #b0dfff; */
 }
 
-.sectLink:hover {
-  color: #CCE5FF;
-}
+/* background-color: #ffab91;
+/* FFD8D8;  */
+/* border-color: #e4572e; */
 
 .faqHeader {
-  background-color: #293A73;
-}
-
-.faqLink, .a {
-  color: #e4572e;
-}
-
-.faqLink:hover {
-  color: #FE9920;
+  background-color:#0079C1;
+  /* background-color: #000951; */
+  /*  */
 }
 
 .card-body {
-   color: #293A73;
+   color: #000951;
+   /* #004991; */
+}
+
+.faqLink, .a {
+  color: #F8971A;
+}
+
+.faqLink:hover {
+  /* color: #E75724; */
+  color: #F6CC09;
 }
 
 .sectLink {
   color: white;
+  /* #0079C1; */
+}
+
+.sectLink:hover {
+  color: #F8971A;
 }
 
 a.anchor {
     display: block;
     position: relative;
-    top: -80px;
+    top: -90px;
     visibility: hidden;
 }
 
@@ -167,8 +209,25 @@ a.anchor {
   }
 }
 
-.icon:hover {
-  opacity: 75%;
+/* .icon:hover {
+  background:
+  /* opacity: 75%; */
+/* }  */
+
+.icon {
+  position: relative;
+  display: inline-block;
+}
+.icon .on_hover {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+.icon:hover .on_hover {
+    display: inline;
+    /* opacity: 70%; */
 }
 
 
