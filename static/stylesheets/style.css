@@ -1,5 +1,5 @@
 body {
-  color: black;
+  color: #000951;
   background-color: white;
   /* #000951; */
 }
@@ -207,8 +207,24 @@ a.anchor {
   }
 }
 
-.icon:hover {
-  opacity: 75%;
+/* .icon:hover {
+  background:
+  /* opacity: 75%; */
+/* }  */
+
+.icon {
+  position: relative;
+  display: inline-block;
+}
+.icon .on_hover {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+.icon:hover .on_hover {
+    display: inline;
 }
 
 
