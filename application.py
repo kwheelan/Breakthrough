@@ -3,7 +3,7 @@ import os
 from flask import Flask, render_template, request, session
 import requests
 
-from util import *
+from tools import *
 from datetime import date
 
 app = Flask(__name__)
@@ -14,8 +14,6 @@ app.static_folder = 'static'
 API_KEY = "AIzaSyB_TMYCnCqQz_UDRc6wsu7Tw7rMUbgQ0hQ"
 #api key for Google Maps
 MAPS_API_KEY = "AIzaSyCjVH1q11RrdM74l9r70bjDfwvRpRnsbVo"
-
-
 
 
 #Helper functions:
@@ -130,15 +128,16 @@ def get_page(lang, state, page, national=False):
 
 #URL routess
 
+@app.route("/")
+def index():
+    """National landing page"""
+    days = max((date(2020,11,3) - date.today()).days, 0)
+    return render_template('index.html', days_to_election = days)
+
 @app.route("/<lang>/<state>/home")
 def home(lang, state):
     """State-specific homepage"""
     return get_page(lang, state, 'home')
-
-@app.route("/")
-def index():
-    """National landing page"""
-    return home('en', 'CA')
 
 @app.route("/<lang>/<state>/register")
 def register(lang,state):
