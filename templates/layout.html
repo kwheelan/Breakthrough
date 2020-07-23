@@ -59,7 +59,8 @@
       <a href="{{ url_for('faqs', state=state, lang=lang) + '#vbm'}}" class = "faqLink">here</a>.
       {% elif state.lower() == 'fl' %}
       <font align=center>
-      The state of Florida allows any registered voter to vote by mail. See more about vote-by-mail in Florida
+        The registration deadline for the November 3, 2020 general election is <strong>October 5, 2020</strong>.
+        The state of Florida allows any registered voter to vote by mail. See more about vote-by-mail in Florida
       <a href="{{ url_for('faqs', state=state, lang=lang) + '#vbm'}}" class = "faqLink">here</a>.
     </font>
       {% endif %}
@@ -124,8 +125,6 @@
     {% block footer %}
       <footer class = "mt-auto page-footer font-small">
 
-        <!-- Copyright -->
-        <!-- slate hex #373c43 -->
         <div class="footer-copyright text-center py-3" style = "background-color: #0079C1">
           <font color = "white">
             For more information, visit
@@ -134,7 +133,7 @@
             {% elif state.lower() == 'fl' %}
             <a class = "faqLink" href="https://dos.myflorida.com/elections/for-voters/" target = "_blank"><font>dos.myflorida.com/elections/for-voters</font></a>.
             <br>
-            Voter Assistance Hotline: 1-866-308-673 | Monday thru Friday | 8am-5pm with extended hours during statewide elections.
+            Voter Assistance Hotline: 1-866-308-673 | Monday thru Friday | 8am-5pm (extended hours during statewide elections)
             {% endif %}
           </font>
         </div>
