@@ -112,6 +112,7 @@ states = ["CA", "FL"]
 stateLangDict = { "CA": ['zh', 'es'], "FL" : ['es']}
 #language url extension
 langDict = { "zh" : 'mandarin', "es": 'spanish', 'en': 'english'}
+stateDict = {'ca':'California', 'fl':'Florida'}
 
 def get_page(lang, state, page, national=False):
     """help method to fetch html file by state and language"""
@@ -124,20 +125,28 @@ def get_page(lang, state, page, national=False):
     return render_template(f"{loc}/{langDict[lang]}/{page}.html", langs=stateLangDict[state.upper()], state=state)
 
 
-
-
 #URL routess
 
-@app.route("/")
-def index():
-    """National landing page"""
-    days = max((date(2020,11,3) - date.today()).days, 0)
-    return render_template('index.html', days_to_election = days)
+# @app.route("/")
+# def index():
+#     """National landing page"""
+#     return home('en', 'ca')
+#     days = max((date(2020,11,3) - date.today()).days, 0)
+#     return render_template('index.html', days_to_election = days)
 
 @app.route("/<lang>/<state>/home")
 def home(lang, state):
     """State-specific homepage"""
-    return get_page(lang, state, 'home')
+    if state.upper() not in states or lang not in langDict.keys():
+       return "PAGE NOT FOUND"
+    return render_template(f"national/{langDict[lang]}/home.html", langs=stateLangDict[state.upper()], state=state, state_long=stateDict[state.lower()])
+
+@app.route("/")
+def index():
+    """National landing page"""
+    return home('en', 'ca')
+    days = max((date(2020,11,3) - date.today()).days, 0)
+    return render_template('index.html', days_to_election = days)
 
 @app.route("/<lang>/<state>/register")
 def register(lang,state):

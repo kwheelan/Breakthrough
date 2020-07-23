@@ -148,11 +148,11 @@ h3, h1 {
    /* #004991; */
 }
 
-.faqLink, .a {
+.faqLink, a {
   color: #F8971A;
 }
 
-.faqLink:hover {
+.faqLink:hover, a:hover {
   /* color: #E75724; */
   color: #F6CC09;
 }

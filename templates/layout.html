@@ -26,15 +26,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172950926-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'UA-172950926-1');
-    </script>
-
     <!-- favicon -->
     <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename = 'images/favicon/favicon-32x32.png')}}">
     <link rel="icon" type="image/png" sizes="16x16"href="{{ url_for('static', filename = 'images/favicon/favicon-16x16.png')}}">
@@ -58,22 +49,27 @@
 
   <!-- optional warning banner -->
   {% block warning %}
-  {% if state.lower()=='ca' %}
   <div class="alert alert-custom" role="alert" style = "margin-bottom: -10px">
     <p padding = 20px>
+      {% if state.lower()=='ca' %}
       Due to the Covid-19 pandemic,
       <font><strong>all registered California residents will receive a mail-in ballot for the November 3, 2020 general election.</strong></font> The registration deadline for the general election is
       <font><strong>October 19, 2020</strong></font>. For more information about important dates <a href="{{ url_for('faqs', state=state, lang=lang)}}" class = "faqLink">see FAQs</a>.
       More information about vote-by-mail can be found
       <a href="{{ url_for('faqs', state=state, lang=lang) + '#vbm'}}" class = "faqLink">here</a>.
+      {% elif state.lower() == 'fl' %}
+      <font align=center>
+      The state of Florida allows any registered voter to vote by mail. See more about vote-by-mail in Florida
+      <a href="{{ url_for('faqs', state=state, lang=lang) + '#vbm'}}" class = "faqLink">here</a>.
+    </font>
+      {% endif %}
     </p>
   </div>
-  {% endif %}
   {% endblock %}
 
     <!-- Nav bar -->
     <nav class="navbar navbar-expand-md sticky-top" style ="background-color: #0079C1;">
-      <a class="navbar-brand" href=#>
+      <a class="navbar-brand" href="{{ url_for('index') }}">
           <img class = "logo" src="{{ url_for('static', filename ='images/logo.png')}}" alt="">
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -98,17 +94,16 @@
             <a class="dropdown-item" href="#"><font color=black>English</font></a>
             <div class="dropdown-divider"></div>
             {% if 'es' in langs %}
-            <a class="dropdown-item" href="{{ url_for(page, state=state, lang='en' )}}"><font color=black>Español | Spanish</font></a>
+            <a class="dropdown-item" href="{{ url_for(page, state=state, lang='es' )}}"><font color=black>Español | Spanish</font></a>
             {% endif %}
             {% if 'zh' in langs %}
-            <a class="dropdown-item" href="{{ url_for(page, state=state, lang='en')}}"><font color=black>中文 | Chinese</font></a>
+            <a class="dropdown-item" href="{{ url_for(page, state=state, lang='zh')}}"><font color=black>中文 | Chinese</font></a>
             {% endif %}
           </div>
           </li>
         </ul>
       </div>
     </nav>
-
 
 
     <div class="container" align=center>
@@ -138,6 +133,8 @@
             <a class = "faqLink" href="https://www.sos.ca.gov/elections/voting-resources/" target = "_blank"><font>www.sos.ca.gov/elections/voting-resources</font></a>.
             {% elif state.lower() == 'fl' %}
             <a class = "faqLink" href="https://dos.myflorida.com/elections/for-voters/" target = "_blank"><font>dos.myflorida.com/elections/for-voters</font></a>.
+            <br>
+            Voter Assistance Hotline: 1-866-308-673 | Monday thru Friday | 8am-5pm with extended hours during statewide elections.
             {% endif %}
           </font>
         </div>

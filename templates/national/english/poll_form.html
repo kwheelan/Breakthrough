@@ -10,8 +10,8 @@
 
 <div class = "mainText">
   <font size = 4>
-    {% if state.lower() == 'ca' %}
     <p align=left>
+    {% if state.lower() == 'ca' %}
       Due to the COVID-19 pandemic and Governor Newsom’s order to send every registered
       voter a
       <a href="{{ url_for('faqs', state=state, lang=lang) + '#vbm'}}" class = "faqLink">vote-by-mail ballot</a>
@@ -21,8 +21,11 @@
       your local county elections officials
       <a class = "faqLink" href="https://www.sos.ca.gov/elections/voting-resources/county-elections-offices/">here</a>
       if you have further questions.
-    </p>
+    {% else %}
+      Please note that polling places are subject to change. Make sure to check your polling place
+      <strong>2-4 weeks</strong> before November 3, 2020.
     {% endif %}
+    </p>
   </font>
 </div>
 

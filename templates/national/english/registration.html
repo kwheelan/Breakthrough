@@ -20,19 +20,24 @@
       <br>
   </p>
 
+  {% if state.lower() == 'fl'}
+  If you think this information may not be correct, check the offical Florida registration site
+  <a href="https://registration.elections.myflorida.com/CheckVoterStatus">here</a>.
+  <br>
+  {% endif %}
+
 
   {% if text == "You are registered to vote." %}
 
-<a href = "{{ url_for('pollFinder', state=state, lang=lang) }}">
-  <button class="btn btn-custom">
-    Find my polling place >>
-  </button>
-</a><br>
+  <a href = "{{ url_for('pollFinder', state=state, lang=lang) }}">
+    <button class="btn btn-custom">
+      Find my polling place >>
+    </button>
+  </a><br>
 
   {% else %}
 
   <div class = "container" style = "padding-left: 20%; padding-right: 20%"">
-  <font color=black>
     <br>
     <p align = left>Please note that this information may be affected by the following things:
     <ul align=left>
@@ -41,7 +46,6 @@
       <li>If you registered recently and are not yet in the system</li>
     </ul>
     </p>
-  </font>
   </div>
 
 
