@@ -28,30 +28,42 @@
 
 <br>
 
-  <div class = "row">
-    <div class="col-sm icon_col1">
-      <a href="{{ url_for('registration_forms', state=state, lang=lang)}}" class = "form-label">
-        <img class = "icon" src="{{ url_for('static', filename='images/icons/chinese/check_registration_icon.png') }}">
-      </a>
-    </div>
-    <div class="col-sm icon_col2">
-      <a href="{{ url_for('register', state=state, lang=lang)}}" class = "form-label">
-        <img class = "icon" src="{{ url_for('static', filename='images/icons/chinese/register_to_vote.png') }}">
-      </a>
-    </div>
-   </div><br>
-  <div class = "row">
-    <div class="col-sm icon_col1">
-      <a href="{{ url_for('poll_forms', state=state, lang=lang)}}" class = "form-label">
-        <img class = "icon" src="{{ url_for('static', filename='images/icons/chinese/polling.png') }}">
-      </a>
-    </div>
-    <div class="col-sm icon_col2">
-      <a href="{{ url_for('faqs', state=state, lang=lang)}}" class = "form-label">
-        <img class = "icon" src="{{ url_for('static', filename='images/icons/chinese/faqs.png') }}">
-      </a>
-    </div>
+<div class = "row">
+  <div class="col-sm icon_col1">
+    <a href="{{ url_for('registration_forms', state=state, lang=lang)}}" class = "form-label">
+      <div class = "icon">
+        <img src="{{ url_for('static', filename='images/icons/chinese/check_registration_before.png') }}" alt="">
+        <img src="{{ url_for('static', filename='images/icons/chinese/check_registration_orange.png') }}" class="on_hover" alt="">
+      </div>
+    </a>
   </div>
+  <div class="col-sm icon_col2">
+    <a href="{{ url_for('register', state=state, lang=lang)}}" class = "form-label">
+      <div class = "icon">
+        <img src="{{ url_for('static', filename='images/icons/chinese/register_before.png') }}" alt="">
+        <img src="{{ url_for('static', filename='images/icons/chinese/register_to_vote_orange.png') }}" class="on_hover" alt="">
+      </div>
+    </a>
+  </div>
+ </div><br>
+<div class = "row">
+  <div class="col-sm icon_col1">
+    <a href="{{ url_for('poll_forms', state=state, lang=lang)}}" class = "form-label">
+      <div class = "icon">
+        <img src="{{ url_for('static', filename='images/icons/chinese/polling_before.png') }}" alt="">
+        <img src="{{ url_for('static', filename='images/icons/chinese/polling_orange.png') }}" class="on_hover" alt="">
+      </div>
+    </a>
+  </div>
+  <div class="col-sm icon_col2">
+    <a href="{{ url_for('faqs', state=state, lang=lang)}}" class = "form-label">
+      <div class = "icon">
+        <img src="{{ url_for('static', filename='images/icons/chinese/faqs_before.png') }}" alt="">
+        <img src="{{ url_for('static', filename='images/icons/chinese/faqs_orange.png') }}" class="on_hover" alt="">
+      </div>
+    </a>
+  </div>
+</div>
 
 
 {% endblock %}

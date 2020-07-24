@@ -10,6 +10,9 @@
 
 <br>
 <p align = center>
+  <a href="#register">
+    <button class = "btn btn-big">Voter Registration Questions</button>
+  </a>
   <a href="#general">
     <button class = "btn btn-big">General Voting Questions</button>
   </a>
@@ -19,26 +22,9 @@
 </p>
 <br>
 
-<a class="anchor" id="general"></a>
-<h3 align=left margin-bottom=10px>General Questions About Voting</h3><br>
-<div id="accordion" align=left style = "margin-bottom: 30px">
-  <div class="card faq">
-    <div class="card-header faqHeader" id="headingOne">
-      <h4 class="mb-0">
-        <button class="btn btn-link collapsed sectLink" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-            How will COVID-19 affect voting in California?
-        </button>
-      </h4>
-    </div>
-
-    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
-      <div class="card-body">
-        Due to the Covid-19 pandemic, <strong>all registered California residents will receive a mail-in ballot.</strong>
-        However, if voters prefer to vote in person, <strong>polling places will be available.</strong> You can find your polling place information 2-4 weeks before the election
-        <a href="{{ url_for('poll_forms', state=state, lang=lang)}}" class = "faqLink">here</a>.
-      </div>
-    </div>
-  </div>
+<a class="anchor" id="register"></a>
+<h3 align=left margin-bottom=10px>Questions About Voter Registration</h3><br>
+<div id="accordion0" align=left style = "margin-bottom: 30px">
   <div class="card faq">
     <div class="card-header faqHeader" id="headingTwo">
       <h4 class="mb-0">
@@ -47,7 +33,7 @@
         </button>
       </h4>
     </div>
-    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion0">
       <div class="card-body">
         Voters must register in California at least <strong>15 days</strong> before the upcoming election.
         The last day to register to vote in the November 3, 2020 general election is
@@ -64,7 +50,7 @@
         </button>
       </h5>
     </div>
-    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion0">
       <div class="card-body">
         If you're an eligible voter (see below) and you miss the October 19, 2020 registration deadline
         to register or update your voter registration, you can still vote.
@@ -86,7 +72,7 @@
         </button>
       </h5>
     </div>
-    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion0">
       <div class="card-body">
         ALL of the following must be true to be eligible to vote:
         <ul>
@@ -103,6 +89,50 @@
           If you are a formerly incarcerated individual who is now off parole, you will have to
           <a href="https://covr.sos.ca.gov/" targe="_blank" class="faqLink">re-register to vote.</a>
         </strong>
+      </div>
+    </div>
+  </div>
+  <div class="card faq">
+    <div class="card-header faqHeader" id="headingEight">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed sectLink" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+           If I will not be 18 years old by Election Day, can I pre-register to vote?
+        </button>
+      </h5>
+    </div>
+    <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordion0">
+      <div class="card-body">
+        Yes! If you are currently 16 or 17 years old and the following are true, you are eligible to pre-register to vote. <br>
+        <ul>
+          <li>US citizen and resident of California.</li>
+          <li>Not currently in state or federal prison or on parole for the conviction of a felony.
+          More information <a class = "faqLink" href="https://www.sos.ca.gov/elections/voting-resources/voting-california/who-can-vote-california/voting-rights-californians/">here</a>.</li>
+          <li>Not currently found mentally incompetent to vote by a court.
+          More information <a class = "faqLink" href="https://www.sos.ca.gov/elections/voting-info/conservatorship/">here</a>.</li>
+        </ul><br>
+        <a href="https://registertovote.ca.gov/" class="faqLink">Pre-register to vote online in California</a>.
+      </div>
+    </div>
+  </div>
+</div>
+
+<a class="anchor" id="general"></a>
+<h3 align=left margin-bottom=10px>General Questions About Voting</h3><br>
+<div id="accordion" align=left style = "margin-bottom: 30px">
+  <div class="card faq">
+    <div class="card-header faqHeader" id="headingOne">
+      <h4 class="mb-0">
+        <button class="btn btn-link collapsed sectLink" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+            How will COVID-19 affect voting in California?
+        </button>
+      </h4>
+    </div>
+
+    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+      <div class="card-body">
+        Due to the Covid-19 pandemic, <strong>all registered California residents will receive a mail-in ballot.</strong>
+        However, if voters prefer to vote in person, <strong>polling places will be available.</strong> You can find your polling place information 2-4 weeks before the election
+        <a href="{{ url_for('poll_forms', state=state, lang=lang)}}" class = "faqLink">here</a>.
       </div>
     </div>
   </div>
@@ -130,7 +160,6 @@
       </div>
     </div>
   </div>
-
   <div class="card faq">
     <div class="card-header faqHeader" id="headingFive">
       <h5 class="mb-0">
@@ -212,28 +241,6 @@
         general election, <strong>voters are encouraged to vote at home and return their ballot either by mail or at a polling place.</strong>
         See county-specific COVID-19 early voting policies
         <a class ="faqLink" href="https://www.sos.ca.gov/elections/voting-resources/county-elections-offices/">here</a>.
-      </div>
-    </div>
-  </div>
-  <div class="card faq">
-    <div class="card-header faqHeader" id="headingEight">
-      <h5 class="mb-0">
-        <button class="btn btn-link collapsed sectLink" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
-           If I will not be 18 years old by Election Day, can I pre-register to vote?
-        </button>
-      </h5>
-    </div>
-    <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordion">
-      <div class="card-body">
-        Yes! If you are currently 16 or 17 years old and the following are true, you are eligible to pre-register to vote. <br>
-        <ul>
-          <li>US citizen and resident of California.</li>
-          <li>Not currently in state or federal prison or on parole for the conviction of a felony.
-          More information <a class = "faqLink" href="https://www.sos.ca.gov/elections/voting-resources/voting-california/who-can-vote-california/voting-rights-californians/">here</a>.</li>
-          <li>Not currently found mentally incompetent to vote by a court.
-          More information <a class = "faqLink" href="https://www.sos.ca.gov/elections/voting-info/conservatorship/">here</a>.</li>
-        </ul><br>
-        <a href="https://registertovote.ca.gov/" class="faqLink">Pre-register to vote online in California</a>.
       </div>
     </div>
   </div>
