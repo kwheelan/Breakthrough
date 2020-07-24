@@ -109,44 +109,37 @@ def pollFinderHelper():
 #states with enabled pages
 states = ["CA", "FL"]
 #translations avaible for each state
-stateLangDict = { "CA": ['zh', 'es'], "FL" : ['es']}
+stateLangDict = { "CA": ['en', 'zh', 'es'], "FL" : ['en', 'es']}
 #language url extension
 langDict = { "zh" : 'mandarin', "es": 'spanish', 'en': 'english'}
 stateDict = {'ca':'California', 'fl':'Florida'}
 
 def get_page(lang, state, page, national=False):
     """help method to fetch html file by state and language"""
-    if state.upper() not in states or lang not in langDict.keys():
+    if state.upper() not in states or lang not in stateLangDict[state.upper()]:
        return "PAGE NOT FOUND"
     if national:
         loc = 'national'
     else:
         loc = state.upper()
-    return render_template(f"{loc}/{langDict[lang]}/{page}.html", langs=stateLangDict[state.upper()], state=state)
+    return render_template(f"{loc}/{langDict[lang]}/{page}.html", langs=stateLangDict[state.upper()], state=state, lang=lang)
 
 
-#URL routess
-
-# @app.route("/")
-# def index():
-#     """National landing page"""
-#     return home('en', 'ca')
-#     days = max((date(2020,11,3) - date.today()).days, 0)
-#     return render_template('index.html', days_to_election = days)
-
-@app.route("/<lang>/<state>/home")
-def home(lang, state):
-    """State-specific homepage"""
-    if state.upper() not in states or lang not in langDict.keys():
-       return "PAGE NOT FOUND"
-    return render_template(f"national/{langDict[lang]}/home.html", langs=stateLangDict[state.upper()], state=state, state_long=stateDict[state.lower()])
+#URL routes
 
 @app.route("/")
 def index():
     """National landing page"""
-    # return home('en', 'ca')
     days = max((date(2020,11,3) - date.today()).days, 0)
     return render_template('index.html', days_to_election = days)
+
+@app.route("/<lang>/<state>/home")
+def home(lang, state):
+    """State-specific homepage"""
+    if state.upper() not in states or lang not in stateLangDict[state.upper()]:
+       return "PAGE NOT FOUND"
+    return render_template(f"national/{langDict[lang]}/home.html", langs=stateLangDict[state.upper()], state=state, state_long=stateDict[state.lower()], lang=lang)
+
 
 @app.route("/<lang>/<state>/register")
 def register(lang,state):

@@ -23,10 +23,12 @@
     for the November 3, 2020 general election.</strong>
     <br><br>The registration deadline for the general election is
     <strong>October 19, 2020</strong>. For more information about important dates
-    <a href="{{ url_for('faqs', state=state, lang=lang)}}" class = "faqLink">see FAQs</a>.
+    <a href="{{ url_for('faqs', state=state, lang=lang)}}" class = "faqLink">see Frequently Asked Questions</a>.
 
     {% elif state.lower() == 'fl' %}
     The registration deadline for the November 3, 2020 general election is <strong>October 5, 2020</strong>.
+    For more information about important dates
+    <a href="{{ url_for('faqs', state=state, lang=lang)}}" class = "faqLink">see Frequently Asked Questions</a>.
     The state of Florida allows any registered voter to vote by mail. See more about vote-by-mail in Florida
     <a href="{{ url_for('faqs', state=state, lang=lang) + '#vbm'}}" class = "faqLink">here</a>.
     {% endif %}

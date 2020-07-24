@@ -9,12 +9,21 @@ h3, h1 {
   color: #F8971A;
 }
 
+h1 {
+  text-align: center;
+}
+
+.footer-copyright {
+  background-color: #0079C1;
+  color: white;
+}
 /* alert */
 
 .alert-custom {
   background-color:  #000951;
-  /* #b0dfff; */
+  /* background-color: #b0dfff; */
   color:  #0079C1;
+  margin-bottom: -10px;
 }
 
 /* navbar */
@@ -83,6 +92,8 @@ h3, h1 {
   background-color: #F8971A;
   margin-right: 20px;
   color: white;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .btn-big:hover {

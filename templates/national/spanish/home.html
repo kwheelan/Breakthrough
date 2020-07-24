@@ -1,7 +1,7 @@
-{% extends "layout_spanish.html" %}
+{% extends "layout.html" %}
 
 {% set page = 'home' %}
-{% set state = 'CA' %}
+{% set lang = 'es' %}
 
 {% block head %}
   {{ super() }}
@@ -12,7 +12,7 @@
 {% endblock %}
 
 {% block header %}
-  Guía de recursos para votar en California
+  Guía de recursos para votar en {{ state_long }}
 {% endblock %}
 
 {% block body %}
