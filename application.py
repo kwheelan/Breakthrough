@@ -150,6 +150,13 @@ def faqs(lang,state):
     """State specific FAQs"""
     return get_page(lang, state, 'faqs')
 
+@app.route("/<lang>/<state>/faqs/search", methods = ['POST'])
+def faq_search(lang, state):
+    keyword = request.form.get("keyword")
+    Q = request.args.get('Q_1')
+    A = request.args.get('A_1')
+    return render_template(f"GA/{langDict[lang]}/faqs.html", langs=stateLangDict[state.upper()], state=state, lang=lang, search=True, keyword=keyword, Q=Q, A=A)
+
 @app.route("/<lang>/<state>/registration/query")
 def registration_forms(lang, state):
     """Get registration info form page; available in the languages for each state"""

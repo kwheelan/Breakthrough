@@ -133,32 +133,10 @@ NOTE: If you meet any of the following criteria, you may complete one applicatio
  </p>
  <p>
  After you update your voter registration, you should submit a new application to receive an absentee ballot. (link faq)
- </p>"
+ </p>",
 
  "<!-- How do I track my absentee ballot application and returned ballot? -->
  <p>
-To track your absentee ballot application and ballot status,<a target = \"_blank\" href=\"https://www.mvp.sos.ga.gov/MVP/mvp.do\">click here</a>.
+To track your absentee ballot application and ballot status, <a target = \"_blank\" href=\"https://www.mvp.sos.ga.gov/MVP/mvp.do\">click here</a>.
 </p>"
  ] %}
-
-{% set n = (Q | length) %}
-
-<div id="accordion_{{section}}" align=left style = "margin-bottom: 30px">
-{% for i in range(n) %}
-  <div class="card faq">
-    <div class="card-header faqHeader" id="heading_{{ section }}_{{ i }}">
-      <h4 class="mb-0">
-        <button class="btn btn-link collapsed sectLink" data-toggle="collapse" data-target="#collapse_{{ section }}_{{ i }}" aria-expanded="false" aria-controls="collapse_{{ section }}_{{ i }}">
-         {{ Q[i] | safe}}
-        </button>
-      </h4>
-    </div>
-    <div id="collapse_{{ section }}_{{ i }}" class="collapse" aria-labelledby="heading_{{ section }}_{{ i }}" data-parent="#accordion_{{section}}">
-      <div class="card-body">
-       {{ A[i] | safe}}
-      </div>
-    </div>
-  </div>
-
-{% endfor %}
-</div>

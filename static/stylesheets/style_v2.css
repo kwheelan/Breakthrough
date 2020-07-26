@@ -184,6 +184,12 @@ a.anchor {
     visibility: hidden;
 }
 
+.search_bar {
+  width: 200px;
+  height: 40px;
+  padding: 5px;
+  margin-top: 10px;
+}
 
 /* home page */
 

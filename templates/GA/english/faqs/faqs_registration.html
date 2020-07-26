@@ -96,25 +96,3 @@ If you misplaced or have not received your precinct card within 3-4 weeks of sub
 </p>"
 
  ] %}
-
-{% set n = (Q | length) %}
-
-<div id="accordion_{{section}}" align=left style = "margin-bottom: 30px">
-{% for i in range(n) %}
-  <div class="card faq">
-    <div class="card-header faqHeader" id="heading_{{ section }}_{{ i }}">
-      <h4 class="mb-0">
-        <button class="btn btn-link collapsed sectLink" data-toggle="collapse" data-target="#collapse_{{ section }}_{{ i }}" aria-expanded="false" aria-controls="collapse_{{ section }}_{{ i }}">
-         {{ Q[i] | safe }}
-        </button>
-      </h4>
-    </div>
-    <div id="collapse_{{ section }}_{{ i }}" class="collapse" aria-labelledby="heading_{{ section }}_{{ i }}" data-parent="#accordion_{{section}}">
-      <div class="card-body">
-       {{ A[i] | safe }}
-      </div>
-    </div>
-  </div>
-
-{% endfor %}
-</div>
