@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% set page='faqs' %}
+
+{% block header %}
+    Frequently Asked Questions
+{% endblock %}
+
+{% block body %}
+
+<br>
+<p align = center>
+  <a href="#registration">
+    <button class = "btn btn-big" style = "margin-right: 20px">Registration Questions</button>
+  </a>
+  <a href="#general">
+    <button class = "btn btn-big" style = "margin-right: 20px">General Voting Questions</button>
+  </a>
+  <a href="#vbm">
+    <button class = "btn btn-big">Vote-by-Mail Questions</button>
+  </a>
+</p>
+<br>
+
+<a class="anchor" id="registration"></a>
+<h3 align=left margin-bottom=10px>Questions About Voter Registration</h3><br>
+{% include 'GA/english/faqs/faqs_registration.html' %}
+
+<a class="anchor" id="general"></a>
+<h3 align=left margin-bottom=10px>General Questions About Voting</h3><br>
+{% include 'GA/english/faqs/faqs_general.html' %}
+
+<a class="anchor" id="vbm"></a>
+<h3 align=left margin-bottom=10px>Questions About Vote-by-Mail</h3><br>
+{% include 'GA/english/faqs/faqs_vbm.html' %}
+
+
+{% endblock %}

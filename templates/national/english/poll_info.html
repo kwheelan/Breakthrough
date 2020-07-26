@@ -35,6 +35,10 @@
           Click
           <a class = "faqLink" href="{{ url_for('faqs', state=state, lang=lang) + '#vbm'}}">here</a>
           for more information.
+        {% elif state.lower() == 'ga' %}
+          Our database may not yet reflect recent changes to polling locations in Georgia. Check
+          <a href="https://www.mvp.sos.ga.gov/MVP/mvp.do">here</a>
+          to see the Georgia's official poll finder.
         {% endif %}
       </strong>
     </font>

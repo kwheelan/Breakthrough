@@ -144,12 +144,10 @@ h1 {
   /* #b0dfff; */
 }
 
-/* background-color: #ffab91;
-/* FFD8D8;  */
-/* border-color: #e4572e; */
 
 .faqHeader {
   background-color:#0079C1;
+  text-align: left;
   /* background-color: #b0dfff; */
   /* background-color: #000951; */
   /*  */
@@ -157,6 +155,7 @@ h1 {
 
 .sectLink {
   color: white;
+  text-align: left;
   /* #0079C1; */
 }
 

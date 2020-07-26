@@ -29,6 +29,14 @@
           The state of Florida allows any registered voter to vote by mail. See more about vote-by-mail in Florida
           <a href="{{ url_for('faqs', state=state, lang=lang) + '#vbm'}}" class = "faqLink">here</a>.
         {% elif lang == 'es' %}
+        {% endif %}
+
+        {% elif state.lower() == 'ga' %}
+          {% if lang == 'en' %}
+            The registration deadline for the November 3, 2020 general election is <strong>October 5, 2020</strong>.
+            The state of Georgia allows any registered voter to vote by mail. See more about vote-by-mail in Georgia
+            <a href="{{ url_for('faqs', state=state, lang=lang) + '#vbm'}}" class = "faqLink">here</a>.
+          {% elif lang == 'es' %}
 
         {% endif %}
       {% endif %}

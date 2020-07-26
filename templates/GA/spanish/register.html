@@ -1,0 +1,42 @@
+{% extends "layout_spanish.html" %}
+
+{% set page='register' %}
+
+{% set state='CA' %}
+
+{% block header %}
+    Registrarse para votar
+{% endblock %}
+
+{% block body %}
+
+<p>
+  <font class="form-label">
+    Dele click a el enlace para registrarse para votar en linea. Encuentre más recursos acerca de votar en esta página.
+  </font>
+</p>
+
+
+<a target = "_blank" href="https://covr.sos.ca.gov/ES">
+  <button class="btn btn-lg btn-big">
+      <font size=6><strong>Registrarse para votar en California</strong></font>
+  </button>
+</a>
+<br><br>
+
+
+
+  <a href = "{{ url_for('poll_forms', state=state, lang=lang) }}" style = "padding: 15px">
+    <button class="btn btn-custom">
+      Encuenta mi casilla >>
+    </button>
+  </a>
+
+  <a href = " {{ url_for('faqs', state=state ,lang=lang) }}" style = "padding: 15px">
+    <button class="btn btn-custom">
+      Preguntas frecuentes acerca de votar
+    </button>
+  </a>
+
+
+{% endblock %}

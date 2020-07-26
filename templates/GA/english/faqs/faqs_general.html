@@ -1,0 +1,204 @@
+
+{% set section = 'general' %}
+
+{% set Q =[
+"How do I update my voter registration record?",
+"Where do I vote on Election Day on November 3, 2020?",
+"What identification do I need to provide to vote?",
+"Can I vote early in Georgia? Where?",
+"I forgot or do not have a proper ID to vote. Can I still cast a ballot?",
+"What is a provisional ballot?",
+"Can I get time off work to vote?",
+"I just moved within the same county in Georgia. How do I update my voter registration?",
+"I just moved to a different county in Georgia. How do I update my voter registration?",
+"I need assistance to vote due to a disability. What are my options?",
+"My question was not answered. Where can I go for more information?"
+] %}
+
+{% set A = [
+"<p>
+To make changes to your voter registration record, click <a target=\"_blank\" href=\"https://registertovote.sos.ga.gov/GAOLVR/welcome.do#no-back-button\">here</a>.
+</p>
+<p>
+If you have questions about updating your voter registration record due to a change of residence, see below.
+</p>",
+
+"<p>
+<strong>If you are not voting by absentee ballot or during the advance voting period (see below), you must vote in-person at your assigned polling location on Election Day.</strong> On Election Day, polling locations in Georgia are open from 7 AM to 7 PM.  <strong>If you are in line at 7 PM, you will be allowed to cast your vote. </strong>
+</p>
+<p>
+To find your assigned polling location, <a target=\"_blank\" href=\"https://www.mvp.sos.ga.gov/MVP/mvp.do\">click here</a>. Your assigned polling location is also found on your precinct card.
+</p>",
+
+"<p>
+<span style=\"text-decoration:underline;\">Acceptable identification</span>
+</p>
+<p>
+If you decide to vote in person at a polling location, bring <strong>one</strong> of the six valid forms of ID:
+</p>
+<ul>
+
+<li>Any valid state or federal government issued photo ID, <strong>including a free voter ID Card issued by your county registrar's office or the Georgia Department of Driver Services (DDS)</strong>
+
+<li>A Georgia Driver's License,<strong> even if expired</strong>
+
+<li>Valid employee photo ID from any branch, department, agency, or entity of the U.S. Government, Georgia, or any county, municipality, board, authority or other entity of this state
+
+<li>Valid U.S. passport ID
+
+<li>Valid U.S. military photo ID
+
+<li>Valid tribal photo ID
+</li>
+</ul>
+<p>
+NOTE: <strong>Georgia accepts student ID cards as a valid form of identification from certain public and technical institutions.</strong> Students at private universities must show one of the other acceptable forms of photo ID to vote. You can see if your school’s student ID is accepted <a target=\"_blank\" href=\"http://sos.ga.gov/admin/files/acceptableID_9-18.v2.pdf\">here.</a>
+</p>
+<p>
+<span style=\"text-decoration:underline;\">Georgia Voter Identification Card</span>
+</p>
+<p>
+If you do not have one of the six acceptable forms of photo ID, <strong>the State of Georgia offers a free ID Card.</strong> An ID card can be issued at any <a target=\"_blank\" href=\"https://elections.sos.ga.gov/Elections/countyregistrars.do\">county registrar's office</a> or Department of Driver Services Office free of charge.
+</p>
+<p>
+To receive a voter identification card, the voter must provide:
+</p>
+<ul>
+
+<li>A photo identity document or approved non-photo identity document that includes full legal name and date of birth
+
+<li>Documentation showing the voter's date of birth
+
+<li>Evidence that the applicant is a registered voter
+
+<li>Documentation showing the applicant's name and residential address
+</li>
+</ul>
+<p>
+Example of a voter identification card:
+</p>
+<p>
+
+<img src=\"https://sos.ga.gov/admin/uploads/55a86c8140522bb4307da8e39ce4a315.gif\"  alt=\"Image cannot render.\">
+
+</p>",
+
+"<p>
+<strong>Yes. Early voting in Georgia is available from Monday, Oct 12, 2020 through Friday Oct 30, 2020.</strong>
+</p>
+<p>
+Find early voting polling locations and open hours <a target = \"_blank\" href=\"https://elections.sos.ga.gov/Elections/advancedVotingInfoResult.do\">here</a>, or by contacting your<a target = \"_blank\" href=\"https://elections.sos.ga.gov/Elections/countyregistrars.do\"> county registrar’s office</a>.
+</p>
+<p>
+Voting any time prior to Election Day, even at a precinct, is absentee voting. You will complete an absentee ballot application in person at the early voting location immediately prior to casting your vote.
+</p>",
+
+"<p>
+If you do not bring/do not have a proper ID to vote during early voting (October 12 - October 30) or Election Day (November 3), you can cast a provisional ballot.
+</p>
+<p>
+See the next question for more information about provisional ballots.
+</p>",
+
+"<p>
+Provisional voting allows you to vote in person even if all the requirements for doing so cannot be met at the time. Your provisional ballot will count if the problem is solved within three days after Election Day.
+</p>
+<p>
+The three reasons for voting with a provisional ballot are:
+</p>
+<ol>
+
+<li>You are unable to show one of the <span style=\"text-decoration:underline;\">required forms of photo ID</span> when you vote in person
+
+<li>When you first registered to vote in Georgia, you registered by mail, did not provide any identification at that time, and are unable to present acceptable identification the first time you vote in person
+
+<li>Your name does not appear on the list of registered voters in the precinct.
+</li>
+</ol>
+<p>
+If you vote with a provisional ballot because you did not have acceptable identification, you will have <strong>three days after the polls close to provide acceptable identification</strong> to your <a href=\"https://elections.sos.ga.gov/Elections/countyregistrars.do\">county registrar office</a> for your vote to count.
+</p>
+<p>
+If you voted a provisional ballot because your name did not appear on the list of registered voters in the precinct, the <a href=\"https://elections.sos.ga.gov/Elections/countyregistrars.do\">county registrar</a> has up to three days after the election to determine if you were properly registered to vote in that election. If you were, your vote will count. If you were not eligible to vote in that election, your vote will not be counted, and you will be notified in writing.
+</p>
+<p>
+If you were eligible to vote but voted in the wrong precinct, only the votes for candidates for which you were entitled to vote will be counted, and you will be notified in writing that your ballot was partially counted for your correct precinct.
+</p>
+<p>
+In federal elections, if the polling place is kept open after 7:00 PM on November 3, 2020 because of a court order, anyone arriving after 7:00 PM will vote by provisional ballot. If you are eligible to vote and the order stands, your vote will be counted.
+</p>",
+
+
+"Yes, Georgia law (Ga. Code Ann. § 21-2-404) requires employers to permit their employees to take up to two hours to vote. Employees must notify their employer in advance of the election.",
+
+"<p>
+Voters are required to notify the board of registrars of their county of residence whenever they move.
+</p>
+<p>
+If you move within the same county in which you are registered to vote and don't notify the registrar at least 30 days prior to an election, you may vote in your old polling place for that election. You must file a notice of your new address. This can be done by writing to your <a target = \"_blank\" href=\"http://elections.sos.ga.gov/Elections/countyregistrars.do\">county board of registrars' office</a> or by submitting a new voter registration application.
+</p>",
+
+"<p>
+Voters are required to notify the board of registrars of their county of residence whenever they move.
+</p>
+<p>
+If you move outside the county in which you are registered to vote<strong> within 30 days</strong> of an election, you may vote in your old precinct for that election.
+</p>
+<p>
+If you move outside the county in which you are registered to vote <strong>in excess of 30 days</strong> prior to an election, you have <strong>lost your eligibility to vote</strong> in the county of your old residence. You must <strong><a href = \"https://registertovote.sos.ga.gov/GAOLVR/welcome.do#no-back-button\">register to vote</a> in your new county of residence.</strong> You will be assigned a new voting precinct and polling location. Remember, if you don't register to vote by the deadline, you cannot vote in that particular election.
+</p>",
+
+"<p>
+Georgia offers many options to make voting accessible to everyone, regardless of disability.
+</p>
+<p>
+Eligible voters with disabilities may benefit from any of the following depending on circumstance:
+</p>
+<ul>
+
+<li>Assistance registering to vote.
+
+<li>If you are 75 years of age or older or have a disability and you show up at the polling place between 9:30 a.m. and 4:30 p.m. on Election Day (November 3, 2020), you will not be required to wait in line.
+
+<li>In-person voting assistance
+
+<li>In-person voting assistive voting devices
+
+<li>Seated voting
+
+<li>Vote-by-mail before Election Day
+
+<li>Early voting
+</li>
+</ul>
+<p>
+More information about voting with disabilities in Georgia can be found <a target = \"_blank\" href=\"https://sos.ga.gov/index.php/elections/voters_with_disabilities\">here</a>.
+</p>",
+
+"<p>
+More information about voting in Georgia can be found on the <a target = \"_blank\" href=\"https://sos.ga.gov/index.php/elections\">Secretary of State’s website</a> or by contacting your <a target = \"_blank\" href=\"https://elections.sos.ga.gov/Elections/countyregistrars.do\">county registrar</a>.
+</p>"
+
+ ] %}
+
+{% set n = (Q | length) %}
+
+<div id="accordion_{{section}}" align=left style = "margin-bottom: 30px">
+{% for i in range(n) %}
+  <div class="card faq">
+    <div class="card-header faqHeader" id="heading_{{ section }}_{{ i }}">
+      <h4 class="mb-0">
+        <button class="btn btn-link collapsed sectLink" data-toggle="collapse" data-target="#collapse_{{ section }}_{{ i }}" aria-expanded="false" aria-controls="collapse_{{ section }}_{{ i }}">
+         {{ Q[i] | safe }}
+        </button>
+      </h4>
+    </div>
+    <div id="collapse_{{ section }}_{{ i }}" class="collapse" aria-labelledby="heading_{{ section }}_{{ i }}" data-parent="#accordion_{{section}}">
+      <div class="card-body">
+       {{ A[i] | safe }}
+      </div>
+    </div>
+  </div>
+
+{% endfor %}
+</div>

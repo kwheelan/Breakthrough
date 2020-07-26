@@ -95,39 +95,32 @@
       <br>
       </p>
 
-
+<div class = "row">
+  <div class = "col-lg-10">
       <!-- clickable map -->
       <iframe src="https://createaclickablemap.com/map.php?&id=94556&maplocation=false&online=true" width="900" height="525" style="border: none;"></iframe>
         <script>
           if (window.addEventListener){ window.addEventListener("message", function(event) { if(event.data.length >= 22) { if( event.data.substr(0, 22) == "__MM-LOCATION.REDIRECT") location = event.data.substr(22); } }, false); } else if (window.attachEvent){ window.attachEvent("message", function(event) { if( event.data.length >= 22) { if ( event.data.substr(0, 22) == "__MM-LOCATION.REDIRECT") location = event.data.substr(22); } }, false); }
         </script>
+  </div>
 
 
-        <p align = left >
-            <a href="{{ url_for('home', state="ca", lang="en")}}" style = "padding: 20px" >
+{% set states = ['ca', 'fl', 'ga'] %}
+{% set state_longs = ['California', 'Florida', 'Georgia'] %}
+
+<div class = "col-lg-2">
+  <p align = left >
+    {% for i in range(states | length) %}
+            <a href="{{ url_for('home', state=states[i], lang="en")}}" style = "padding: 20px" >
               <button class="btn btn-big">
-                <font size = 8 >California</font>
+                <font size = 6 >{{state_longs[i]}}</font>
               </button>
             </a>
-            <a href="{{ url_for('home', state="fl", lang="en")}}" style = "padding: 20px">
-              <button class="btn btn-big">
-                <font size = 8 >Florida</font>
-              </button>
-            </a>
-        </p>
+    {% endfor %}
+  </p>
+</div>
 
-      <!-- <br> <br>
-      <p align=center>
-      <a href="https://www.breakthroughcollaborative.org/" align=center>
-        <button class="btn btn-custom">
-          <font size= 4>
-            Go to Breakthrough's national homepage
-          </font>
-        </button>
-      </a>
-      </p> -->
-
-
+</div>
     </div>
   </body>
 

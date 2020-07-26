@@ -4,6 +4,8 @@
       <footer class = "mt-auto page-footer font-small">
 
         <div class="footer-copyright text-center py-3">
+
+          <!-- California -->
             {% if state.lower() == 'ca' %}
               {% if lang == 'en' %}
                 For more information, visit <a class = "faqLink" href="https://www.sos.ca.gov/elections/voting-resources/" target = "_blank"><font>www.sos.ca.gov/elections/voting-resources</a>.
@@ -19,23 +21,34 @@
                   <br>
                   California Voter Hotline: (800) 339-2857 - 中文 / Chinese
               {% endif %}
+
+              <!-- Florida -->
             {% elif state.lower() == 'fl' %}
               {% if lang == 'en' %}
                 For more information, visit <a class = "faqLink" href="https://dos.myflorida.com/elections/for-voters/" target = "_blank"><font>dos.myflorida.com/elections/for-voters</font></a>.
                 <br>
-                Florida Voter Assistance Hotline: 1-866-308-673 | Monday thru Friday | 8am-5pm (extended hours during statewide elections)
+                Florida Voter Assistance Hotline: 1-866-308-6739 | Monday thru Friday | 8am-5pm (extended hours during statewide elections)
               {% elif lang == 'es' %}
                 Para más información, visite <a href="https://dos.myflorida.com/elections/for-voters/" target = "_blank"><font>dos.myflorida.com/elections/for-voters</font></a>.
               {% endif %}
+
+
+              <!-- Georgia -->
+              {% elif state.lower() == 'ga' %}
+                {% if lang == 'en' %}
+                  For more information, visit <a class = "faqLink" href="https://georgia.gov/voting" target = "_blank"><font>dos.myflorida.com/elections/for-voters</font></a>.
+                  <br>
+                  Common Cause Voter Assistance Hotline: 1-866-687-8683 or text "OUR VOTE" to 97779
+                {% elif lang == 'es' %}
+                  Para más información, visite <a href="https://georgia.gov/voting" target = "_blank"><font>dos.myflorida.com/elections/for-voters</font></a>.
+                {% endif %}
             {% endif %}
         </div>
-        <!-- Copyright -->
 
 
       </footer>
     {% endblock %}
 
-  <!-- </section> -->
   </body>
 
 </html>

@@ -107,12 +107,12 @@ def pollFinderHelper():
     return addressList
 
 #states with enabled pages
-states = ["CA", "FL"]
+states = ["CA", "FL", "GA"]
 #translations avaible for each state
-stateLangDict = { "CA": ['en', 'zh', 'es'], "FL" : ['en', 'es']}
+stateLangDict = { "CA": ['en', 'zh', 'es'], "FL" : ['en', 'es'], "GA": ['en', 'es']}
 #language url extension
 langDict = { "zh" : 'mandarin', "es": 'spanish', 'en': 'english'}
-stateDict = {'ca':'California', 'fl':'Florida'}
+stateDict = {'ca':'California', 'fl':'Florida', 'ga': 'Georgia'}
 
 def get_page(lang, state, page, national=False):
     """help method to fetch html file by state and language"""
@@ -139,7 +139,6 @@ def home(lang, state):
     if state.upper() not in states or lang not in stateLangDict[state.upper()]:
        return "PAGE NOT FOUND"
     return render_template(f"national/{langDict[lang]}/home.html", langs=stateLangDict[state.upper()], state=state, state_long=stateDict[state.lower()], lang=lang)
-
 
 @app.route("/<lang>/<state>/register")
 def register(lang,state):
