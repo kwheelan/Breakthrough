@@ -1,4 +1,5 @@
 {% extends "layout.html" %}
+{% set lang = 'en' %}
 
 {% set page='pollFinder' %}
 
@@ -26,7 +27,7 @@
 
     <font class="form-label">
       <br>
-      <strong>Please note that polling places are subject to change.<br>
+      <strong>Please note that polling places are subject to change.
         Make sure you check this information 2-4 weeks before the election.
         {% if state.lower() == "ca" %}
         <br><br>
@@ -38,25 +39,27 @@
         {% elif state.lower() == 'ga' %}
           Our database may not yet reflect recent changes to polling locations in Georgia. Check
           <a href="https://www.mvp.sos.ga.gov/MVP/mvp.do">here</a>
-          to see the Georgia's official poll finder.
+          to see Georgia's official poll finder.
         {% endif %}
       </strong>
     </font>
     <br><br>
 
+  <div align = left>
     {% if addressList == [] %}
        <font size = 5>No polling data for this address or no upcoming elections.</font>
     {% else %}
       {% for address in addressList %}
-        <font size=5><strong><font color=#e4572e>{{ address["locationName"] }}</font></strong><br>
+        <h3>{{ address["locationName"] }}</h3>
+        <font size=4>
         {{ address["line1"] }} <br>
         {{ address["city"] }}, {{address["state"]}} {{address["zip"]}} <br>
         <strong>Hours: </strong>{{ address["hours"] }}
         <br><br></font>
       {% endfor %}
     {% endif %}
+  </div>
     <br>
-  </p>
 
 
 

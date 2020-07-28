@@ -148,14 +148,14 @@ def register(lang,state):
 @app.route("/<lang>/<state>/faqs")
 def faqs(lang,state):
     """State specific FAQs"""
-    return get_page(lang, state, 'faqs')
+    return render_template(f"national/faqs.html", langs=stateLangDict[state.upper()], state=state, lang=lang, lang_full = langDict[lang])
 
-@app.route("/<lang>/<state>/faqs/search", methods = ['POST'])
+@app.route("/<lang>/<state>/faqs/search", methods = ['POST', 'GET'])
 def faq_search(lang, state):
+    if request.method == 'GET':
+        return faqs(lang, state)
     keyword = request.form.get("keyword")
-    Q = request.args.get('Q_1')
-    A = request.args.get('A_1')
-    return render_template(f"GA/{langDict[lang]}/faqs.html", langs=stateLangDict[state.upper()], state=state, lang=lang, search=True, keyword=keyword, Q=Q, A=A)
+    return render_template(f"national/faqs.html", langs=stateLangDict[state.upper()], state=state, lang=lang,  lang_full = langDict[lang], search=True, keyword=keyword)
 
 @app.route("/<lang>/<state>/registration/query")
 def registration_forms(lang, state):

@@ -6,7 +6,7 @@
 
 
   {% for i in range(n) %}
-    {% if not keyword or keyword.title() in Q[i] or keyword.title() in A[i] or keyword.lower() in Q[i] or keyword.lower() in A[i] %}
+    {% if not keyword or keyword.lower() in Q[i].lower() or keyword.lower() in A[i].lower() %}
       <div class="card faq">
         <div class="card-header faqHeader" id="heading_{{ section }}_{{ i }}">
           <h4 class="mb-0">
