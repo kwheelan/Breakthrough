@@ -3,10 +3,10 @@
 {% set Q = [
   "¿Cómo va a afectar votar el COVID-19 en California?",
   "Where can I vote?",
-  "What do I need to bring with me on Election Day?",
-  "Can I get time off of work to vote?",
+  "¿Qué necesito traer conmigo en el día de las elecciones? ",
+  "¿Puedo tomarme tiempo libre durante el trabajo para ir a votar?",
   "Can I vote early in California?",
-  "My question was not answered. Where can I find more information?"
+  "Mi pregunta no fue contestada. ¿Dónde puedo encontrar más información?"
 
 ]%}
 
@@ -26,45 +26,47 @@ To find more information about specific polling location rules, visit
   your county elections office website
 </a>.",
 
-"In most cases, voters in California don’t need to show a form of identification to a poll worker before voting.
-However, if you are voting for the first time after registering to vote by mail and did
-not provide your driver license number, California identification number or the last four digits of
-your social security number on your registration form, you may be asked to show a form of
-identification when you go to the polls. <strong>If this applies to you, bring identification with you to your
-polling place or include a copy of it with your vote-by-mail ballot.</strong> <br><br>
-<strong>Please bring one of the following as a form of ID:</strong>
+"En la mayoría de los casos, no se necesita enseñar una identificación a alguien trabajando en las casillas antes de votar.
+Sin embargo, si usted está votando por la primera vez después de haberse registrado por correo y no proporcionó su número de licencia de manejo,
+Número de identificación de California o los últimos cuatro dígitos de su número de seguro social en su forma de registro,
+se le puede pedir que enseñe alguna identificación cuando se presente en las casillas.
+<strong>Asegúrese de traer una identificación a su casilla o de incluir una copia de su identificación en su boleta de votación por correo.</strong> <br><br>
+<strong>Por favor traiga uno de los siguientes tipos de identificación: </strong>
 <ul>
   <li>
-    Photo identification, such as:
+    Una identificación que tenga su foto, por ejemplo:
     <ul>
-      <li>Driver’s license or identification card from any other state</li>
-      <li>Passport</li>
-      <li>Employee ID card</li>
-      <li>ID card provided by a commercial establishment</li>
-      <li>Credit or debit card</li>
-      <li>Student ID</li>
-      <li>Health club ID</li>
-      <li>Insurance plan ID</li>
-      <li>Public housing ID</li>
+      <li>Licencia de manejo o tarjeta  de identificación de otro estado</li>
+      <li>Pasaporte </li>
+      <li>
+          Tarjeta de identificación de empleado
+      </li>
+      <li>Tarjeta de identificación proporcionada por un establecimiento comercial</li>
+      <li>Tarjeta de débito o crédito</li>
+      <li>Tarjeta de identificación de estudiante</li>
+      <li>Tarjeta de identificación de club de salud</li>
+      <li>Tarjeta de identificación del seguro</li>
+      <li>Tarjeta de identificación de vivienda pú</li>
     </ul>
   </li>
   <li>
-    OR copy of one of the following documents:
+    O una copia de alguno de los siguiente documentos:
     <ul>
-      <li>Utility bill</li>
-      <li>Recent bank statement</li>
-      <li>Paycheck, government check, or document that shows the voter’s name and address</li>
-      <li>The sample ballot booklet you received from your county elections office</li>
-      <li>Another document sent to you by a government agency</li>
+      <li>Factura de servicios públicos</li>
+      <li>Extracto bancario reciente</li>
+      <li>Cheque o documento gubernamental que muestre el nombre y la dirección del votante </li>
+      <li>El folleto con una boleta de muestra que recibió en las oficinas de elecciones de su municipio </li>
+      <li>Algún otro documento enviado a usted por una agencia del gobierno</li>
     </ul>
   </li>
 </ul>",
 
-"Yes, California law requires employers to provide time for employees to vote.
-  Every voter is entitled to up to two hours of paid time off to vote.
-   If you plan to vote during the workday, <strong>you must notify your employer
-  that you intend to vote during work hours at least 2 working days before the election.</strong> See more
-  <a href=\"https://www.sos.ca.gov/administration/news-releases-and-advisories/2018-news-releases-and-advisories/california-law-allows-time-vote-election-day1/\">here</a>.",
+"Sí. La ley requiere que los empleadores en California den tiempo para que sus empleados vayan a votar.
+  Específicamente, cada votante tiene derecho a 2 horas para ir a votar al principio o al final de su turno dependiendo en cuál opción le da más tiempo al votante para ir a
+  votar y menos tiempo fuera del trabajo. Estas 2 horas tienen que ser pagadas. Every voter is entitled to up to two hours of paid time off to vote.
+  Si usted planea ir a votar durante el día laboral,
+  <strong> los votantes deben avisarle a su empleador que planean ir a votar durante el día laboral mínimo 2 días antes de la elección.</strong> Más información
+  <a href=\"https://www.sos.ca.gov/administration/news-releases-and-advisories/2018-news-releases-and-advisories/california-law-allows-time-vote-election-day1/\">aquí</a>.",
 
   "In previous elections, eligible voters in some counties could vote early at select polling locations in the days leading up to Election Day.
   However, given that every registered California voter will receive a mail-in ballot for the November 3, 2020
@@ -72,12 +74,18 @@ polling place or include a copy of it with your vote-by-mail ballot.</strong> <b
   See county-specific COVID-19 early voting policies
   <a href=\"https://www.sos.ca.gov/elections/voting-resources/county-elections-offices/\">here</a>.",
 
-"More information about voting can be found on the State of California’s website in 10 languages!
+"¡Puede encontrar información acerca de votar en el sitio web del Estado de California en 9 idiomas!
 <ul>
-  <li><a href=\"https://www.sos.ca.gov/elections/voting-resources/voting-california/\">English</a></li>
-  {% for lang in ['spanish', 'chinese', 'hindi', 'japanese', 'khmer', 'korean', 'tagalog', 'thai', 'vietnamese'] %}
-  <li><a href=\"{{'https://www.sos.ca.gov/elections/voting-resources/voting-california/{}/'.format(lang)}}\">{{ lang.title() }}</a></li>
-  {% endfor %}
+  <li><a target = \"_blank\" href=\"https://www.sos.ca.gov/elections/voting-resources/voting-california/spanish/\">español</a></li>
+  <li><a target = \"_blank\" href=\"https://www.sos.ca.gov/elections/voting-resources/voting-california/\">inglés</a></li>
+  <li><a target = \"_blank\" href=\"https://www.sos.ca.gov/elections/voting-resources/voting-california/chinese/\">chino</a></li>
+  <li><a target = \"_blank\" href=\"https://www.sos.ca.gov/elections/voting-resources/voting-california/hindi/\">hindi</a></li>
+  <li><a target = \"_blank\" href=\"https://www.sos.ca.gov/elections/voting-resources/voting-california/japanese/\">japonés</a></li>
+  <li><a target = \"_blank\" href=\"https://www.sos.ca.gov/elections/voting-resources/voting-california/khmer/\">khmer</a></li>
+  <li><a target = \"_blank\" href=\"https://www.sos.ca.gov/elections/voting-resources/voting-california/korean/\">koreano</a></li>
+  <li><a target = \"_blank\" href=\"https://www.sos.ca.gov/elections/voting-resources/voting-california/tagalog/\">tagalog</a></li>
+  <li><a target = \"_blank\" href=\"https://www.sos.ca.gov/elections/voting-resources/voting-california/thai/\">tailandés</a></li>
+  <li><a target = \"_blank\" href=\"https://www.sos.ca.gov/elections/voting-resources/voting-california/vietnamese/\">vietnamita</a></li>
 </ul>"
 
 ] %}
