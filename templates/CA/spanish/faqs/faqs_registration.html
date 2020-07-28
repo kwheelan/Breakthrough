@@ -1,0 +1,57 @@
+
+{% set section = 'registration' %}
+
+
+{% set Q = [
+"¿Cuándo es la fecha límite para registrarse para votar en la elección general de noviembre?",
+"¿Qué pasa si no me he registrado y ya pasó la fecha límite?",
+"Am I eligible to vote?",
+"If I will not be 18 years old by Election Day, can I pre-register to vote?"
+] %}
+
+
+
+{% set A = [
+"Para votar, es necesario registrarse mínimo <strong>15 días</strong> antes de una elección.
+El último día para registrarse para votar en la elección general del 3 de noviembre del 2020
+es <strong>el 19 de octubre del 2020.</strong> Si usted envía su registro por correo, lo debe haber mandado más tardar ese mismo día.
+Cualquier persona elegible se puede registrar en línea.",
+
+"Aunque no es ideal, si está tratando de registrarse después del 19 de octubre del 2020, todavía puede votar.
+<strong>Las personas elegibles para votar en California (vea arriba) pueden completar su registro y votar en la
+  oficina de elecciones de su municipio, casilla o centro de votación dentro de 14 días de la elección. </strong>
+  These ballots will be counted
+once the state verifies the voter registration of these voters. Go
+<a href=\"https://www.sos.ca.gov/elections/voter-registration/same-day-reg/\" target = \"_blank\" >here</a>
+for a list of early voting locations where you can complete the
+Same Day Voter Registration Process. Or, register at your polling place on Election Day.",
+
+"<!-- Am I eligible to vote? -->
+ALL of the following must be true to be eligible to vote:
+<ul>
+  <li>US citizen and resident of California. More information for military personnel and those living overseas
+    <a target = \"_blank\" href=\"https://www.sos.ca.gov/elections/voter-registration/military-overseas-voters\">here</a>.</li>
+  <li>18 years or older on Election Day (November 3, 2020).</li>
+  <li>Not currently in state or federal prison or on parole for the conviction of a felony.
+  More information <a target = \"_blank\" href=\"https://www.sos.ca.gov/elections/voting-resources/voting-california/who-can-vote-california/voting-rights-californians/\">here</a>.</li>
+  <li>Not currently found mentally incompetent to vote by a court.
+  More information <a   target = \"_blank\" href=\"https://www.sos.ca.gov/elections/voting-info/conservatorship/\">here</a>.</li>
+</ul><br>
+
+<strong>Formerly incarcerated individuals who are no longer on parole, or are now “off paper,” are eligible to vote in California.
+  If you are a formerly incarcerated individual who is now off parole, you will have to
+  <a target = \"_blank\" href=\"https://covr.sos.ca.gov/\">re-register to vote.</a>
+</strong>",
+
+"<!-- If I will not be 18 years old by Election Day, can I pre-register to vote? -->
+Yes! If you are currently 16 or 17 years old and the following are true, you are eligible to pre-register to vote. <br>
+<ul>
+  <li>US citizen and resident of California.</li>
+  <li>Not currently in state or federal prison or on parole for the conviction of a felony.
+  More information <a   target = \"_blank\" href=\"https://www.sos.ca.gov/elections/voting-resources/voting-california/who-can-vote-california/voting-rights-californians/\">here</a>.</li>
+  <li>Not currently found mentally incompetent to vote by a court.
+  More information <a   target = \"_blank\" href=\"https://www.sos.ca.gov/elections/voting-info/conservatorship/\">here</a>.</li>
+</ul><br>
+<a target = \"_blank\" href=\"https://registertovote.ca.gov/\">Pre-register to vote online in California</a>."
+
+] %}

@@ -1,0 +1,83 @@
+{% set section = 'general' %}
+
+{% set Q = [
+  "How will COVID-19 affect voting in California?",
+  "Where can I vote?",
+  "What do I need to bring with me on Election Day?",
+  "Can I get time off of work to vote?",
+  "Can I vote early in California?",
+  "My question was not answered. Where can I find more information?"
+
+]%}
+
+{% set A = [
+"Due to the Covid-19 pandemic, <strong>all registered California residents will receive a mail-in ballot.</strong>
+However, if voters prefer to vote in person, <strong>polling places will be available.</strong> You can find your polling place information 2-4 weeks before the election
+<a href=\"{{ url_for('poll_forms', state=state, lang=lang)}}\">here</a>.",
+
+"You can vote either by mail or at your polling place. Due to the Covid-19 pandemic, all registered voters
+will be sent a vote-by-mail ballot. For your safety, you are encouraged to vote by mail. See more vote-by-mail
+information
+<a href=\"#vbm\">here</a>.
+<br><br>
+However, all registered voters in California can also vote in person at their assigned polling location.
+To find more information about specific polling location rules, visit
+<a href=\"https://www.sos.ca.gov/elections/voting-resources/county-elections-offices/\">
+  your county elections office website
+</a>.",
+
+"In most cases, voters in California don’t need to show a form of identification to a poll worker before voting.
+However, if you are voting for the first time after registering to vote by mail and did
+not provide your driver license number, California identification number or the last four digits of
+your social security number on your registration form, you may be asked to show a form of
+identification when you go to the polls. <strong>If this applies to you, bring identification with you to your
+polling place or include a copy of it with your vote-by-mail ballot.</strong> <br><br>
+<strong>Please bring one of the following as a form of ID:</strong>
+<ul>
+  <li>
+    Photo identification, such as:
+    <ul>
+      <li>Driver’s license or identification card from any other state</li>
+      <li>Passport</li>
+      <li>Employee ID card</li>
+      <li>ID card provided by a commercial establishment</li>
+      <li>Credit or debit card</li>
+      <li>Student ID</li>
+      <li>Health club ID</li>
+      <li>Insurance plan ID</li>
+      <li>Public housing ID</li>
+    </ul>
+  </li>
+  <li>
+    OR copy of one of the following documents:
+    <ul>
+      <li>Utility bill</li>
+      <li>Recent bank statement</li>
+      <li>Paycheck, government check, or document that shows the voter’s name and address</li>
+      <li>The sample ballot booklet you received from your county elections office</li>
+      <li>Another document sent to you by a government agency</li>
+    </ul>
+  </li>
+</ul>",
+
+"Yes, California law requires employers to provide time for employees to vote.
+  Every voter is entitled to up to two hours of paid time off to vote.
+   If you plan to vote during the workday, <strong>you must notify your employer
+  that you intend to vote during work hours at least 2 working days before the election.</strong> See more
+  <a href=\"https://www.sos.ca.gov/administration/news-releases-and-advisories/2018-news-releases-and-advisories/california-law-allows-time-vote-election-day1/\">here</a>.",
+
+  "In previous elections, eligible voters in some counties could vote early at select polling locations in the days leading up to Election Day.
+  However, given that every registered California voter will receive a mail-in ballot for the November 3, 2020
+  general election, <strong>voters are encouraged to vote at home and return their ballot either by mail or at a polling place.</strong>
+  See county-specific COVID-19 early voting policies
+  <a href=\"https://www.sos.ca.gov/elections/voting-resources/county-elections-offices/\">here</a>.",
+
+"More information about voting can be found on the State of California’s website in 10 languages!
+<ul>
+  <li><a href=\"https://www.sos.ca.gov/elections/voting-resources/voting-california/\">English</a></li>
+  {% for lang in ['spanish', 'chinese', 'hindi', 'japanese', 'khmer', 'korean', 'tagalog', 'thai', 'vietnamese'] %}
+  <li><a href=\"{{'https://www.sos.ca.gov/elections/voting-resources/voting-california/{}/'.format(lang)}}\">{{ lang.title() }}</a></li>
+  {% endfor %}
+</ul>"
+
+] %}

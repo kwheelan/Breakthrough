@@ -1,0 +1,179 @@
+
+{% set section='vbm' %}
+
+{% set Q = [
+"How do I request to vote by mail?",
+"How will I receive my vote-by-mail ballot?",
+"I have been approved to vote by mail. How do I complete my vote-by-mail ballot?",
+"I received a vote-by-mail ballot but I want to vote at the polls in person. What should I do?",
+"What is the deadline to return a vote-by-mail ballot?",
+"Do I need to re-request to vote-by-mail in the upcoming November 3, 2020 general election if I voted by mail in the past?",
+"How do I correct a missing or mismatched signature on my vote-by-mail ballot?",
+"What if my mailing address has changed from when I registered to vote and I intend to vote by mail?",
+"How do I track my vote-by-mail ballot request and returned ballot?"
+] %}
+
+{% set A = [
+"<strong>
+  Anyone in Florida can request to vote by mail.
+</strong>
+Voters who do not want to vote at a polling place in the November 3, 2020 general election may elect to vote by mail to avoid COVID-19 exposure.
+<br><br>
+A request to vote by mail may be made in one of the following ways:
+<ul>
+  <li>Online application on your
+    <a target=\"_blank\" href=\"https://dos.elections.myflorida.com/supervisors/\" target=\"_blank\">county Supervisors of Elections’</a> website
+  </li>
+  <li>
+    By other writing (i.e. by email, fax, mail) to your Supervisor of Elections
+  </li>
+  <li>
+    In person at the office of you Supervisor of Elections
+  </li>
+  <li>
+    By telephone call to your Supervisor of Elections
+  </li>
+</ul>
+
+To make a request, the following information is required:
+<ul>
+  <li>The name of the voter for whom the ballot is being requested</li>
+  <li>The voter’s address</li>
+  <li>The voter’s date of birth</li>
+  <li>The voter’s signature (if the request is written and the request is to an address other than on one’s voter file)</li>
+</ul>
+
+If an immediate family member or legal guardian is requesting a vote-by-mail ballot as directed by the voter, the following additional information must be provided:
+<ul>
+  <li>
+    The requestor’s address
+  </li>
+  <li>The requestor’s driver’s license number (if available)</li>
+  <li>The requestor’s relationship to the voter</li>
+  <li>The requestor’s signature (if the request is written)</li>
+</ul>
+<strong>A request for a vote-by-mail ballot must be mailed no later than 5pm on October 24, 2020. </strong>",
+
+"Your county Supervisor of Elections must mail your requested ballot within 2 business days after your request for a vote-by-mail is received.
+The last day for a Supervisor to be able to mail out a ballot is 8 days before the election (October 26, 2020).
+<br><br>
+<strong>
+  To guarantee that you receive your vote-by-mail ballot for the general election on November 3, submit a request to your county Supervisor of Elections as soon as possible.
+</strong>
+<br><br>
+In previous elections, voters in some counties had the option to pick up their blank vote-by-mail ballot in person. Due to Covid-19 it is unclear if this option will be available for the general election on November 3, 2020.
+Please contact your
+<a target=\"_blank\" href=\"https://dos.elections.myflorida.com/supervisors/\" >county Supervisor of Elections</a> for more information.
+<br><br>
+NOTE: <strong>You should check your vote-by-mail status every calendar year.</strong>  If you voted by mail in an election prior to 2020, you may need to submit a new request.
+If you voted by mail this year (in 2020) in a previous election you do not need to submit a new request.
+<strong>
+  Check your vote-by-mail status
+  <a target=\"_blank\" href=\"https://registration.elections.myflorida.com/CheckVoterStatus\">here</a>.
+</strong>",
+
+"  Voting by mail is simple:
+  <ol>
+    <li>Fill out your ballot.
+    <ul>
+      <li>Use a black ballpoint pen. Do not use felt-tip pens.</li>
+      <li>Fully blacken desired ovals.</li>
+      <li>Do not sign or initial on the ballot.</li>
+    </ul></li>
+    <li>Sign the return envelope (in the indicated box) and print the date below.
+    <ul>
+      <li>IMPORTANT:
+      <strong>The signature on your voter file MUST match the signature on your vote-by-mail ballot’s return envelope.</strong>
+      If signatures don’t match, you will have until 5:00 pm on November 5, 2020 to correct any signature deficiencies.
+      </li>
+      <li>Place completed ballot in the return envelope provided.</li>
+      <li>Write the return address on the return envelope.</li>
+      <li>Make sure to complete all information on the outside of the return envelope.</li>
+    </ul></li>
+    <li>Return your ballot in time! You have a few options for returning your ballot. <strong>If you are not sure that your vote-by-mail ballot will arrive in time if mailed, bring your ballot to any polling location
+      in the state between 7:00 am and 8:00 pm on Election Day (November 3, 2020).</strong>
+    <ol>
+      <li>Mail
+      <ul>
+        <li><strong>Remember to affix required postage</strong>; the return envelope is NOT prepaid.</li>
+        <li>
+          <strong>
+            Plan on mailing your vote-by-mail ballot by October 27, 2020
+          </strong>(one week before the general election on November 3, 2020).
+        </li>
+        <li>The return envelope with your ballot <strong>must be received by your county Supervisor of Elections by 7pm on Election Day.
+          </strong>
+        </li>
+      </ul></li>
+      <li> Return via drop-off
+        <ul>
+          <li>
+            Return your completed ballot at a secure drop box at early voting sites during the early voting period in your county.
+            Please contact your
+            <a target=\"_blank\" href=\"https://dos.elections.myflorida.com/supervisors/\" target=\"_blank\">county Supervisor of Elections</a>
+            or visit their website for the location of all vote-by-mail ballot secure drop boxes in your county.
+          </li>
+        </ul>
+    </ol></li>
+  </ol>",
+
+"<strong>
+  All voters who request to vote by mail also have the option of voting at their assigned polling location.
+</strong>
+<br><br>
+<strong>
+  If you decide to go to the polls to vote instead of voting by mail, you should bring your vote-by-mail ballot (marked or not).
+</strong> The vote-by-mail ballot will be canceled and you will then be able to vote with regular a ballot at the polls.
+<br><br>
+If you come to the polls without your vote-by-mail ballot, you can vote with a regular ballot if the Supervisor of Elections' office can confirm that it has not received your vote-by-mail ballot. If it is confirmed that the Supervisor of Elections’ office has received your vote-by-mail ballot or it cannot be determined, you will not be able to vote with a regular ballot at the polls.
+<br><br>
+However, if you believe that you have not already voted, you can vote with a provisional ballot.",
+
+"<strong>
+  A completed vote-by-mail ballot must be received by the Supervisor of Elections no later than 7pm on Election Day (November 3, 2020) for the ballot to be counted.
+</strong>
+<br><br>
+Other return options are available for
+<a target=\"_blank\" href=\"https://www.dos.myflorida.com/elections/for-voters/voting/military-and-overseas-citizens-voting/\">military and overseas voters</a>
+under certain circumstances.
+<br><br>
+The United States Postal Service recommends that domestic nonmilitary
+<strong>
+  voters mail back their voted ballots at least 1 week before the Election Day deadline
+</strong>
+to account for any unforeseen events or weather issues.
+<br><br>
+<strong>
+  Vote-by-mail ballots may also be returned at secure drop boxes at early voting sites during the early voting period
+</strong>
+(October 24-31, 2020, and possibly other dates depending on county) preceding Election Day (November, 3, 2020). Contact your
+<a target=\"_blank\" href=\"https://dos.elections.myflorida.com/supervisors/\" target=\"_blank\">county Supervisor of Elections</a>
+or visit their website for the location of all vote-by-mail ballot secure drop boxes in your county.",
+
+"<strong>
+  You should check your vote-by-mail status every calendar year.
+</strong>
+<br><br>
+  If you voted by mail in an election prior to 2020, you may need to submit a new request. If you voted by mail for an election this year (in 2020) you do not need to submit a new request.
+  <strong>
+  Check your vote-by-mail status</strong>
+  <a target=\"_blank\" href=\"https://registration.elections.myflorida.com/CheckVoterStatus\">here</a>.",
+
+"If you are notified that your signature on your vote-by-mail ballot is missing or does not match the signature on record, you may complete and return a “Vote-by-Mail Ballot Cure” Affidavit
+  (<a target=\"_blank\" href=\"https://dos.myflorida.com/media/700479/dsde139.pdf\" >Form DS-DE 139</a>) with a copy of identification to your county Supervisor of Elections.
+  <br><br>
+  The documentation can be returned by mail, email, fax, or in person.
+  <strong>
+    The “Vote-by-Mail Ballot Cure” Affidavit and copy of ID must be submitted to your county Supervisor of Elections by 5 p.m. (local time) on November 5, 2020.
+  </strong>
+  <br><br>
+  If you fail to return this form and copy of ID to your county Supervisor of Elections by 5 p.m on November 5, 2020, your ballot will not be counted.",
+
+"  To change information pertaining to your voter registration, click
+  <a target=\"_blank\" href=\"https://registertovoteflorida.gov/home\" target = \"_blank\">here</a>. You may need to submit a new request to vote by mail, and should contact your
+  <a target=\"_blank\" href=\"https://dos.elections.myflorida.com/supervisors/\" target=\"_blank\">county Supervisor of Elections</a>.",
+
+"If you request a vote-by-mail ballot, you can track the status of your ballot via the State of Florida’s
+<a target=\"_blank\" href=\"https://registration.elections.myflorida.com/CheckVoterStatus\" target=\"_blank\">Voter Information tool</a> or via your <a target=\"_blank\" href=\"https://dos.elections.myflorida.com/supervisors/\" target=\"_blank\">county Supervisor of Elections</a>."
+
+] %}
