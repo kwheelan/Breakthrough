@@ -38,10 +38,34 @@
                 {% if lang == 'en' %}
                   For more information, visit <a class = "faqLink" href="https://georgia.gov/voting" target = "_blank"><font>https://georgia.gov/voting</font></a>.
                   <br>
-                  Common Cause Voter Assistance Hotline: 1-866-687-8683 or text "OUR VOTE" to 97779
+                  Voter Assistance Hotline: call 1-866-687-8683 or text "OUR VOTE" to 97779
                 {% elif lang == 'es' %}
-                  Para más información, visite <a href="https://georgia.gov/voting" target = "_blank"><font>dos.myflorida.com/elections/for-voters</font></a>.
+                  Para más información, visite <a href="https://georgia.gov/voting" target = "_blank"><font>https://georgia.gov/voting</font></a>.
                 {% endif %}
+
+              <!-- Texas -->
+              {% elif state.lower() == 'tx' %}
+                {% if lang == 'en' %}
+                  For more information, visit <a class = "faqLink" href="https://www.sos.texas.gov/" target = "_blank"><font>https://www.sos.texas.gov/</font></a>.
+                  <br>
+                  Voter Assistance Hotline: call 1-866-687-8683 or text "OUR VOTE" to 97779
+                {% elif lang == 'es' %}
+                  Para más información, visite <a href="https://www.sos.texas.gov/sos_espanol.shtml" target = "_blank"><font>https://www.sos.texas.gov/sos_espanol.shtml</font></a>.
+                  <br>
+                  Voter Assistance Hotline: 1-888-839-8682
+                {% endif %}
+
+                <!-- Minnesota -->
+                {% elif state.lower() == 'mn' %}
+                  {% if lang == 'en' %}
+                    For more information, visit <a class = "faqLink" href="https://www.sos.state.mn.us/elections-voting/" target = "_blank"><font>https://www.sos.state.mn.us/elections-voting/</font></a>.
+                    <br>
+                    State Voter Support: 1-877-600-VOTE (8683) or contact your <a href="https://www.sos.state.mn.us/elections-voting/find-county-election-office/">county election office</a>
+                  {% elif lang == 'es' %}
+                    Para más información, visite <a href="https://www.sos.state.mn.us/elections-voting/" target = "_blank"><font>https://www.sos.state.mn.us/elections-voting/</font></a>.
+                    <br>
+                    State Voter Support: 1-877-600-VOTE (8683) or contact your <a href="https://www.sos.state.mn.us/elections-voting/find-county-election-office/">county election office</a>
+                  {% endif %}
             {% endif %}
         </div>
 

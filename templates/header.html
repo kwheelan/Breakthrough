@@ -24,6 +24,7 @@
         {% elif lang == 'zh' %}
           鉴于当前疫情，加州州长Gavin Newsom已宣布所有登记在册的加州居民都将收到一封邮寄的选票。2020年11月3日大选的登记截止日期是2020年10月19日。
         {% endif %}
+
       {% elif state.lower() == 'fl' %}
         {% if lang == 'en' %}
           The registration deadline for the November 3, 2020 general election is <strong>October 5, 2020</strong>.
@@ -46,8 +47,16 @@
             For more information about important dates see
             <a href="{{ url_for('faqs', state=state, lang=lang)}}" class = "faqLink">Frequently Asked Questions</a>.
           {% elif lang == "es" %}
+          {% endif %}
 
+        {% elif state.lower() == 'mn' %}
+          {% if lang == 'en' %}
+          The registration deadline for the November 3, 2020 general election is <strong>October 13, 2020</strong>.
+          The state of Minnesota allows any registered voter to vote by mail. See more about vote-by-mail in Minnesota
+          <a href="{{ url_for('faqs', state=state, lang=lang) + '#vbm'}}" class = "faqLink">here</a>.
+        {% elif lang == 'es' %}
         {% endif %}
+
       {% endif %}
     </p>
   </div>

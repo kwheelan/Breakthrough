@@ -37,6 +37,13 @@
     For more information about important dates see
     <a href="{{ url_for('faqs', state=state, lang=lang)}}" class = "faqLink">Frequently Asked Questions</a>.
 
+    {% elif state.lower() == 'mn' %}
+    The registration deadline for the November 3, 2020 general election is <strong>October 13, 2020</strong>.
+    For more information about important dates see
+    <a href="{{ url_for('faqs', state=state, lang=lang)}}" class = "faqLink">Frequently Asked Questions</a>.
+    The state of {{ state_long }} allows any registered voter to vote by mail. See more about vote-by-mail in {{ state_long }}
+    <a href="{{ url_for('faqs', state=state, lang=lang) + '#vbm'}}" class = "faqLink">here</a>.
+
     {% endif %}
   </p>
 </div>

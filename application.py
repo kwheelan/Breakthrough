@@ -107,12 +107,12 @@ def pollFinderHelper():
     return addressList
 
 #states with enabled pages
-states = ["CA", "FL", "GA", "TX"]
+states = ["CA", "FL", "GA", "TX", "MN"]
 #translations avaible for each state
-stateLangDict = { "CA": ['en', 'zh', 'es'], "FL" : ['en', 'es'], "GA": ['en', 'es'], "TX": ['en', 'es']}
+stateLangDict = { "CA": ['en', 'zh', 'es'], "FL" : ['en', 'es'], "GA": ['en', 'es'], "TX": ['en', 'es'], "MN": ['en', 'es']}
 #language url extension
 langDict = { "zh" : 'mandarin', "es": 'spanish', 'en': 'english'}
-stateDict = {'ca':'California', 'fl':'Florida', 'ga': 'Georgia', 'tx': 'Texas'}
+stateDict = {'ca':'California', 'fl':'Florida', 'ga': 'Georgia', 'tx': 'Texas', 'mn': 'Minnesota'}
 
 def get_page(lang, state, page, national=False):
     """help method to fetch html file by state and language"""
