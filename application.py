@@ -107,12 +107,12 @@ def pollFinderHelper():
     return addressList
 
 #states with enabled pages
-states = ["CA", "FL", "GA"]
+states = ["CA", "FL", "GA", "TX"]
 #translations avaible for each state
-stateLangDict = { "CA": ['en', 'zh', 'es'], "FL" : ['en', 'es'], "GA": ['en', 'es']}
+stateLangDict = { "CA": ['en', 'zh', 'es'], "FL" : ['en', 'es'], "GA": ['en', 'es'], "TX": ['en', 'es']}
 #language url extension
 langDict = { "zh" : 'mandarin', "es": 'spanish', 'en': 'english'}
-stateDict = {'ca':'California', 'fl':'Florida', 'ga': 'Georgia'}
+stateDict = {'ca':'California', 'fl':'Florida', 'ga': 'Georgia', 'tx': 'Texas'}
 
 def get_page(lang, state, page, national=False):
     """help method to fetch html file by state and language"""
@@ -131,7 +131,7 @@ def get_page(lang, state, page, national=False):
 def index():
     """National landing page"""
     days = max((date(2020,11,3) - date.today()).days, 0)
-    return render_template('index.html', days_to_election = days)
+    return render_template('index.html', days_to_election = days, states = states, stateDict = stateDict)
 
 @app.route("/<lang>/<state>/home")
 def home(lang, state):

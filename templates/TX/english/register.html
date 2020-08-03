@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+
+{% set page='register' %}
+
+{% set state='tx' %}
+
+{% block header %}
+    Register to Vote
+{% endblock %}
+
+{% block body %}
+
+<p>
+  <div class="form-label" align = left>
+    Texas does not have online voter registration. You have two options:
+    <ol>
+    <li><strong>If you have access to a printer</strong>, you can fill out a
+    <a target = "_blank" href="https://webservices.sos.state.tx.us/vrapp/index.asp">voter registration application form</a>, which
+    you must print and mail back to your
+    <a target = "_blank" href="https://www.sos.state.tx.us/elections/voter/votregduties.shtml">County Voter Registrar.</a>
+    </li>
+    <li>
+      <strong>If you don't have access to a printer</strong>, you can
+      <a target = "_blank" href="https://webservices.sos.state.tx.us/vrrequest/index.asp">request a postage-paid registration application</a>, which will
+      be mailed to you.
+    </li>
+    </ol>
+  </div>
+</p>
+
+
+<a target = "_blank" href="https://webservices.sos.state.tx.us/vrapp/index.asp">
+  <button class="btn btn-lg btn-big">
+      <font size=6><strong>Voter Registration Application Form</strong></font>
+  </button>
+</a>
+<br><br>
+
+<a target = "_blank" href="https://webservices.sos.state.tx.us/vrrequest/index.asp">
+  <button class="btn btn-lg btn-big">
+      <font size=6><strong>Request an Application to be Mailed to You</strong></font>
+  </button>
+</a>
+<br><br>
+
+
+  <a href = "{{ url_for('poll_forms',state=state, lang=lang) }}" style = "margin-right: 20px">
+    <button class="btn btn-custom">
+      Find my polling place
+    </button>
+  </a>
+
+  <a href = " {{ url_for('faqs',state=state, lang=lang) }}">
+    <button class="btn btn-custom">
+      Voting FAQs
+    </button>
+  </a>
+
+
+{% endblock %}

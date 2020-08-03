@@ -4,6 +4,7 @@
 
   <!-- optional warning banner -->
   {% block warning %}
+  {% if page != 'home' %}
   <div class="alert alert-custom" role="alert">
     <p padding = 20px>
       {% if state.lower()=='ca' %}
@@ -37,11 +38,20 @@
             The state of Georgia allows any registered voter to vote by mail. See more about vote-by-mail in Georgia
             <a href="{{ url_for('faqs', state=state, lang=lang) + '#vbm'}}" class = "faqLink">here</a>.
           {% elif lang == 'es' %}
+          {% endif %}
+
+        {% elif state.lower() == 'tx' %}
+          {% if lang == "en" %}
+            The registration deadline for the November 3, 2020 general election is <strong>October 5, 2020</strong>.
+            For more information about important dates see
+            <a href="{{ url_for('faqs', state=state, lang=lang)}}" class = "faqLink">Frequently Asked Questions</a>.
+          {% elif lang == "es" %}
 
         {% endif %}
       {% endif %}
     </p>
   </div>
+  {% endif %}
   {% endblock %}
 
     <!-- Nav bar -->

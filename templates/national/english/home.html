@@ -22,15 +22,20 @@
     <a href="{{ url_for('faqs', state=state, lang=lang) + '#vbm'}}" class="faqLink">mail-in ballot</a>
     for the November 3, 2020 general election.</strong>
     <br><br>The registration deadline for the general election is
-    <strong>October 19, 2020</strong>. For more information about important dates
-    <a href="{{ url_for('faqs', state=state, lang=lang)}}" class = "faqLink">see Frequently Asked Questions</a>.
+    <strong>October 19, 2020</strong>. For more information about important dates see
+    <a href="{{ url_for('faqs', state=state, lang=lang)}}" class = "faqLink">Frequently Asked Questions</a>.
 
     {% elif state.lower() == 'fl' or state.lower() == 'ga' %}
     The registration deadline for the November 3, 2020 general election is <strong>October 5, 2020</strong>.
-    For more information about important dates
-    <a href="{{ url_for('faqs', state=state, lang=lang)}}" class = "faqLink">see Frequently Asked Questions</a>.
+    For more information about important dates see
+    <a href="{{ url_for('faqs', state=state, lang=lang)}}" class = "faqLink">Frequently Asked Questions</a>.
     The state of {{ state_long }} allows any registered voter to vote by mail. See more about vote-by-mail in {{ state_long }}
     <a href="{{ url_for('faqs', state=state, lang=lang) + '#vbm'}}" class = "faqLink">here</a>.
+
+    {% elif state.lower() == 'tx' %}
+    The registration deadline for the November 3, 2020 general election is <strong>October 5, 2020</strong>.
+    For more information about important dates see
+    <a href="{{ url_for('faqs', state=state, lang=lang)}}" class = "faqLink">Frequently Asked Questions</a>.
 
     {% endif %}
   </p>
