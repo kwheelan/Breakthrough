@@ -160,7 +160,8 @@ def faq_search(lang, state):
 @app.route("/<lang>/<state>/registration/query")
 def registration_forms(lang, state):
     """Get registration info form page; available in the languages for each state"""
-    return get_page(lang, state, 'registrationForm', True)
+    return get_page(lang, state, 'check_registration')
+    #return get_page(lang, state, 'registrationForm', True)
 
 @app.route("/<lang>/<state>/registration/info", methods = ['POST', 'GET'])
 def registration(lang, state):
