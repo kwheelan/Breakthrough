@@ -187,3 +187,7 @@ def pollFinder(lang, state):
     else:
         loc = state.upper()
     return render_template(f"national/{langDict[lang]}/poll_info.html", langs=stateLangDict[state.upper()], state=state, addressList=pollFinderHelper())
+
+@app.route("/<lang>/<state>/privacy-policy")
+def privacy_policy(lang, state):
+    return render_template("national/english/privacy_policy.html", state = state, lang = lang, langs=stateLangDict[state.upper()],)
