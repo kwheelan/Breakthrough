@@ -20,8 +20,13 @@
             </div>
             <div class="modal-body">
 				      <p align = left style = "margin-left: 20px; margin-right: 20px">
-                Please note that information on this site is subject to change. Please check the California Secretary of State website
-                <a href="https://www.sos.ca.gov/elections/" target = "_blank">here</a> for the most up to date voting information.
+                {% if state.lower() == 'ca' %}
+                  Please note that information on this site is subject to change. Please check the California Secretary of State website
+                  <a href="https://www.sos.ca.gov/elections/" target = "_blank">here</a> for the most up to date voting information.
+                {% elif state.lower() == 'fl' %}
+                  Please note that information on this site is subject to change. Please check the {{ state_long }} Secretary of State website
+                  <a href="https://dos.myflorida.com/elections/" target = "_blank">here</a> for the most up to date voting information.
+                {% endif %}
               </p>
               <p align=right>
                   <button type="submit" class = "btn btn-custom" data-dismiss="modal" aria-hidden="true">OK</button>

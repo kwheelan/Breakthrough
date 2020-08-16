@@ -130,7 +130,6 @@ def get_page(lang, state, page, national=False):
 @app.route("/")
 def index():
     """National landing page"""
-    return home('en', 'ca')
     days = max((date(2020,11,3) - date.today()).days, 0)
     return render_template('index.html', days_to_election = days, states = states, stateDict = stateDict)
 
