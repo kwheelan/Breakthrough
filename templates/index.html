@@ -1,43 +1,8 @@
 {% set page = 'index' %}
 
-{% include 'head.html' %}
+{% extends 'layout.html' %}
 
-  <body>
-
-    <!-- Nav bar -->
-    <nav class="navbar navbar-expand-md sticky-top" style ="background-color: #0079C1;">
-      <a class="navbar-brand" href=#>
-          <img class = "logo" src="{{ url_for('static', filename ='images/logo.png')}}" alt="">
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon">
-          <img src="{{ url_for('static', filename='images/toggle.png') }}" alt="Menu" height=35px width=40px style = "margin-top: -2px; margin-left: -5px">
-        </span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <font color=white size=5 style = "margin-left: 20px"> Breakthrough Voting Initiative </font>
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Language
-          </a>
-          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#"><font color=black>English</font></a>
-            <div class="dropdown-divider"></div>
-            {% if 'sp' in langs %}
-            <a class="dropdown-item" href="{{ url_for(page, state=state, lang='sp' )}}"><font color=black>Español | Spanish</font></a>
-            {% endif %}
-            {% if 'ch' in langs %}
-            <a class="dropdown-item" href="{{ url_for(page, state=state, lang='en')}}"><font color=black>中文 | Chinese</font></a>
-            {% endif %}
-          </div>
-          </li>
-        </ul>
-      </div>
-    </nav>
-
-
-
+  {% block body %}
     <div class = "container" align=center>
       <p align=center>
       <h1 style= "margin-top: 30px;">
@@ -51,11 +16,11 @@
 
       <br>
 
-      <h2 align=center>
-        State Specific Voting Information
-      </h2>
+      <h2>
+        Click on your state on the map or in the sidebar to view information about voting in your state.
+      <h2>
       <br>
-      </p>
+
 
 <div class = "row">
   <div class = "col-lg-10">
@@ -68,18 +33,17 @@
 <div class = "col-lg-2">
   <p align = left >
     {% for state in states %}
+      {% if state != 'US' %}
             <a href="{{ url_for('home', state=state, lang="en")}}" style = "padding: 20px" >
               <button class="btn btn-big">
                 <font size = 6 >{{stateDict[state.lower()]}}</font>
               </button>
             </a>
+        {% endif %}
     {% endfor %}
   </p>
 </div>
 
 </div>
     </div>
-  </body>
-
-
-</html>
+  {% endblock %}

@@ -107,9 +107,9 @@ def pollFinderHelper():
     return addressList
 
 #states with enabled pages
-states = ["CA", "FL", "GA", "TX", "MN"]
+states = ["CA", "FL", "GA", "TX", "MN", "US"]
 #translations avaible for each state (CA translations temporarily disabled)
-stateLangDict = { "CA": ['en'], "FL" : ['en', 'es'], "GA": ['en', 'es'], "TX": ['en', 'es'], "MN": ['en', 'es']}
+stateLangDict = { "CA": ['en'], "FL" : ['en', 'es'], "GA": ['en', 'es'], "TX": ['en', 'es'], "MN": ['en', 'es'], "US": ['en']}
 #language url extension
 langDict = { "zh" : 'mandarin', "es": 'spanish', 'en': 'english'}
 stateDict = {'ca':'California', 'fl':'Florida', 'ga': 'Georgia', 'tx': 'Texas', 'mn': 'Minnesota'}
@@ -131,7 +131,17 @@ def get_page(lang, state, page, national=False):
 def index():
     """National landing page"""
     days = max((date(2020,11,3) - date.today()).days, 0)
-    return render_template('index.html', days_to_election = days, states = states, stateDict = stateDict)
+    return render_template('index.html', days_to_election = days, states = states, stateDict = stateDict, lang='en', state = "US")
+
+@app.route("/<lang>/<state>/about")
+def about(lang,state):
+    """About this project"""
+    return get_page(lang, state, 'about', True)
+
+@app.route("/<lang>/<state>/state-site-list")
+def sos_site_list(lang,state):
+    """List of official websites"""
+    return get_page(lang, state, 'sos_list', True)
 
 @app.route("/<lang>/<state>/home")
 def home(lang, state):

@@ -4,7 +4,7 @@
 
   <!-- optional warning banner -->
   {% block warning %}
-  {% if page != 'home' %}
+  {% if page != 'home' and state != 'US' %}
   <div class="alert alert-custom" role="alert">
     <p padding = 20px>
       {% if state.lower()=='ca' %}
@@ -75,6 +75,26 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <ul class="nav navbar-nav">
+          {% if state == 'US' %}
+                <li><a class="nav-item nav-link" href="{{ url_for('about', lang=lang, state=state)}}"><font {% if page=='about' %} class ="active" {% endif %}>
+                  {% if lang == 'en' %} About This Project
+                  {% elif lang == 'es' %}
+                  {% elif lang == 'zh' %}
+                  {% endif %}
+                </font></a></li>
+                <li><a class="nav-item nav-link" href="{{ url_for('sos_site_list', lang=lang, state=state)}}"><font {% if page=='sos_site_list'%} class ="active" {% endif %}>
+                  {% if lang == 'en' %} List of Official State Election Sites
+                  {% elif lang == 'es' %}
+                  {% elif lang == 'zh' %}
+                  {% endif %}
+                </font></a></li>
+                <li><a class="nav-item nav-link" href="https://www.breakthroughcollaborative.org/"><font>
+                  {% if lang == 'en' %} Breakthrough Homepage
+                  {% elif lang == 'es' %}
+                  {% elif lang == 'zh' %}
+                  {% endif %}
+                </font></a></li>
+          {% else %}
           <li><a class="nav-item nav-link" href="{{ url_for('home', lang=lang, state=state)}}"><font {% if page=='home' %} class ="active" {% endif %}>
             {% if lang == 'en' %} Home
             {% elif lang == 'es' %} Menu
@@ -105,6 +125,7 @@
             {% elif lang == 'zh' %} 投票常见问答
             {% endif %}
           </font></a></li>
+          {% endif %}
         </ul>
         <ul class="navbar-nav ml-auto">
           <li class="nav-item dropdown">
@@ -144,3 +165,5 @@
         </ul>
       </div>
     </nav>
+
+    {% endif %}
