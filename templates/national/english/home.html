@@ -2,10 +2,6 @@
 
 {% set page = 'home' %}
 
-{% block head %}
-  {{ super() }}
-{% endblock %}
-
 {% block warning %}
 {% endblock %}
 
@@ -14,6 +10,28 @@
 {% endblock %}
 
 {% block body %}
+
+<div id="myModal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content" role = "document" tabindex="-1" role="dialog">
+            <div class="modal-header" text-align = "left">
+                <!-- <h4 class="modal-title">Notice</h4> -->
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style = "margin-right: 10px">&times;</button>
+            </div>
+            <div class="modal-body">
+				      <p align = left style = "margin-left: 20px; margin-right: 20px">
+                Please note that information on this site is subject to change. Please check the California Secretary of State website
+                <a href="https://www.sos.ca.gov/elections/" target = "_blank">here</a> for the most up to date voting information.
+              </p>
+              <p align=right>
+                  <button type="submit" class = "btn btn-custom" data-dismiss="modal" aria-hidden="true">OK</button>
+              </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 <br>
 <div class = "mainText">
   <p align = left>

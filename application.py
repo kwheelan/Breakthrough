@@ -108,8 +108,8 @@ def pollFinderHelper():
 
 #states with enabled pages
 states = ["CA", "FL", "GA", "TX", "MN"]
-#translations avaible for each state
-stateLangDict = { "CA": ['en', 'zh', 'es'], "FL" : ['en', 'es'], "GA": ['en', 'es'], "TX": ['en', 'es'], "MN": ['en', 'es']}
+#translations avaible for each state (CA translations temporarily disabled)
+stateLangDict = { "CA": ['en'], "FL" : ['en', 'es'], "GA": ['en', 'es'], "TX": ['en', 'es'], "MN": ['en', 'es']}
 #language url extension
 langDict = { "zh" : 'mandarin', "es": 'spanish', 'en': 'english'}
 stateDict = {'ca':'California', 'fl':'Florida', 'ga': 'Georgia', 'tx': 'Texas', 'mn': 'Minnesota'}
@@ -130,6 +130,7 @@ def get_page(lang, state, page, national=False):
 @app.route("/")
 def index():
     """National landing page"""
+    return home('en', 'ca')
     days = max((date(2020,11,3) - date.today()).days, 0)
     return render_template('index.html', days_to_election = days, states = states, stateDict = stateDict)
 
@@ -160,7 +161,8 @@ def faq_search(lang, state):
 @app.route("/<lang>/<state>/registration/query")
 def registration_forms(lang, state):
     """Get registration info form page; available in the languages for each state"""
-    return get_page(lang, state, 'registrationForm', True)
+    return get_page(lang, state, 'check_registration')
+    #return get_page(lang, state, 'registrationForm', True)
 
 @app.route("/<lang>/<state>/registration/info", methods = ['POST', 'GET'])
 def registration(lang, state):
@@ -186,3 +188,7 @@ def pollFinder(lang, state):
     else:
         loc = state.upper()
     return render_template(f"national/{langDict[lang]}/poll_info.html", langs=stateLangDict[state.upper()], state=state, addressList=pollFinderHelper())
+
+@app.route("/<lang>/<state>/privacy-policy")
+def privacy_policy(lang, state):
+    return render_template("national/english/privacy_policy.html", state = state, lang = lang, langs=stateLangDict[state.upper()],)

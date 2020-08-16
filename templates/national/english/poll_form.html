@@ -16,7 +16,9 @@
       voter a
       <a href="{{ url_for('faqs', state=state, lang=lang) + '#vbm'}}" class = "faqLink">vote-by-mail ballot</a>
       for the November 3, 2020 general election, <strong>some polling
-      locations may differ this year.</strong> Check here <strong>2-4 weeks</strong> before November 3, 2020 if you
+      locations may differ this year.</strong> Check
+      <a target = "_blank" href="https://www.sos.ca.gov/elections/polling-place/">your state poll finder</a>
+      <strong>2-4 weeks</strong> before November 3, 2020 if you
       plan to drop off your ballot or vote in person at a polling location. Contact
       your local county elections officials
       <a class = "faqLink" href="https://www.sos.ca.gov/elections/voting-resources/county-elections-offices/">here</a>
@@ -124,5 +126,19 @@
       </div>
 
     </form>
+
+<div class = "mainText">
+  <p align = left style = "line-height: 1">
+    <span style = "font-size: 12px">
+    This polling information comes from the Google Civic API, a project created in conjunction with the
+    <a target = "_blank" href="https://www.votinginfoproject.org/about">Voting Information Project</a>.
+    <!-- The Voting Information Project is a partnership between
+    <a target="_blank" href="https://www.democracy.works/">Democracy Works</a>
+    and state and local election officials.  -->
+    Please make sure to confirm this information with your
+    state and/or local elections office.
+    </span>
+  </p>
+</div>
 
 {% endblock %}
