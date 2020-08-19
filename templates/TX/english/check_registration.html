@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% set page='registration_forms' %}
+
+{% block header %}
+    Check Your Voter Registration Status
+{% endblock %}
+
+{% block body %}
+
+<p>
+  <font class="form-label">
+    Click the button below to check your registration status in Texas. You will be prompted to "login" using a personal identifier.
+     Find other voting resources below.
+  </font>
+</p>
+
+
+<a target = "_blank" href="https://teamrv-mvp.sos.texas.gov/MVP/mvp.do">
+  <button class="btn btn-lg btn-big">
+      <font size=6><strong>Am I Registered to Vote?</strong></font>
+  </button>
+</a>
+<br><br>
+
+
+<!-- <div class="alert alert-secondary sect" role="alert">
+    <a class = "sectLink" target = "_blank" hsref="https://covr.sos.ca.gov/">
+      <h1 align= center>
+        Register to vote in the state of California
+      </h1>
+    </a>
+</div>
+<br><br> -->
+
+
+  <a href = "{{ url_for('poll_forms',state=state, lang=lang) }}" style = "margin-right: 20px">
+    <button class="btn btn-custom">
+      Find my polling place
+    </button>
+  </a>
+
+  <a href = " {{ url_for('faqs',state=state, lang=lang) }}">
+    <button class="btn btn-custom">
+      Voting FAQs
+    </button>
+  </a>
+
+
+{% endblock %}
