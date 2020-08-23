@@ -36,13 +36,20 @@
           <a class = "faqLink" href="{{ url_for('faqs', state=state, lang=lang) + '#vbm'}}">here</a>
           for more information.
           <br><br> -->
-          This database may not yet reflect recent changes to polling locations in California. Check
+          This database may not yet reflect recent changes to polling locations in California. Click
           <a href="https://www.sos.ca.gov/elections/polling-place/">here</a>
           to see California's official poll finder.
         {% elif state.lower() == 'ga' %}
-          This database may not yet reflect recent changes to polling locations in Georgia. Check
+          This database may not yet reflect recent changes to polling locations in Georgia. Click
           <a href="https://www.mvp.sos.ga.gov/MVP/mvp.do">here</a>
           to see Georgia's official poll finder.
+        {% elif state.lower() == 'tx' %}
+            This database may not yet reflect recent changes to polling locations in Texas. Check your county
+            website to find the most up-to-date polling locations and hours.
+        {% elif state.lower() == 'fl' %}
+            This database may not yet reflect recent changes to polling locations in Florida. Click
+            <a href="https://registration.elections.myflorida.com/CheckVoterStatus">here</a>
+            to see Florida's official poll finder.
         {% endif %}
       </strong>
     </font>
