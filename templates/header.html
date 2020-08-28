@@ -47,6 +47,9 @@
             For more information about important dates see
             <a href="{{ url_for('faqs', state=state, lang=lang)}}" class = "faqLink">Frequently Asked Questions</a>.
           {% elif lang == "es" %}
+            La fecha límite para registrarse para la elección general es <strong>el 5 de octubre del 2020.</strong>
+            Más información está
+            <a href="{{ url_for('faqs', state=state, lang=lang)}}" class = "faqLink">aquí</a>.
           {% endif %}
 
         {% elif state.lower() == 'mn' %}

@@ -1,0 +1,95 @@
+
+{% set section = 'general' %}
+
+{% set Q =[
+"¿Cómo actualizo mi registro de votante?",
+"¿Dónde voto en el Día de las Elecciones el 3 de noviembre del 2020? ",
+"¿Qué tipo de identificación necesito proveer para votar?",
+"Olvidé / no tengo la identificación necesaria para votar. ¿Puedo votar comoquiera?",
+"¿Puedo votar temprano en Texas? ¿Dónde?",
+"¿Qué es una balota “limitada”?",
+"Necesito ayuda lingüística para votar. ¿Cuáles son mis opciones? ",
+"Tengo una discapacidad y necesito ayuda para votar. ¿Cuáles son mis opciones?",
+"Soy un votante militar / que vive en el extranjero. ¿Dónde puedo encontrar más información acerca de votar?",
+"Mi pregunta no fue contestada. ¿Dónde puedo encontrar más información?"
+] %}
+
+{% set A = [
+
+"<!-- How do I update my voter registration record? -->
+<p>
+  Necesita actualizar su registro de votante si usted:
+  <ul>
+    <li>Cambió de residencia dentro de su propio municipio en Texas</li>
+    <li>Cambió de residencia a otro municipio dentro de Texas</li>
+    <li>Cambió su nombre desde la última vez que se registró para votar</li>
+  </ul>
+</p>
+<p>
+Más información acerca de cómo actualizar su registro de votante puede ser encontrada  <a target=\"_blank\" href=\"Más información acerca de cómo actualizar su registro de votante puede ser encontrada\">aquí</a>.
+</p>",
+
+"
+<!-- Where do I vote on Election Day on November 3, 2020? -->
+<p>
+<strong>Cada municipio en Texas tiene sus propias reglas acerca de dónde se puede votar en el Día de las Elecciones (3 de noviembre del 2020). </strong>
+</p>
+<p>
+Para encontrar la ubicación y los horarios de su casilla electoral para el Día de las Elecciones y para votar temprano, haga clic <a target=\"_blank\" href=\"https://www.google.com/url?q=https://teamrv-mvp.sos.texas.gov/MVP/voterDetails.do&sa=D&ust=1598643440963000&usg=AFQjCNGLlhVdWambGArCNow8dLC4cam8CA\">here</a>.
+</p>
+<p>
+Una vez que haya iniciado la sesión, haga clic en el link “11/03/2020 -- 2020 November 3rd General Election” que se encuentra debajo de la pestaña “Próximas Elecciones”
+</p>
+<p>
+  Encontrará las ubicaciones de casillas disponibles para votar temprano y para el Día de las Elecciones. Por favor note que la ubicación de las casillas para votar temprano puede ser diferente de la ubicación de las casillas para el Día de las Elecciones.
+</p>
+",
+
+"<!-- What identification do I need to provide to vote? -->
+<p>
+Puede encontrar información acerca de los tipos válidos de identificación <a target=\"_blank\" href=\"https://www.google.com/url?q=https://www.votetexas.gov/es/registrese-para-votar/necesita-identificacion.html&sa=D&ust=1598643440964000&usg=AFQjCNEztbQRkwPrGCRFE1_iwEdkT07Lmg\">here</a>.
+</p>",
+
+"<!-- I forgot or do not have a proper ID to vote. Can I still cast a ballot? -->
+<p>
+Sí, es posible votar usando una boleta provisional. Encuentre más información <a target=\"_blank\" href=\"https://www.votetexas.gov/es/sus-derechos/index.html\">aquí</a>.
+</p>",
+
+"<!-- Can I vote early in Texas? Where? -->
+<p>
+Todos los votantes registrados son elegibles para votar temprano en Texas. Encuentre más información acerca de votar temprano <a target=\"_blank\" href=\"https://www.google.com/url?q=https://www.votetexas.gov/es/preguntas-frecuentes/votando-temprano.html&sa=D&ust=1598643440956000&usg=AFQjCNFDlzQ9vEUdaQG598haGRFyPsFlJQ\">aquí</a>.
+</p>
+<p>
+Para encontrar las ubicaciones y los horarios de las casillas para votar temprano, haga clic <a target=\"_blank\" href=\"https://www.google.com/url?q=https://teamrv-mvp.sos.texas.gov/MVP/languageChange.do&sa=D&ust=1598643440957000&usg=AFQjCNEM-T6SiQg5g6scIb7GCsl_N779DQ\">aquí.
+</p>",
+
+"<!-- What is a “limited” ballot? -->
+<p>
+<strong>Si usted cambia de dirección a un municipio diferente dentro de Texas, pero ya es muy tarde par registrarse para votar en su nuevo municipio, es posible votar usando una balota “limitada”. </strong>Una balota “limitada” solamente le permitirá votar en candidatos y cuestiones que sus dos municipios tienen en común. Más información acerca de las balotas limitadas puede ser encontrada
+<a target=\"_blank\" href=\"https://www.sos.state.tx.us/elections/laws/limited-ballot-voters-and-district-chart.shtml\">aquí</a>.
+</p>
+<p>
+Si cree que califica para votar con una balota “limitada” o tiene preguntas acerca de votar con una balota “limitada”, contacte a la <a target=\"_blank\" href=\"https://www.sos.state.tx.us/elections/voter/votregduties.shtml\">registradora de votantes de su municipio</a> en su nuevo municipio.
+</p>",
+
+"<!-- I need language assistance to vote. What are my options? -->
+<p>
+Votantes que no hablan inglés pueden usar un intérprete que les ayude a comunicarse con los funcionarios electorales o a traducir el lenguaje en la balota. Encuentre más información <a target=\"_blank\" href=\"https://www.google.com/url?q=https://www.votetexas.gov/es/votantes-con-necesidades-especiales/index.html&sa=D&ust=1598643440952000&usg=AFQjCNF2ulFvsNAlxpIuKU4J6ENwIchDaQ\">aquí</a>.
+</p>",
+
+"<!-- I need assistance to vote due to a disability. What are my options? -->
+<p>
+Es requerido que todos los sistemas de votación y todas las casillas en Texas sean accesibles para votantes con discapacidades. Encuentre más información <a target=\"_blank\" href=\"https://www.votetexas.gov/es/votantes-con-necesidades-especiales/index.html\">aquí</a>.
+</p>",
+
+"<!-- I am a Military/Overseas voter. Where can I find more information about voting? -->
+<p>
+Información acerca de votar mientras está en la militar o en el extranjero puede ser encontrada <a target=\"_blank\" href=\"https://www.votetexas.gov/es/votantes-militares-o-en-el-extranjero/index.html\">aquí</a>.
+</p>",
+
+"<!-- more info -->
+<p>
+Puede encontrar más información acerca de votar en Texas <a target=\"_blank\" href=\"https://www.votetexas.gov/faq/index.html\">aquí</a>.
+</p>"
+
+ ] %}

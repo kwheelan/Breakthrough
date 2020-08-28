@@ -10,6 +10,7 @@
 
 {% block body %}
 
+
 <p>
   <div class="form-label" align = left >
     Texas does not have online voter registration. You have two options:
@@ -26,7 +27,7 @@
     </li>
     </ol>
   </div>
-</p> 
+</p>
 
 
 <a target = "_blank" href="https://webservices.sos.state.tx.us/vrapp/index.asp">
@@ -44,17 +45,17 @@
 <br><br>
 
 
-  <a href = "{{ url_for('poll_forms',state=state, lang=lang) }}" style = "margin-right: 20px">
+
+  <a href = "{{ url_for('poll_forms', state=state, lang=lang) }}" style = "padding: 15px">
     <button class="btn btn-custom">
-      Find my polling place
+      Encuenta mi casilla
     </button>
   </a>
 
-  <a href = " {{ url_for('faqs',state=state, lang=lang) }}">
+  <a href = " {{ url_for('faqs', state=state ,lang=lang) }}" style = "padding: 15px">
     <button class="btn btn-custom">
-      Voting FAQs
+      Preguntas frecuentes acerca de votar
     </button>
   </a>
-
 
 {% endblock %}

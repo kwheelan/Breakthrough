@@ -16,20 +16,73 @@
 {% endblock %}
 
 {% block body %}
+
+<div id="myModal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content" role = "document" tabindex="-1" role="dialog">
+            <div class="modal-header" text-align = "left">
+                <!-- <h4 class="modal-title">Notice</h4> -->
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style = "margin-right: 10px">&times;</button>
+            </div>
+            <div class="modal-body">
+				      <p align = left style = "margin-left: 20px; margin-right: 20px">
+                {% if state.lower() == 'ca' %}
+                  Please note that information on this site is subject to change. Please check the California Secretary of State website
+                  <a href="https://www.sos.ca.gov/elections/" target = "_blank">here</a> for the most up to date voting information.
+                {% elif state.lower() == 'fl' %}
+                  Please note that information on this site is subject to change. Please check the {{ state_long }} Secretary of State website
+                  <a href="https://dos.myflorida.com/elections/" target = "_blank">here</a> for the most up to date voting information.
+                {% elif state.lower() == 'tx' %}
+                  Por favor note que la información en esta página de internet puede cambiar. Por favor verifique
+                  <a href="https://www.sos.state.tx.us/sos_espanol.shtml" target="_blank">la página de internet de la Secretaría de Estado de Texas</a>
+                  para encontrar la información de votación más actualizada.
+                {% elif state.lower() == 'ga' %}
+                  Please note that information on this site is subject to change. Please check the {{ state_long }} Secretary of State website
+                  <a href="https://sos.ga.gov/index.php/elections" target = "_blank">here</a> for the most up to date voting information.
+                {% endif %}
+              </p>
+              <p align=right>
+                  <button type="submit" class = "btn btn-custom" data-dismiss="modal" aria-hidden="true">OK</button>
+              </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 <br>
 <div class = "mainText">
   <p align = left>
-    <font color = #373c43>
-    A raíz de la pandemia de COVID-19, el gobernador de California, Gavin Newsom, ordenó que
-    <strong> todos los residentes de California registrados para votar van a recibir una boleta
-      en el correo para la elección general del 3 de Noviembre del 2020. </strong>
-    La fecha límite para registrarse para la elección general es <strong>el 19 de Octubre del 2020.</strong>
-    Para más información está
+    {% if state.lower() == 'ca' %}
+    Due to the Covid-19 pandemic, <strong>all registered California residents will receive a
+    <a href="{{ url_for('faqs', state=state, lang=lang) + '#vbm'}}" class="faqLink">mail-in ballot</a>
+    for the November 3, 2020 general election.</strong>
+    <br><br>The registration deadline for the general election is
+    <strong>October 19, 2020</strong>. For more information about important dates see
+    <a href="{{ url_for('faqs', state=state, lang=lang)}}" class = "faqLink">Frequently Asked Questions</a>.
+
+    {% elif state.lower() == 'fl' or state.lower() == 'ga' %}
+    The registration deadline for the November 3, 2020 general election is <strong>October 5, 2020</strong>.
+    For more information about important dates see
+    <a href="{{ url_for('faqs', state=state, lang=lang)}}" class = "faqLink">Frequently Asked Questions</a>.
+    The state of {{ state_long }} allows any registered voter to vote by mail. See more about vote-by-mail in {{ state_long }}
+    <a href="{{ url_for('faqs', state=state, lang=lang) + '#vbm'}}" class = "faqLink">here</a>.
+
+    {% elif state.lower() == 'tx' %}
+    La fecha límite para registrarse para la elección general es <strong>el 5 de octubre del 2020.</strong>
+    Más información está
     <a href="{{ url_for('faqs', state=state, lang=lang)}}" class = "faqLink">aquí</a>.
-    </font>
+
+    {% elif state.lower() == 'mn' %}
+    The registration deadline for the November 3, 2020 general election is <strong>October 13, 2020</strong>.
+    For more information about important dates see
+    <a href="{{ url_for('faqs', state=state, lang=lang)}}" class = "faqLink">Frequently Asked Questions</a>.
+    The state of {{ state_long }} allows any registered voter to vote by mail. See more about vote-by-mail in {{ state_long }}
+    <a href="{{ url_for('faqs', state=state, lang=lang) + '#vbm'}}" class = "faqLink">here</a>.
+
+    {% endif %}
   </p>
 </div>
-
 <br>
 
 <div class = "row">

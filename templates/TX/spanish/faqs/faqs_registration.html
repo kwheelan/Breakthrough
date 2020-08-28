@@ -1,0 +1,89 @@
+
+{% set section = 'registration' %}
+
+{% set Q =[
+"¿Cuándo es la fecha límite para registrarse para votar en la elección general del 3 de noviembre?",
+"¿Cómo me registro para votar?",
+"¿Cómo verifico si estoy registrado para votar?",
+"¿Soy elegible para votar? ",
+"No he votado en elecciones recientes. ¿Necesito volver a registrarme para votar?",
+"¿Qué es un certificado de registro de votante?",
+"¿Si todavía no tengo 18 años, me puedo pre-registrar para votar? "
+] %}
+
+{% set A = [
+  "<p>
+<strong>La fecha límite para <a target=\"_black\" href=\"https://webservices.sos.state.tx.us/vrapp/index-sp.asp\">registrarse para votar</a> en la elección general del 3 de noviembre del 2020 es el 5 de octubre del 2020. </strong>
+</p>",
+
+  "<p>
+Hay varias maneras de registrarse para votar en Texas. <strong>La fecha límite para registrarse para votar es el 5 de octubre del 2020.</strong> <strong>Completar el proceso de registro lo más pronto posible ayudará a asegurar que su registro sea revisado antes de la fecha límite. </strong>
+</p>
+<p>
+Escoja UNA de las siguientes maneras de registrarse para votar en Texas:
+</p>
+<ol>
+
+<li>Los votantes elegibles en Texas pueden <strong>llenar una <a target=\"_black\" href=\"https://webservices.sos.state.tx.us/vrapp/index-sp.asp\">forma de registro en línea</a>, imprimirla y enviarla a <a target=\"_black\" href=\"https://www.sos.state.tx.us/elections/voter/votregduties.shtml\">la registradora de votantes local</a></strong> en su municipio de residencia.
+</li>
+
+<li>Los votantes elegibles en Texas pueden <a target=\"_black\" href=\"https://webservices.sos.state.tx.us/vrrequest/index.asp\">pedir una aplicación</a> para registrarse para votar con los gastos de envío pagados al llenar esta forma en línea. Recibirá una aplicación de registro por correo, la cual regresará a la <a target=\"_black\" href=\"https://www.sos.state.tx.us/elections/voter/votregduties.shtml\">registradora de votantes de su municipio</a> por correo.
+</li>
+
+<li>Los votantes elegibles también pueden pedirle una aplicación de registro para votar con los gastos de envío pagados a la <a target=\"_black\" href=\"https://www.sos.state.tx.us/elections/voter/votregduties.shtml\">registradora de votantes de su municipio</a>. Tiene que enviar la aplicación de registro a su registradora de votantes por correo una vez que la complete. </li>
+
+<li>Puede registrarse en persona en la oficina de la registradora de votantes de su municipio. <strong>Por favor verifique con la <a target=\"_black\" href=\"https://www.sos.state.tx.us/elections/voter/votregduties.shtml\">registradora de votantes de su municipio</a> si esta opción está disponible. Covid-19 puede haber afectado registrase para votar en persona. </strong>
+</li>
+
+<li>Antes de la pandemia de Covid-19, aplicaciones para registrarse para votar estaban disponibles en muchas oficinas de correo, bibliotecas, oficinas del Departamento de Seguridad Pública de Texas y oficinas de la Comisión de Salud y Servicios Humanos de Texas en todo el estado. Esto puede haber cambiado, dada la pandemia de Covid-19. Verifique con la <a target=\"_black\" href=\"https://www.sos.state.tx.us/elections/voter/votregduties.shtml\">registradora de votantes de su municipio</a>.
+</li>
+</ol>
+<p>
+NOTA: Algunos municipios tienen páginas de internet que pueden tener información actualizada importante acerca del proceso de votar durante la pandemia de Covid-19. Haga <a target=\"_black\" href=\"https://www.sos.state.tx.us/elections/voter/links.shtml#County\">clic aquí</a> para obtener más información acerca de su municipio.
+</p>",
+
+
+"
+<!-- Am I registered to vote? -->
+<p>
+<strong>Para verificar si está registrado para votar en Texas, <a target=\"_black\" href=\"https://teamrv-mvp.sos.texas.gov/MVP/languageChange.do\">haga clic aquí</a></strong>
+</p>
+<p>
+Se le pedirá que “inicie la sesión” con información de identificación personal.
+</p>
+<p>
+Una vez que haya “iniciado la sesión,” usted podrá verificar su estado de registro, ubicación de las casillas electorales, ubicación de casillas para votar temprano, información de registro y fechas importantes.
+</p>
+<p>
+<strong>La fecha límite para registrarse para votar es el 5 de octubre del 2020. Si usted cambia de dirección o cambia su nombre, debe de actualizar su registro. </strong>
+</p>",
+
+
+
+"<!-- Am I eligible to vote in Texas? -->
+<p>
+Haga clic <a target=\"_black\" href=\"https://www.votetexas.gov/es/registrese-para-votar/index.html\">aquí</a> para obtener más información acerca de la elegibilidad del votante en Texas.
+</p>
+<p>
+Nota: En Texas, un convicto vuelve a obtener su derecho de votar después de haber completado su sentencia. Por lo tanto, una vez que haya terminado su sentencia (incluyendo tiempo en la cárcel, libertad condicional o supervisión) usted es elegible para registrarse y votar en el estado de Texas.
+</p>",
+
+"<!-- I have not voted in recent elections. Do I need to re-register to vote? -->
+<p>
+Posiblemente. <a target=\"_black\" href=\"https://teamrv-mvp.sos.texas.gov/MVP/languageChange.do\">Verifique su estado de registro</a> lo más pronto posible, y, si es necesario, vuelva a <a target=\"_black\" href=\"https://webservices.sos.state.tx.us/vrapp/index-sp.asp\">registrarse para votar</a> antes del 5 de octubre del 2020.
+</p>
+",
+
+"<!-- What is a voter registration certificate? -->
+<p>
+Un certificado de registro de votante es prueba de su registro. Los votantes recibirán uno por correo cada dos años. Más información acerca de los certificados de registro de votantes puede ser encontrada <a target=\"_blank\" href=\"https://www.votetexas.gov/es/registrese-para-votar/tarjeta.html\">aquí<\a>. Por favor notifique a la <a target=\"_black\" href=\"https://www.sos.state.tx.us/elections/voter/votregduties.shtml\">registradora de votantes de su municipio</a> si pierde su certificado o si su certificado tiene información incorrecta.
+</p>
+",
+
+"<!-- If I am not yet 18 years old, can I pre-register to vote? -->
+<p>
+<strong>Sí</strong>. Si tiene mínimo 17 años y 10 meses y va a tener 18 el 3 de noviembre del 2020, el día de las elecciones, puede pre-registrarse para votar.
+</p>
+"
+
+ ] %}

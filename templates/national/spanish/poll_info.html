@@ -19,14 +19,13 @@
 <br><br>
 
 <h2 align=left>
-Ubicaciones de casilla
+Ubicación(es) de casillas electorales para su domicilio.
 </h2>
 <p align=left>
 
 <font class="form-label">
   <br>
-  *Por favor note que las ubicaciones de sus casillas pueden cambiar.
-  Verifique esta información 2-4 semanas antes de la elección.
+  Por favor note que la ubicación de las casillas electorales puede cambiar. Verifique esta información 2-4 semanas antes de las elecciones. Es posible que esta base de datos no refleje cambios de ubicación recientes de las casillas electorales. Revise la página de internet de su municipio para encontrar la información más reciente acerca de la ubicación y los horarios de las casillas electorales.
     {% if state.lower() == "ca" %}
     <br><br>
       Every registered voter in California will receive a vote-by-mail ballot at the address used to register to vote.
@@ -40,7 +39,9 @@ Ubicaciones de casilla
 <br><br>
 
 {% if addressList == [] %}
-   <font size = 5>No polling data for this address or no upcoming elections.</font>
+   <font size = 5>
+  No hay información acerca de las casillas electorales para esta dirección o no hay elecciones próximas.
+  </font>
 {% else %}
   {% for address in addressList %}
     <font size=5><strong><font color=#e4572e>{{ address["locationName"] }}</font></strong><br>

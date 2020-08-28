@@ -2,8 +2,6 @@
 
 {% set page='register' %}
 
-{% set state='CA' %}
-
 {% block header %}
     Registrarse para votar
 {% endblock %}
@@ -11,30 +9,47 @@
 {% block body %}
 
 <p>
-  <font class="form-label">
-    Dele click a el enlace para registrarse para votar en linea. Encuentre más recursos acerca de votar en esta página.
-  </font>
+  <div class="form-label" align = left >
+  En Texas no se puede hacer el registro de votantes en línea. Usted tiene dos opciones:
+  <ol>
+    <li><strong>Si tiene acceso a una impresora</strong>, puede llenar un
+    <a target = "_blank" href="https://webservices.sos.state.tx.us/vrapp/index-sp.asp">formulario de aplicación de registro de votantes</a>
+    el cual debe imprimir y enviar a la
+    <a target = "_blank" href="https://www.sos.state.tx.us/elections/voter/votregduties.shtml">registradora de votantes de su municipio</a>.
+    </li>
+    <li>
+      <strong>Si no tiene acceso a una impresora</strong>, puede solicitar
+      <a target = "_blank" href="https://webservices.sos.state.tx.us/vrrequest/index.asp">una aplicación de registro para votar con los gastos de envío pagados</a>, el cual recibirá por correo.
+    </li>
+    </ol>
+  </div>
 </p>
 
 
-<a target = "_blank" href="https://covr.sos.ca.gov/ES">
+<a target = "_blank" href="https://webservices.sos.state.tx.us/vrapp/index.asp">
   <button class="btn btn-lg btn-big">
-      <font size=6><strong>Registrarse para votar en California</strong></font>
+      <font size=6><strong>Formulario de aplicación de registro de votantes</strong></font>
+  </button>
+</a>
+<br><br>
+
+<a target = "_blank" href="https://webservices.sos.state.tx.us/vrrequest/index.asp">
+  <button class="btn btn-lg btn-big">
+      <font size=6><strong>Solicite que le envíen una aplicación por correo</strong></font>
   </button>
 </a>
 <br><br>
 
 
-
-  <a href = "{{ url_for('poll_forms', state=state, lang=lang) }}" style = "padding: 15px">
+  <a href = "{{ url_for('poll_forms',state=state, lang=lang) }}" style = "margin-right: 20px">
     <button class="btn btn-custom">
-      Encuenta mi casilla >>
+      Encuentre mi casilla para votar
     </button>
   </a>
 
-  <a href = " {{ url_for('faqs', state=state ,lang=lang) }}" style = "padding: 15px">
+  <a href = " {{ url_for('faqs',state=state, lang=lang) }}">
     <button class="btn btn-custom">
-      Preguntas frecuentes acerca de votar
+Preguntas frecuentes acerca de votar
     </button>
   </a>
 

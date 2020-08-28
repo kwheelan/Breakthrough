@@ -10,8 +10,9 @@
 
 <div class="mainText">
   <font size = 4>
-    {% if state.lower() == 'ca' %}
     <p align=left>
+    {% if state.lower() == 'ca' and False %}
+    <!-- translate -->
       Due to the COVID-19 pandemic and Governor Newsom’s order to send every registered
       voter a
       <a href="{{ url_for('faqs', state=state, lang=lang) + '#vbm'}}" class = "faqLink">vote-by-mail ballot</a>
@@ -21,8 +22,10 @@
       your local county elections officials
       <a class = "faqLink" href="https://www.sos.ca.gov/elections/voting-resources/county-elections-offices/">here</a>
       if you have further questions.
-    </p>
+    {% else %}
+      Por favor note que la ubicación de las casillas puede cambiar. Verifique la ubicación de su casilla 2-4 semanas antes del 3 de noviembre del 2020.
     {% endif %}
+    </p>
   </font>
 </div>
 
@@ -121,5 +124,15 @@
       </div>
 
     </form>
+
+    <div class = "mainText">
+      <p align = left style = "line-height: 1">
+        <span style = "font-size: 12px">
+        Esta información de votación proviene de la API cívica de Google, un proyecto creado en conjunto con
+        <a target = "_blank" href="https://www.votinginfoproject.org/about">el Proyecto de Información de Votación</a>.
+        Por favor verifique que esta información esté correcta con la oficina electoral local / de su estado.
+        </span>
+      </p>
+    </div>
 
 {% endblock %}
