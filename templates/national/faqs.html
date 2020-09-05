@@ -60,8 +60,15 @@ Buscar palabra clave
 {% from state.upper() + '/' + lang_full + '/faqs/faqs_general.html' import A as A2 %}
 {% from state.upper() + '/' + lang_full + '/faqs/faqs_vbm.html' import Q as Q3 %}
 {% from state.upper() + '/' + lang_full + '/faqs/faqs_vbm.html' import A as A3 %}
-{% set Q = Q1 + Q2 + Q3 %}
-{% set A = A1 + A2 + A3 %}
+{% if state.lower() == 'tx' and lang == "en" %}
+  {% from state.upper() + '/' + lang_full + '/faqs/faqs_student.html' import Q as Q4 %}
+  {% from state.upper() + '/' + lang_full + '/faqs/faqs_student.html' import A as A4 %}
+{% else %}
+  {% set Q4=[] %}
+  {% set Q4=[] %}
+{% endif %}
+{% set Q = Q1 + Q2 + Q3 + Q4 %}
+{% set A = A1 + A2 + A3 + Q4 %}
 {% include 'accordion.html' %}
 
 
@@ -96,6 +103,17 @@ Buscar palabra clave
       {% endif %}
     </button>
   </a>
+  {% if state.lower() == 'tx' and lang == 'en' %}
+  <a href="#students">
+    <button class = "btn btn-big">
+      {% if lang == 'en' %}
+        Student Voting Questions
+      {% elif lang == 'es' %}
+        Preguntas acerca de los estudiantes
+      {% endif %}
+    </button>
+  </a>
+  {% endif %}
 </p>
 <br>
 
@@ -136,6 +154,20 @@ Preguntas generales acerca de votar
 {% from state.upper() + '/' + lang_full + '/faqs/faqs_vbm.html' import A %}
 {% set section = 'vbm' %}
 {% include 'accordion.html' %}
+
+{% if state.lower() == 'tx' and lang == 'en' %}
+<a class="anchor" id="students"></a>
+<h3 align=left margin-bottom=10px>
+  {% if lang == 'en' %}
+    Questions About Voting as a Student
+  {% elif lang == 'es' %}
+    Preguntas acerca de
+  {% endif %}</h3><br>
+{% from state.upper() + '/' + lang_full + '/faqs/faqs_student.html' import Q %}
+{% from state.upper() + '/' + lang_full + '/faqs/faqs_student.html' import A %}
+{% set section = 'vbm' %}
+{% include 'accordion.html' %}
+{% endif %}
 {% endif %}
 
 {% endblock %}
