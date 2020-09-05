@@ -68,8 +68,10 @@
                   {% endif %}
             {% endif %}
             {% if state != "US" %}
-              <br><br>
+              <br>
             {% endif %}
+            </div>
+            <div class="footer-copyright text-center py-3" style="background-color: #2099E1">
              © 2020 Copyright: Breakthrough Voting Initiative |
              <a href="{{ url_for('privacy_policy', state = state, lang=lang)}}">Privacy Policy and Terms of Use</a>
         </div>

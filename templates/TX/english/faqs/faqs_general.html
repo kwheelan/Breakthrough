@@ -2,10 +2,12 @@
 {% set section = 'general' %}
 
 {% set Q =[
+"I'm a first time voter. What do I need to know?",
 "How do I update my voter registration record?",
 "Where do I vote on Election Day on November 3, 2020?",
 "What identification do I need to provide to vote?",
 "I forgot or do not have a proper ID to vote. Can I still cast a ballot?",
+"What will be on my ballot?",
 "Can I vote early in Texas? Where?",
 "What is a “limited” ballot?",
 "I need language assistance to vote. What are my options?",
@@ -15,6 +17,18 @@
 ] %}
 
 {% set A = [
+"<!-- I'm a first time voter. What do I need to know? -->
+Here is a checklist for first time voters:
+<ol>
+  <li><a target=\"_blank\" href='register'>Register to vote</a>.</li>
+  <li><a target=\"_blank\" href=\"poll_finder/query\">Find your polling place</a>.</li>
+  <li><a target=\"_blank\" href=\"https://www.vote411.org/ballot\">Review what's on the ballot</a>.</li>
+  <li>Bring a
+  <a target=\"_blank\" href=\"https://www.votetexas.gov/register-to-vote/need-id.html\">proper photo ID</a>
+  with you to the polls. Or, if you don't have a proper ID, see your options
+  <a target=\"_blank\" href=\"https://www.voteriders.org/states/texas/\">here</a></li>
+  <li>Vote!</li>
+</ol>",
 
 "<!-- How do I update my voter registration record? -->
 <p>
@@ -53,8 +67,17 @@ Information about valid identification needed to vote can be found <a target=\"_
 
 "<!-- I forgot or do not have a proper ID to vote. Can I still cast a ballot? -->
 <p>
-Yes, you may be able to vote using a provisional ballot. For more information, click <a target=\"_blank\" href=\"https://www.votetexas.gov/your-rights/\">here</a>.
+  If you don’t have an acceptable photo ID, you may have other options for voting. See more information
+  <a target=\"_blank\" href=\"https://www.voteriders.org/states/texas/\">here</a>.
+</p>
+<p>
+You may also have the option to vote using a provisional ballot. For more information about provisional ballots, click <a target=\"_blank\" href=\"https://www.votetexas.gov/your-rights/\">here</a>.
 </p>",
+
+"<!-- What will be on my ballot? -->
+<p>You can view a sample ballot and voter guide before the election
+<a target=\"_blank\" href=\"https://www.vote411.org/ballot\">here</a>.</p>
+",
 
 "<!-- Can I vote early in Texas? Where? -->
 <p>

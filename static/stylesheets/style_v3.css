@@ -16,6 +16,8 @@ h1 {
 .footer-copyright {
   background-color: #0079C1;
   color: white;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 /* alert */
 
@@ -79,6 +81,8 @@ h1 {
   /* border-color: #000951; */
   color: white;
   margin-right: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .btn-custom:hover {
