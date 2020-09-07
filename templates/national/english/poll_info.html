@@ -8,7 +8,7 @@
 
     <a href = "{{ url_for('poll_forms', state=state, lang=lang) }}" style = "padding: 20px">
       <button class="btn btn-custom" >
-        << Enter a different address to the poll finder
+        << Enter a different address into the poll finder
       </button>
     </a>
 
@@ -18,19 +18,12 @@
       </button>
     </a>
 
-    <br><br>
-
-  <h2 align=left>
-    Poll Location(s) for your Address
-  </h2>
-  <p align=left>
-
     <font class="form-label">
-      <br>
+      <br><br>
+      <p align=left>
       <strong>Please note that polling places are subject to change.
         Make sure you check this information 2-4 weeks before the election.
         {% if state.lower() == "ca" %}
-        <br><br>
           <!-- Every registered voter in California will receive a vote-by-mail ballot at the address used to register to vote.
           Click
           <a class = "faqLink" href="{{ url_for('faqs', state=state, lang=lang) + '#vbm'}}">here</a>
@@ -44,20 +37,29 @@
           <a href="https://www.mvp.sos.ga.gov/MVP/mvp.do">here</a>
           to see Georgia's official poll finder.
         {% elif state.lower() == 'tx' %}
-            This database may not yet reflect recent changes to polling locations in Texas. Check your county
-            website to find the most up-to-date polling locations and hours.
+            This database may not yet reflect recent changes to polling locations in Texas. Check your
+            <a target="_blank" href="https://www.sos.state.tx.us/elections/voter/links.shtml#County">county website</a>
+            to find the most up-to-date polling locations and hours.
         {% elif state.lower() == 'fl' %}
             This database may not yet reflect recent changes to polling locations in Florida. Click
             <a href="https://registration.elections.myflorida.com/CheckVoterStatus">here</a>
             to see Florida's official poll finder.
         {% endif %}
       </strong>
+      </p>
     </font>
-    <br><br>
+    <br>
+
+    <h2 align=left>
+      Poll Location(s) for your address
+    </h2>
+    <p align=left>
+      <br>
 
   <div align = left>
     {% if addressList == [] %}
-       <font size = 5>No polling data for this address or no upcoming elections.</font>
+       <font size = 5>No polling data for this address or no upcoming elections.
+       Please check with your county to find up-to-date polling locations.</font>
     {% else %}
       {% for address in addressList %}
         <h3>{{ address["locationName"] }}</h3>
