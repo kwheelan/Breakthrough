@@ -1,71 +1,41 @@
 {% set section = 'general' %}
 
 {% set Q = [
-  "COVID-19会影响加利福利亚州的投票选举吗？",
-  "Where can I vote?",
-  "我在选举当日应当携带什么材料？",
-  "我可以请假投票吗？",
-  "Can I vote early in California?",
-  "我的问题没有被解答。我在哪里可以找到更多信息？"
-
-]%}
+  "新型冠状病毒会如何影响加州的投票？",
+  "我可以在哪里投票？",
+  "我在选举日需要携带什么？",
+  "我可以在加州提前投票吗？",
+  "我的问题没有得到回答。我在哪里可以找到更多信息？"
+] %}
 
 {% set A = [
-"鉴于当前疫情，加州州长Gavin Newsom已宣布所有登记在册的加州居民都将收到一封邮寄的选票。如果您更愿意现场投票，我们的投票点也对外开放。您将会在选举前2-4周收到投票点的具体地址。",
 
-"You can vote either by mail or at your polling place. Due to the Covid-19 pandemic, all registered voters
-will be sent a vote-by-mail ballot. For your safety, you are encouraged to vote by mail. See more vote-by-mail
-information
-<a href=\"#vbm\">here</a>.
+"<p>由于新型冠状病毒大流行，所有已登记的加州居民将收到邮寄选票。</p>
+<p>了解更多关于
+<a target=\"_blank\" href=\"https://www.sos.ca.gov/administration/news-releases-and-advisories/2020-news-releases-and-advisories/ap20067-99-days-until-11032020-general-election-sos-office-launches-vote-safe-california-campaign/\">加州投票安全</a>活动的信息，为应对新型冠状病毒大流行，该活动于2020年7月启动。
+</p>
+<p>
+  请在<a target=\"_blank\" href=\"https://voterstatus.sos.ca.gov/\">此处</a>查看您的选民登记状况。
+</p>
+<p>
+  请在<a target=\"_blank\" href=\"https://registertovote.ca.gov/\">此处</a>更新您的选民登记信息（任何地址更改、姓名更改等）。
+</p>",
+
+"<p>如果您选择亲自投票，您可以在
+<a target=\"_blank\" href=\"https://www.sos.ca.gov/elections/polling-place/\">此处</a>
+找到您的投票站。该信息可能会有所更改，因此请务必在2020年11月3日大选前2-4周再回来查看。
+</p>
+<p>
+  欲知有关提前投票和邮寄选票投递地点的信息，请点击<a target=\"_blank\" href=\"https://caearlyvoting.sos.ca.gov/\">此处</a>。
+</p>",
+
+"有关选举日应带什么东西的一般信息，请点击<a target=\"_blank\" href=\"https://www.sos.ca.gov/elections/voting-resources/voting-california/what-bring/\">此处</a>。
+如果您对可接受的身份证明有任何疑问，请拨打州务卿的免费选民热线(800) 345-VOTE (8683)或联络您的
+<a target=\"_blank\" href=\"https://www.sos.ca.gov/elections/voting-resources/county-elections-offices/\">县选举办公室</a>。
 <br><br>
-However, all registered voters in California can also vote in person at their assigned polling location.
-To find more information about specific polling location rules, visit
-<a href=\"https://www.sos.ca.gov/elections/voting-resources/county-elections-offices/\">
-  your county elections office website
-</a>.",
+有关可接受的身份证明的完整清单，请点击<a target=\"_blank\" href=\"https://elections.cdn.sos.ca.gov/regulations/hava_id_regs_from_barclays_3_3_06.pdf\">此处</a>。",
 
-"一般情况下，选民不需要向投票站工作人员出示身份证明即可投票。
-但是，如果您是在通过邮件登记投票后首次投票，并且没有在登记表上提供您的驾驶执照号码、加利福尼亚州身份证号码或您的社会保险号码的最后四位数字，您在投票时可能会被要求出示身份证明表。
-<strong>请确保带上您的身份证明到你的投票地点，或者在你的邮寄投票中附上它的副本。</strong> <br><br>
-<strong>请携带下列证件之一作为身份证明：</strong>
-<ul>
-  <li>
-    通过以下证件照片识别，例如
-    <ul>
-      <li>其他州的驾照或身份证</li>
-      <li>护照</li>
-      <li>工作证</li>
-      <li>商业机构提供的身份证</li>
-      <li>信用卡或借记卡</li>
-      <li>学生卡</li>
-      <li>医疗卡</li>
-      <li>保险卡</li>
-      <li>公积金卡</li>
-    </ul>
-  </li>
-  <li>
-    或以下任一材料的复印件
-    <ul>
-      <li>水电费账单</li>
-      <li>近期银行流水</li>
-      <li>工资单或含有选民姓名和地址的发票</li>
-      <li>你从当地选举办公室收到的选票样本</li>
-      <li>其他由政府部门发放的文件</li>
-    </ul>
-  </li>
-</ul>",
-
-"是的，加利福利亚州法律要求雇主在工作日为员工合理安排投票时间。
-具体而言，每位投票人在轮班开始或结束时都有权有2小时的投票时间，这取决于给员工最多的投票时间和最少的休假时间。这段时间最多可支付2小时。
- 如果你打算在工作日投票，投票人必须在选举前至少 <strong>2个工作日通知雇主他们打算在工作时间投票。</strong> 点击
-<a target = \"_blank\" href=\"https://www.sos.ca.gov/administration/news-releases-and-advisories/2018-news-releases-and-advisories/california-law-allows-time-vote-election-day1/\">这里</a>
-投票，投票人必须在选举前至少2个工作日通知雇主他们打算在工作时间投票。点击这里查看更多信息。",
-
-  "In previous elections, eligible voters in some counties could vote early at select polling locations in the days leading up to Election Day.
-  However, given that every registered California voter will receive a mail-in ballot for the November 3, 2020
-  general election, <strong>voters are encouraged to vote at home and return their ballot either by mail or at a polling place.</strong>
-  See county-specific COVID-19 early voting policies
-  <a href=\"https://www.sos.ca.gov/elections/voting-resources/county-elections-offices/\">here</a>.",
+"请向您的<a target=\"_blank\" href=\"https://www.sos.ca.gov/elections/voting-resources/county-elections-offices/\">县选举办公室</a>查询有关提前投票的地点。",
 
 "有关投票的信息可以在加利福尼亚州的网站上找到，有10种语言可选择。
 <ul>
