@@ -109,7 +109,7 @@ def pollFinderHelper():
 #states with enabled pages
 states = ["CA", "FL", "GA", "TX", "MN", "US"]
 #translations avaible for each state (CA translations temporarily disabled)
-stateLangDict = { "CA": ['en', 'es', 'zh'], "FL" : ['en', 'es'], "GA": ['en', 'es'], "TX": ['en', 'es'], "MN": ['en', 'es'], "US": ['en']}
+stateLangDict = { "CA": ['en'], "FL" : ['en', 'es'], "GA": ['en', 'es'], "TX": ['en', 'es'], "MN": ['en', 'es'], "US": ['en']}
 #language url extension
 langDict = { "zh" : 'mandarin', "es": 'spanish', 'en': 'english'}
 stateDict = {'ca':'California', 'fl':'Florida', 'ga': 'Georgia', 'tx': 'Texas', 'mn': 'Minnesota'}
