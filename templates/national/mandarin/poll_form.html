@@ -1,22 +1,31 @@
 {% extends "layout.html" %}
+{% set lang='zh' %}
 
 {% set page='poll_forms' %}
 
 {% block header %}
-    Find Your Polling Place
+    查找您的投票站
 {% endblock %}
 
 {% block body %}
 
-<div class="mainText">
-  {% if state.lower() == 'ca' %}
-  <p align=left>
-  <font size = 4>请注意投票地址可能只会在选举前的2-4周才会公布。(UPDATE TEXT)
+<div class = "mainText">
+  <font size = 4>
+    <p align=left>
+    {% if state.lower() == 'ca' %}
+      <strong>由于新型冠状病毒大流行以及Newsom州长下令向2020年11月3日大选的每位登记选民发送
+      <a href="{{ url_for('faqs', state=state, lang=lang) + '#vbm'}}" class = "faqLink">邮寄选票</a>,
+      今年的一些投票站可能有所不同。</strong> 如果您打算在投票站投递选票或亲自投票，请在2020年11月3日前2-4周查看
+      <a target = "_blank" href="https://www.sos.ca.gov/elections/polling-place/">您所在州的投票查询器</a>
+      。
+      如果您有更多问题，请
+      <a class = "faqLink" href="https://www.sos.ca.gov/elections/voting-resources/county-elections-offices/">在此处</a>
+      联系您当地的县级选举官员。
+    {% else %}
+    {% endif %}
+    </p>
   </font>
-  </p>
-  {% endif %}
 </div>
-<br>
 
     <form class = "formSect" action="{{ url_for('pollFinder', state=state, lang=lang) }}" method="post">
 
@@ -25,16 +34,16 @@
       </p>
 
       <div class="form-group">
-          <input class="form-control formOutline" type="text" name="address" placeholder="街道地址" required="required">
+          <input class="form-control formOutline" type="text" name="address" placeholder="线1" required="required">
       </div>
 
       <div class="form-group">
-          <input class="form-control formOutline" type="text" name="city" placeholder="市" required = "required">
+          <input class="form-control formOutline" type="text" name="city" placeholder="城市" required = "required">
       </div>
 
       <div class="form-group">
-            <select class="form-control formOutline" id="exampleFormControlSelect1" name = "state" required="required">
-            <option label="州" value=""></option>
+            <select class="form-control formOutline" id="exampleFormControlSelect1" name = "州" required="required">
+            <option label="State" value=""></option>
             <option value="Alabama">Alabama</option>
             <option value="Alaska">Alaska</option>
             <option value="Arizona">Arizona</option>
@@ -91,7 +100,7 @@
       </div>
 
       <div class="form-group">
-          <input class="form-control formOutline" type="number" name="zip" placeholder="邮递区号" required="required">
+          <input class="form-control formOutline" type="number" name="zip" placeholder="邮政编码" required="required">
       </div>
 
     <!--  <br>
@@ -109,9 +118,23 @@
       </div> -->
 
       <div class="form-group" align=left>
-          <button class="btn btn-custom">找我的投票站</button>
+          <button class="btn btn-custom">查找我的投票站</button>
       </div>
 
     </form>
+
+<div class = "mainText">
+  <p align = left style = "line-height: 1">
+    <span style = "font-size: 12px">
+    此投票信息来自与
+    <a target = "_blank" href="https://www.votinginfoproject.org/about">投票信息项目</a>
+    一起创建的项目，即Google Civic API。
+    <!-- The Voting Information Project is a partnership between
+    <a target="_blank" href="https://www.democracy.works/">Democracy Works</a>
+    and state and local election officials.  -->
+    请务必与您的州和/或地方选举办公室确认此信息。
+    </span>
+  </p>
+</div>
 
 {% endblock %}

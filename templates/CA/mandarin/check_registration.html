@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+
+{% set page='registration_forms' %}
+
+{% block header %}
+    查看您的选民登记状态
+{% endblock %}
+
+{% block body %}
+
+<p>
+  <font class="form-label">
+    点击下面的按钮，查看您在加州的登记状态。在下面找到其他投票资源。
+  </font>
+</p>
+
+
+<a target = "_blank" href="https://voterstatus.sos.ca.gov/">
+  <button class="btn btn-lg btn-big">
+      <font size=6><strong>我是否已登记投票？</strong></font>
+  </button>
+</a>
+<br><br>
+
+
+<!-- <div class="alert alert-secondary sect" role="alert">
+    <a class = "sectLink" target = "_blank" hsref="https://covr.sos.ca.gov/">
+      <h1 align= center>
+        Register to vote in the state of California
+      </h1>
+    </a>
+</div>
+<br><br> -->
+
+
+  <a href = "{{ url_for('poll_forms',state=state, lang=lang) }}" style = "margin-right: 20px">
+    <button class="btn btn-custom">
+      查找我的投票站
+    </button>
+  </a>
+
+  <a href = " {{ url_for('faqs',state=state, lang=lang) }}">
+    <button class="btn btn-custom">
+      投票常见问题
+    </button>
+  </a>
+
+
+{% endblock %}

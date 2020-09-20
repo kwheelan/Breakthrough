@@ -68,7 +68,7 @@ Buscar palabra clave
 {% from state.upper() + '/' + lang_full + '/faqs/faqs_general.html' import A as A2 %}
 {% from state.upper() + '/' + lang_full + '/faqs/faqs_vbm.html' import Q as Q3 %}
 {% from state.upper() + '/' + lang_full + '/faqs/faqs_vbm.html' import A as A3 %}
-{% if state.lower() == 'tx' and lang == "en" %}
+{% if state.lower() in ['tx', 'ca'] %}
   {% from state.upper() + '/' + lang_full + '/faqs/faqs_student.html' import Q as Q4 %}
   {% from state.upper() + '/' + lang_full + '/faqs/faqs_student.html' import A as A4 %}
 {% else %}

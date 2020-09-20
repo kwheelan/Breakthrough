@@ -25,6 +25,29 @@
   </p>
 </div>
 
+<div id="myModal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content" role = "document" tabindex="-1" role="dialog">
+            <div class="modal-header" text-align = "left">
+                <!-- <h4 class="modal-title">Notice</h4> -->
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style = "margin-right: 10px">&times;</button>
+            </div>
+<div class="modal-body">
+  <p align = left style = "margin-left: 20px; margin-right: 20px">
+    {% if state.lower() == 'ca' %}
+    请注意，本网站上的信息可能会发生变更。请
+    <a href="https://www.sos.ca.gov/elections/" target="_blank">在此处</a>
+    查看加州州务卿网站，了解最新的投票信息。
+    {% endif %}
+  </p>
+  <p align=right>
+      <button type="submit" class = "btn btn-custom" data-dismiss="modal" aria-hidden="true">OK</button>
+  </p>
+</div>
+</div>
+</div>
+</div>
+
 
 <br>
 
