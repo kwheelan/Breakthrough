@@ -1,0 +1,94 @@
+
+{% set section = 'student' %}
+
+{% set Q =[
+  "Soy estudiante de secundaria. No tengo la edad suficiente para votar, pero quiero participar en las elecciones de 2020, ¿qué puedo hacer?",
+  "Tengo 18 años de edad y soy estudiante de secundaria. ¿Cómo voto en las elecciones de 2020?",
+  "Soy estudiante universitario y vivo lejos de mi casa. ¿Cómo voto en las elecciones de 2020?",
+  "Inscribirse para votar NO afecta su:"
+] %}
+
+{% set A = [
+"<p>
+Antes de la pandemia de COVID-19, los estudiantes con ciertas credenciales podían desempeñarse como trabajadores electorales estudiantiles. Esta oportunidad permite que los estudiantes se familiaricen con el proceso electoral.  Asimismo, es una actividad remunerada.
+</p>
+<p>
+Para mayor información sobre el programa de trabajadores electorales estudiantiles, haga clic <a target=\"_blank\" href=\"https://www.sos.ca.gov/elections/student-mock-election/student-poll-worker/\">aquí</a>.
+</p>
+<p>
+Comuníquese con la <a target=\"_blank\" href=\"https://www.sos.ca.gov/elections/voting-resources/county-elections-offices/\">oficina electoral de su condado</a> para averiguar si este programa está todavía disponible en su localidad. Es posible que haya habido cambios debido a la pandemia de COVID-19.
+</p>
+<p>
+Si tienes 16 o 17 años de edad y cumples con los demás requisitos, puedes preinscribirte para votar.
+</p>
+<p>
+También puedes animar a los votantes de tu comunidad que cumplan los requisitos a que se inscriban para votar.</p>",
+
+"
+<!-- I’m 18 years old and a high school student. How do I vote in the 2020 election? -->
+<p>
+Si tienes 18 años de edad y reúnes los requisitos para votar, puedes participar en el proceso de inscripción / votación como cualquier otro votante idóneo.
+</p>
+<p>
+Si tienes 16 o 17 años de edad, puedes preinscribirte para votar.
+</p>
+",
+
+"
+<!-- I’m a college student living away from home. How do I vote in the 2020 election? -->
+<ol>
+
+<li><strong><span style=\"text-decoration:underline;\">Inscripción:</span></strong>
+</li>
+<p>
+Si eres estudiante universitario y vives lejos de tu casa, primero debes decidir dónde está tu "hogar".  Si el lugar de residencia de tus padres o demás miembros de tu familia es lo que consideras tu "hogar", usa esa dirección para inscribirte.
+</p>
+<p>
+Si la dirección de tu campus es lo que consideras tu "hogar", usa esa dirección para inscribirte. Sin embargo, solamente puedes inscribirte en un lugar.
+Si te consideras residente de otro estado, comunícate con el ente electoral de ese otro estado para saber cómo votar allí.
+</p>
+
+<li><strong><span style=\"text-decoration:underline;\">¿Cómo votar si vives lejos de tu hogar?</span></strong>
+</li>
+<p>
+Todos los votantes inscritos en California recibirán un sobre de voto por correo para las elecciones generales del 3 de noviembre de 2020 en la dirección de habitación que figura en su registro de votantes. Si te inscribes / inscribiste para votar en el lugar de residencia de tus padres o de un familiar, pero no estarás allí durante el período de votación anticipada o el día de las elecciones, deberás solicitar que te envíen el sobre de voto a tu dirección actual.
+</p>
+<p>
+<em>Ésta es la primera vez que me inscribo para votar:</em>
+</p>
+<p>
+Si te estás <strong>inscribiendo para votar por primera vez</strong> y declaras como “hogar” el lugar de residencia de tus padres o de un miembro de tu familia, pero no estarás allí durante el período de votación anticipada o el día de las elecciones, puedes especificar una dirección diferente como tu "dirección postal" cuando te inscribas para votar en línea.
+</p>
+<p>
+<em>Ya me inscribí para votar en una oportunidad anterior:</em>
+</p>
+<p>
+Si <strong>ya te inscribiste</strong> para votar en la dirección de tus padres o en cualquier otra dirección y ahora deseas que se te envíe el sobre de voto por correo a una dirección alternativa o a la de un campus, debes llenar la <a target=\"_blank\" href=\"https://elections.cdn.sos.ca.gov/vote-by-mail/pdf/vote-by-mail-application.pdf\">solicitud de voto por correo (PDF).</a>.  Envía luego, lo antes posible, este formulario por correo al funcionario electoral del condado en el que estás inscrito actualmente para votar.
+</p>
+</ol>
+<p>
+<strong>Para más información general sobre cómo pueden votar los estudiantes universitarios, haz clic <a target=\"_blank\" href=\"https://www.sos.ca.gov/elections/voting-resources/voting-california/students/\">aquí</a>.</strong>
+</p>
+<p>
+<strong>Si tienes preguntas específicas o quieres verificar si esta información ha cambiado, llama a la línea directa gratuita para votantes de la Secretaría de Estado: (800) 232-VOTA (8682).</strong>
+</p>",
+
+"
+<!-- Will registering to vote affect my financial aid or tax status? -->
+<ul>
+
+<li>Ayuda financiera federal
+
+<li>Estatus como dependiente de los impuestos pagados por sus padres
+
+<li>Estatus de matrícula
+
+<li>Licencia de conducir o registro de automóvil de California
+</li>
+</ul>
+<p>
+Haga clic <a target=\"_blank\" href=\"https://www.campusvoteproject.org/stateguides/California#comp-jwqq9k9z\">aquí</a> para más información.
+</p>
+"
+
+ ] %}

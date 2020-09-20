@@ -1,0 +1,95 @@
+
+{% set section = 'student' %}
+
+{% set Q =[
+  "我是一名高中生。我还未到投票年龄，但我想参与2020年选举 -- 我能做什么？",
+  "我今年18岁，是一名高中生。我如何在2020年选举中投票？",
+  "我是一名住在外地的大学生。我如何在2020年的选举中投票？",
+  "登记投票并不影响您的:"
+] %}
+
+{% set A = [
+"<p>
+在新型冠状病毒大流行之前，具有一定资格的学生可以担任学生投票站工作人员。这个机会可以让学生了解选举过程。它也是付薪水的。
+</p>
+<p>
+有关学生投票站工作人员计划的更多信息可在<a target=\"_blank\" href=\"https://www.sos.ca.gov/elections/student-mock-election/student-poll-worker/\">此处</a>找到。
+</p>
+<p>
+请联络您的<a target=\"_blank\" href=\"https://www.sos.ca.gov/elections/voting-resources/county-elections-offices/\">县选举办公室，</a>查询您所在的地区是否仍提供这个机会。由于新型冠状病毒的大流行，可能会有一些变化。
+</p>
+<p>
+如果您年满16或17岁并符合其他资格，您可以预先登记投票。
+</p>
+<p>
+您也可以鼓励您小区中符合资格的选民进行投票登记!
+</p>",
+
+"
+<!-- I’m 18 years old and a high school student. How do I vote in the 2020 election? -->
+<p>
+如果您年满18岁并有资格投票，您可以像其他有资格的选民一样参加选民登记/投票程序。
+</p>
+<p>
+如果您年满16或17岁，您可以预先登记投票。
+</p>
+",
+
+"
+<!-- I’m a college student living away from home. How do I vote in the 2020 election? -->
+<ol>
+
+<li><strong><span style=\"text-decoration:underline;\">登记:</span></strong>
+</li>
+<p>
+如果您是未在家居住的大学生，您首先要决定 “家”在哪里。如果您将您的父母或其他家庭成员的居住地当做您的“家”，请使用该地址进行登记。
+</p>
+<p>
+如果您将校园地址当做您的“家”，请使用该地址进行登记。但是，您只能在一个地方登记。如果您认为自己是其他州的居民，请与该州的选举部门联系，了解如何在该州投票。
+</p>
+
+<li><strong><span style=\"text-decoration:underline;\">离家投票:</span></strong>
+</li>
+<p>
+2020年11月3日大选的邮寄选票将按选民登记册上所列的住址，寄给所有已登记的加州选民。如果您在父母或家庭成员的居住地登记，但在提前投票或选举日不在当地，您应要求将选票寄到您目前的地址。
+</p>
+<p>
+<em>这是我第一次登记投票:</em>
+</p>
+<p>
+如果您是<strong>第一次登记投票，</strong>并声称您的父母或家庭成员的居住地为“家”，但在提前投票期间/选举日不在那里，您可以在网上登记投票时指定其他地址作为您的“通讯地址”。
+</p>
+<p>
+<em>我之前已经登记过投票，该怎么办？</em>
+</p>
+<p>
+如果您<strong>之前</strong>在父母或其他地址登记投票，现在希望将您的选票邮寄到校园/其他地址，您应该填写<a target=\"_blank\" href=\"https://elections.cdn.sos.ca.gov/vote-by-mail/pdf/vote-by-mail-application.pdf\">邮寄投票申请(PDF)。</a>请尽快将此表格寄回给您目前登记投票所在县的县选举官员。
+</p>
+</ol>
+<p>
+<strong>有关大学生如何投票的更多一般信息，请点击<a target=\"_blank\" href=\"https://www.sos.ca.gov/elections/voting-resources/voting-california/students/\">此处。</a>.</strong>
+</p>
+<p>
+<strong>如有具体问题或想查询这些信息是否已变更，请致电州务卿的免费选民热线: (800) 339-2857。</strong>
+</p>",
+
+"
+<!-- Will registering to vote affect my financial aid or tax status? -->
+
+<ul>
+
+<li>联邦财政援助
+
+<li>作为受抚养人对父母纳税的影响
+
+<li>学费情况
+
+<li>加州驾照或汽车登记
+</li>
+</ul>
+<p>
+点击<a target=\"_blank\" href=\"https://www.campusvoteproject.org/stateguides/California#comp-jwqq9k9z\">此处</a>获取更多信息。
+</p>
+"
+
+ ] %}

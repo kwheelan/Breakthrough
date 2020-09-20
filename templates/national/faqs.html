@@ -21,6 +21,8 @@
 Search keyword
     {% elif lang == 'es' %}
 Buscar palabra clave
+    {% elif lang == 'zh' %}
+搜索关键词
     {% endif %}"
   required="required">
 
@@ -29,6 +31,8 @@ Buscar palabra clave
       Search
     {% elif lang == 'es' %}
       Buscar
+    {% elif lang == 'zh' %}
+      搜索
     {% endif %}
   </button>
 
@@ -38,11 +42,13 @@ Buscar palabra clave
 {% if search %}
 <h3 align=left margin-bottom=10px>
   {% if lang == 'en' %}
-    Search results for:
+    Search results for: {{keyword}}
   {% elif lang == 'es' %}
-    Resultados de la búsqueda de:
+    Resultados de la búsqueda de: {{keyword}}
+  {% elif lang == 'zh' %}
+    {{keyword}} 的搜索结果：
   {% endif %}
-  {{keyword}}</h3>
+  </h3>
 <div align = left>
 <a href="{{ url_for('faqs', lang=lang, state=state)}}">
  <button class = "btn btn-big">
@@ -50,6 +56,8 @@ Buscar palabra clave
      Clear search
    {% elif lang == 'es' %}
      Quitar búsqueda
+  {% elif lang == 'zh' %}
+    清除搜索结果
     {% endif %}
  </button>
 </a>
@@ -82,6 +90,8 @@ Buscar palabra clave
         Registration Questions
       {% elif lang == 'es' %}
         Preguntas acerca del registro
+      {% elif lang == 'zh' %}
+        关于选民登记的问题
       {% endif %}
     </button>
   </a>
@@ -91,8 +101,13 @@ Buscar palabra clave
         General Voting Questions
       {% elif lang == 'es' %}
     Preguntas generales acerca de votar
+      {% elif lang == 'zh' %}
+        关于投票的一般问题
       {% endif %}
     </button>
+    {% if lang == "es" %}
+      <br>
+    {% endif %}
   </a>
   <a href="#vbm">
     <button class = "btn btn-big">
@@ -100,16 +115,20 @@ Buscar palabra clave
         Vote-by-Mail Questions
       {% elif lang == 'es' %}
         Preguntas acerca de votar por correo
+      {% elif lang == 'zh' %}
+        有关通过邮件投票的问题
       {% endif %}
     </button>
   </a>
-  {% if state.lower() == 'tx' and lang == 'en' %}
+  {% if (state.lower() == 'tx' and lang == 'en') or (state.lower() == 'ca') %}
   <a href="#students">
     <button class = "btn btn-big">
       {% if lang == 'en' %}
         Student Voting Questions
       {% elif lang == 'es' %}
         Preguntas acerca de los estudiantes
+      {% elif lang == 'zh' %}
+        学生投票部分
       {% endif %}
     </button>
   </a>
@@ -123,6 +142,8 @@ Buscar palabra clave
     Questions about Voter Registration
   {% elif lang == 'es' %}
     Preguntas acerca del registro de votante
+  {% elif lang == 'zh' %}
+    关于选民登记的问题
   {% endif %}
 </h3><br>
 {% from state.upper() + '/' + lang_full + '/faqs/faqs_registration.html' import Q %}
@@ -136,6 +157,8 @@ Buscar palabra clave
     General Questions About Voting
   {% elif lang == 'es' %}
 Preguntas generales acerca de votar
+  {% elif lang == 'zh' %}
+    关于投票的一般问题
   {% endif %}
 </h3><br>
 {% from state.upper() + '/' + lang_full + '/faqs/faqs_general.html' import Q %}
@@ -149,19 +172,23 @@ Preguntas generales acerca de votar
     Questions About Vote-by-Mail
   {% elif lang == 'es' %}
     Preguntas acerca de votar por correo
+  {% elif lang =='zh' %}
+    有关通过邮件投票的问题
   {% endif %}</h3><br>
 {% from state.upper() + '/' + lang_full + '/faqs/faqs_vbm.html' import Q %}
 {% from state.upper() + '/' + lang_full + '/faqs/faqs_vbm.html' import A %}
 {% set section = 'vbm' %}
 {% include 'accordion.html' %}
 
-{% if state.lower() == 'tx' and lang == 'en' %}
+{% if (state.lower() == 'tx' and lang == 'en') or (state.lower() == 'ca') %}
 <a class="anchor" id="students"></a>
 <h3 align=left margin-bottom=10px>
   {% if lang == 'en' %}
     Questions About Voting as a Student
   {% elif lang == 'es' %}
-    Preguntas acerca de
+    Estudiantes
+  {% elif lang == 'zh' %}
+    学生投票部分
   {% endif %}</h3><br>
 {% from state.upper() + '/' + lang_full + '/faqs/faqs_student.html' import Q %}
 {% from state.upper() + '/' + lang_full + '/faqs/faqs_student.html' import A %}

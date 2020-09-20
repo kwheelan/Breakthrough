@@ -1,65 +1,46 @@
 {% set section = 'general' %}
 
 {% set Q = [
-  "¿Cómo va a afectar votar el COVID-19 en California?",
-  "Where can I vote?",
-  "¿Qué necesito traer conmigo en el día de las elecciones? ",
+  "¿Cómo afectará la Covid-19 la votación en California?",
+  "¿Dónde puedo votar?",
+  "¿Qué necesito llevar conmigo el día de las elecciones?"
   "¿Puedo tomarme tiempo libre durante el trabajo para ir a votar?",
-  "Can I vote early in California?",
-  "Mi pregunta no fue contestada. ¿Dónde puedo encontrar más información?"
+  "¿Puedo votar anticipadamente en California?",
+  "Mi pregunta no fue respondida. ¿Dónde puedo encontrar más información?"
 
 ]%}
 
 {% set A = [
-"A raíz de la pandemia de COVID-19, el gobernador de California, Gavin Newsom, ordenó que <strong> todos los residentes de California registrados para votar van a recibir una boleta en el correo.</strong>
-Sin embargo, si usted prefiere votar en persona, <strong>habrá casillas disponibles.</strong> Encuentre la información acerca de su casilla 2-4 semanas antes de la elección
-<a href=\"{{ url_for('poll_forms', state=state, lang=lang)}}\" >aquí</a>.",
 
-"You can vote either by mail or at your polling place. Due to the Covid-19 pandemic, all registered voters
-will be sent a vote-by-mail ballot. For your safety, you are encouraged to vote by mail. See more vote-by-mail
-information
-<a href=\"#vbm\">here</a>.
-<br><br>
-However, all registered voters in California can also vote in person at their assigned polling location.
-To find more information about specific polling location rules, visit
-<a href=\"https://www.sos.ca.gov/elections/voting-resources/county-elections-offices/\">
-  your county elections office website
-</a>.",
+  "Debido a la pandemia de Covid-19, <strong>todos los residentes inscritos en California recibirán un sobre de voto por correo.</strong>
+  <p>
+  Obtenga más información sobre la campaña <a target=\"_blank\" href=\"https://www.sos.ca.gov/administration/news-releases-and-advisories/2020-news-releases-and-advisories/ap20067-99-days-until-11032020-general-election-sos-office-launches-vote-safe-california-campaign/\">Vote Safe California</a>,
+  que se lanzó en julio de 2020 como respuesta a la pandemia de Covid-19.
+  </p>
+  <p>
+  Verifique si está debidamente inscrito como votante <a target=\"_blank\" href=\"https://voterstatus.sos.ca.gov/ES/\">aquí</a>.
+  </p>
+  <p>
+  Actualice su inscripción como votante (cambio de dirección, cambio de nombre, etc.) <a target=\"_blank\" href=\"https://registertovote.ca.gov/es-mx/\">aquí</a>.
+  </p>",
 
-"En la mayoría de los casos, no se necesita enseñar una identificación a alguien trabajando en las casillas antes de votar.
-Sin embargo, si usted está votando por la primera vez después de haberse registrado por correo y no proporcionó su número de licencia de manejo,
-Número de identificación de California o los últimos cuatro dígitos de su número de seguro social en su forma de registro,
-se le puede pedir que enseñe alguna identificación cuando se presente en las casillas.
-<strong>Asegúrese de traer una identificación a su casilla o de incluir una copia de su identificación en su boleta de votación por correo.</strong> <br><br>
-<strong>Por favor traiga uno de los siguientes tipos de identificación: </strong>
-<ul>
-  <li>
-    Una identificación que tenga su foto, por ejemplo:
-    <ul>
-      <li>Licencia de manejo o tarjeta  de identificación de otro estado</li>
-      <li>Pasaporte </li>
-      <li>
-          Tarjeta de identificación de empleado
-      </li>
-      <li>Tarjeta de identificación proporcionada por un establecimiento comercial</li>
-      <li>Tarjeta de débito o crédito</li>
-      <li>Tarjeta de identificación de estudiante</li>
-      <li>Tarjeta de identificación de club de salud</li>
-      <li>Tarjeta de identificación del seguro</li>
-      <li>Tarjeta de identificación de vivienda pú</li>
-    </ul>
-  </li>
-  <li>
-    O una copia de alguno de los siguiente documentos:
-    <ul>
-      <li>Factura de servicios públicos</li>
-      <li>Extracto bancario reciente</li>
-      <li>Cheque o documento gubernamental que muestre el nombre y la dirección del votante </li>
-      <li>El folleto con una boleta de muestra que recibió en las oficinas de elecciones de su municipio </li>
-      <li>Algún otro documento enviado a usted por una agencia del gobierno</li>
-    </ul>
-  </li>
-</ul>",
+  "<p>
+  Si eliges votar en persona, puedes encontrar tu lugar de votación <a target=\"_blank\" href=\"https://www.sos.ca.gov/elections/polling-place/\">aquí</a>.
+  Esta información puede cambiar, así que cerciórate de revisarla nuevamente 2 a 4 semanas antes de las elecciones generales del 3 de noviembre de 2020.
+  </p>
+  <p>
+  Para obtener información sobre los lugares de entrega de sobres de votación por correo y votación anticipada, haga clic <a target=\"_blank\" href=\"https://www.sos.ca.gov/elections/voting-resources/voting-california/spanish/where-how-vote/\">aquí</a>.
+  </p>",
+
+  "<p>
+  Para obtener información general sobre qué llevar el día de las elecciones, haga clic <a target=\"_blank\" href=\"https://www.sos.ca.gov/elections/voting-resources/voting-california/spanish/where-how-vote/\">aquí</a>.
+  </p>
+  <p>
+  Si tiene preguntas sobre qué documentos de identidad pueden aceptarse, llame a la línea directa gratuita para votantes de la Secretaría de Estado por el (800) 232-VOTA (8682) o comuníquese con la <a target=\"_blank\" href=\"https://www.sos.ca.gov/elections/voting-resources/county-elections-offices/\">oficina electoral de su condado</a>.
+  </p>
+  <p>
+  Para ver la lista completa de documentos de identidad aceptables, haga clic <a target=\"_blank\" href=\"https://elections.cdn.sos.ca.gov/regulations/hava_id_regs_from_barclays_3_3_06.pdf\">aquí</a>.
+  </p>",
 
 "Sí. La ley requiere que los empleadores en California den tiempo para que sus empleados vayan a votar.
   Específicamente, cada votante tiene derecho a 2 horas para ir a votar al principio o al final de su turno dependiendo en cuál opción le da más tiempo al votante para ir a
@@ -68,24 +49,22 @@ se le puede pedir que enseñe alguna identificación cuando se presente en las c
   <strong> los votantes deben avisarle a su empleador que planean ir a votar durante el día laboral mínimo 2 días antes de la elección.</strong> Más información
   <a href=\"https://www.sos.ca.gov/administration/news-releases-and-advisories/2018-news-releases-and-advisories/california-law-allows-time-vote-election-day1/\">aquí</a>.",
 
-  "In previous elections, eligible voters in some counties could vote early at select polling locations in the days leading up to Election Day.
-  However, given that every registered California voter will receive a mail-in ballot for the November 3, 2020
-  general election, <strong>voters are encouraged to vote at home and return their ballot either by mail or at a polling place.</strong>
-  See county-specific COVID-19 early voting policies
-  <a href=\"https://www.sos.ca.gov/elections/voting-resources/county-elections-offices/\">here</a>.",
+  "<p>
+  Confirma con la <a target=\"_blank\" href=\"https://www.sos.ca.gov/elections/voting-resources/county-elections-offices/\">oficina electoral de tu condado</a> sobre los lugares de votación anticipada.
+  </p>",
 
-"¡Puede encontrar información acerca de votar en el sitio web del Estado de California en 9 idiomas!
+"Para más información sobre la votación, visita el sitio web en 10 idiomas del estado de California.
 <ul>
   <li><a target = \"_blank\" href=\"https://www.sos.ca.gov/elections/voting-resources/voting-california/spanish/\">español</a></li>
   <li><a target = \"_blank\" href=\"https://www.sos.ca.gov/elections/voting-resources/voting-california/\">inglés</a></li>
-  <li><a target = \"_blank\" href=\"https://www.sos.ca.gov/elections/voting-resources/voting-california/chinese/\">chino</a></li>
-  <li><a target = \"_blank\" href=\"https://www.sos.ca.gov/elections/voting-resources/voting-california/hindi/\">hindi</a></li>
-  <li><a target = \"_blank\" href=\"https://www.sos.ca.gov/elections/voting-resources/voting-california/japanese/\">japonés</a></li>
-  <li><a target = \"_blank\" href=\"https://www.sos.ca.gov/elections/voting-resources/voting-california/khmer/\">khmer</a></li>
-  <li><a target = \"_blank\" href=\"https://www.sos.ca.gov/elections/voting-resources/voting-california/korean/\">koreano</a></li>
-  <li><a target = \"_blank\" href=\"https://www.sos.ca.gov/elections/voting-resources/voting-california/tagalog/\">tagalog</a></li>
-  <li><a target = \"_blank\" href=\"https://www.sos.ca.gov/elections/voting-resources/voting-california/thai/\">tailandés</a></li>
-  <li><a target = \"_blank\" href=\"https://www.sos.ca.gov/elections/voting-resources/voting-california/vietnamese/\">vietnamita</a></li>
+  <li><a target = \"_blank\" href=\"https://www.sos.ca.gov/elections/voting-resources/voting-california/chinese/\">中文 / Chino</a></li>
+  <li><a target = \"_blank\" href=\"https://www.sos.ca.gov/elections/voting-resources/voting-california/hindi/\">हिन्दी / Hindi</a></li>
+  <li><a target = \"_blank\" href=\"https://www.sos.ca.gov/elections/voting-resources/voting-california/japanese/\">日本語 / Japonés</a></li>
+  <li><a target = \"_blank\" href=\"https://www.sos.ca.gov/elections/voting-resources/voting-california/khmer/\">ខ្មែរ / Jemer</a></li>
+  <li><a target = \"_blank\" href=\"https://www.sos.ca.gov/elections/voting-resources/voting-california/korean/\">한국어 / Coreano</a></li>
+  <li><a target = \"_blank\" href=\"https://www.sos.ca.gov/elections/voting-resources/voting-california/tagalog/\">Tagalo</a></li>
+  <li><a target = \"_blank\" href=\"https://www.sos.ca.gov/elections/voting-resources/voting-california/thai/\">ภาษาไทย / Tailandés</a></li>
+  <li><a target = \"_blank\" href=\"https://www.sos.ca.gov/elections/voting-resources/voting-california/vietnamese/\">Việt ngữ / Vietnamita</a></li>
 </ul>"
 
 ] %}
