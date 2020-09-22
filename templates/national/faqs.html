@@ -68,7 +68,7 @@ Buscar palabra clave
 {% from state.upper() + '/' + lang_full + '/faqs/faqs_general.html' import A as A2 %}
 {% from state.upper() + '/' + lang_full + '/faqs/faqs_vbm.html' import Q as Q3 %}
 {% from state.upper() + '/' + lang_full + '/faqs/faqs_vbm.html' import A as A3 %}
-{% if state.lower() in ['tx', 'ca'] %}
+{% if state.lower() == 'tx' or state.lower() == 'ca' %}
   {% from state.upper() + '/' + lang_full + '/faqs/faqs_student.html' import Q as Q4 %}
   {% from state.upper() + '/' + lang_full + '/faqs/faqs_student.html' import A as A4 %}
 {% else %}
@@ -120,7 +120,7 @@ Buscar palabra clave
       {% endif %}
     </button>
   </a>
-  {% if (state.lower() == 'tx' and lang == 'en') or (state.lower() == 'ca') %}
+  {% if (state.lower() == 'tx') or (state.lower() == 'ca') %}
   <a href="#students">
     <button class = "btn btn-big">
       {% if lang == 'en' %}
@@ -180,7 +180,7 @@ Preguntas generales acerca de votar
 {% set section = 'vbm' %}
 {% include 'accordion.html' %}
 
-{% if (state.lower() == 'tx' and lang == 'en') or (state.lower() == 'ca') %}
+{% if (state.lower() == 'tx') or (state.lower() == 'ca') %}
 <a class="anchor" id="students"></a>
 <h3 align=left margin-bottom=10px>
   {% if lang == 'en' %}
