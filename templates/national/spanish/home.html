@@ -56,16 +56,23 @@
 <div class = "mainText">
   <p align = left>
     {% if state.lower() == 'ca' %}
-    Due to the Covid-19 pandemic, <strong>all registered California residents will receive a
-    <a href="{{ url_for('faqs', state=state, lang=lang) + '#vbm'}}" class="faqLink">mail-in ballot</a>
-    for the November 3, 2020 general election.</strong>
-    <br><br>The registration deadline for the general election is
-    <strong>October 19, 2020</strong>. For more information about important dates see
-    <a href="{{ url_for('faqs', state=state, lang=lang)}}" class = "faqLink">Frequently Asked Questions</a>.
+    Debido a la pandemia de Covid-19, <strong> todos los
+residentes en California debidamente
+inscritos recibirán un
+<a href="{{ url_for('faqs', state=state, lang=lang) + '#vbm'}}" class="faqLink">sobre de voto por correo</a></strong>
+para las elecciones generales del 3 de
+noviembre de 2020.
+    <br><br>La fecha límite de inscripción para las
+elecciones generales es <strong>el 19 de octubre de
+2020</strong>. Para más información sobre fechas
+importantes, consulte
+    <a href="{{ url_for('faqs', state=state, lang=lang)}}" class = "faqLink">Preguntas frecuentes</a>.
 
     {% elif state.lower() == 'fl' %}
     La fecha límite para registrarse para la elección general es <strong>el 5 de octubre del 2020</strong>. Más información está
-      <a href="{{ url_for('faqs', state=state, lang=lang)}}">aquí</a>.
+      <a href="{{ url_for('faqs', state=state, lang=lang)}}">aquí</a>. Todos los
+  residentes en California pueden votar por correo. Más información está
+  <a href="{{ url_for('faqs', state=state, lang=lang) + '#vbm'}}" class = "faqLink">aquí</a>.
 
     {% elif state.lower() == 'ga' %}
     The registration deadline for the November 3, 2020 general election is <strong>October 5, 2020</strong>.

@@ -32,7 +32,9 @@
           <a href="{{ url_for('faqs', state=state, lang=lang) + '#vbm'}}" class = "faqLink">here</a>.
         {% elif lang == 'es' %}
         La fecha límite para registrarse para la elección general es <strong>el 5 de octubre del 2020</strong>. Más información está
-          <a href="{{ url_for('faqs', state=state, lang=lang)}}">aquí</a>.
+          <a href="{{ url_for('faqs', state=state, lang=lang)}}">aquí</a>. Todos los
+      residentes en California pueden votar por correo. Más información está
+      <a href="{{ url_for('faqs', state=state, lang=lang) + '#vbm'}}" class = "faqLink">aquí</a>.
         {% endif %}
 
         {% elif state.lower() == 'ga' %}
