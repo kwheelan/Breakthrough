@@ -31,6 +31,8 @@
           The state of Florida allows any registered voter to vote by mail. See more about vote-by-mail in Florida
           <a href="{{ url_for('faqs', state=state, lang=lang) + '#vbm'}}" class = "faqLink">here</a>.
         {% elif lang == 'es' %}
+        La fecha límite para registrarse para la elección general es <strong>el 5 de octubre del 2020</strong>. Más información está
+          <a href="{{ url_for('faqs', state=state, lang=lang)}}">aquí</a>.
         {% endif %}
 
         {% elif state.lower() == 'ga' %}
